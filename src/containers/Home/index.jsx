@@ -1,9 +1,13 @@
 import React from 'react'
 import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
 
 function Home() {
     return (
-        <Navbar />
+        <React.Fragment>
+            <Navbar />
+            <Footer />
+        </React.Fragment>
     )
 }
 
