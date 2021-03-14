@@ -17,10 +17,6 @@ export const FooterInfo = styled.div`
 `;
 
 export const FooterIcons = styled.div`
-    color: green;
-    display: flex;
-    flex-direction: row-reverse;
-    flex-flow: flex-end;
-    background: red;
+    background: black;
     margin: 0px;
 `;
