@@ -1,5 +1,5 @@
 import React from 'react'
-import { FooterWrapper, FooterDiv, FooterInfo, FooterIcons, GradientDiv } from './FooterElements'
+import { FooterWrapper, FooterDiv, FooterInfo, FooterIcons, GradientDiv, GradientAnimated } from './FooterElements'
 import FooterLogos from './constants/FooterLogos'
 import Icon from '../Icons'
 import * as CONSTANTS from '../../constants'
@@ -8,6 +8,7 @@ function Footer (){
     return (
         <React.Fragment>
             <FooterWrapper>
+                <GradientAnimated />
                 <GradientDiv />
                 <FooterDiv>
                     <FooterInfo>
