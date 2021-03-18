@@ -2,44 +2,34 @@ import styled from 'styled-components'
 import { NavLink as Link } from 'react-router-dom'
 
 export const Nav = styled.nav`
-    background: #000;
+    background: black;
     height: 80px;
     width: 100vw;
+    margin-top: -8px;
+    margin-left: -8px;
     top: 0;
     left: 0;
     display: flex;
-    // padding: 0.5rem calc((100vw - 1000px) / 2);
-    justify-content: space-between;
-    // z-index: 10;
+    justify-content: space-around;
 `;
 
-export const NavLink = styled(Link)`
-    color: #fff;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    padding: 0 1rem;
-    height: 100%;
-    cursor: pointer;
-    margin: 10px;
+export const StyledLink = styled(Link)`
+    color: white;
 
     &.active {
-        color: #15cdfc;
+      color: red;
     }
+`;
+
+export const LogoLink = styled(Link)`
+    color: white;
 `;
 
 export const NavMenu = styled.div`
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-right: -24px;
-  /* Second Nav */
-  /* margin-right: 24px; */
-  /* Third Nav */
-  /* width: 100vw;
-  white-space: nowrap; */
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
 `;
 
 export const NavButtons = styled.nav`

@@ -1,28 +1,28 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { NavButtons, NavMenu, Nav } from './NavbarElements'
+import { NavButtons, NavMenu, Nav, StyledLink, LogoLink } from './NavbarElements'
 
 function Navbar() {
 
     return (
         <React.Fragment>
             <Nav>
-                <NavLink to = '/' >
+                <LogoLink to = '/' >
                     <h1> Logo </h1>
-                </NavLink>
+                </LogoLink>
                 <NavMenu>
-                    <NavLink to = '/posts' activeStyle>
+                    <StyledLink to = '/posts' activeStyle>
                         Posts
-                    </NavLink> 
-                    <NavLink to = '/geeky' activeStyle>
+                    </StyledLink> 
+                    <StyledLink to = '/geeky' activeStyle>
                         Geeky
-                    </NavLink> 
-                    <NavLink to = '/social' activeStyle>
+                    </StyledLink> 
+                    <StyledLink to = '/social' activeStyle>
                         Social
-                    </NavLink> 
-                    <NavLink to = '/watch&play' activeStyle>
+                    </StyledLink> 
+                    <StyledLink to = '/watch&play' activeStyle>
                         Watch & Play
-                    </NavLink> 
+                    </StyledLink> 
                 </NavMenu>
                 <NavButtons>
                     <h2>buttons</h2>

@@ -9,6 +9,7 @@ export const FooterDiv = styled.div`
     align-items: center;
     width: 100vw;
     background: black;
+    justify-content: space-between;
 `;
 
 export const FooterInfo = styled.div`
@@ -19,4 +20,6 @@ export const FooterInfo = styled.div`
 export const FooterIcons = styled.div`
     background: black;
     margin: 0px;
+    display: flex;
+    align-items: left;
 `;
