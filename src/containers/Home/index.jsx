@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
-import { Card, Picture } from './styles'
+import { Card } from './styles'
 
 function Home() {
     return (
@@ -10,9 +10,6 @@ function Home() {
                 <Card>
                     Hello
                 </Card>
-                <Picture>
-                    <img src = '../../assets/profile/pranjal.jpeg' alt = 'profile'/>
-                </Picture>
             <Footer />
         </React.Fragment>
     )
