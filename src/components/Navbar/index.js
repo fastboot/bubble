@@ -1,5 +1,4 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 import { NavButtons, NavMenu, Nav, StyledLink, LogoLink } from './NavbarElements'
 
 function Navbar() {

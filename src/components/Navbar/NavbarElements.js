@@ -15,7 +15,10 @@ export const Nav = styled.nav`
 
 export const StyledLink = styled(Link)`
     color: white;
-
+    display: flex;
+    width: 80px;
+    text-decoration: none;
+    white-space: nowrap;
     &.active {
       color: red;
     }
@@ -23,6 +26,7 @@ export const StyledLink = styled(Link)`
 
 export const LogoLink = styled(Link)`
     color: white;
+    text-decoration: none;
 `;
 
 export const NavMenu = styled.div`
@@ -37,10 +41,4 @@ export const NavButtons = styled.nav`
   align-items: center;
   margin-right: 24px;
   color: white;
-  /* Third Nav */
-  /* justify-content: flex-end;
-  width: 100vw; */
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
 `;

@@ -1,5 +1,5 @@
 import React from 'react'
-import { IconsMenu } from './icon.styles'
+import { IconsMenu } from './styles'
 
 function Icon (props) {
     const source = props.imgsrc
