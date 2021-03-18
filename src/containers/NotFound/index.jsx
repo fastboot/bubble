@@ -1,7 +1,15 @@
 import React from 'react'
+import { StyledDiv, Message, Heading } from './styles'
 
 function Notfound() {
-    return <h1> 404 Page not found ! </h1> 
+    return (
+        <React.Fragment>
+            <StyledDiv>
+                <Heading> 404 </Heading>
+                <Message> That page doesn't exist.</Message>
+            </StyledDiv>
+        </React.Fragment>
+    )
 }
 
 export default Notfound
