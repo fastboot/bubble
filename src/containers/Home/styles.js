@@ -66,6 +66,7 @@ export const WorkplaceTime = styled.div`
   font-weight: normal;
   color: white;
   margin-top: 20px;
+  padding-right: 20px;
 
 `;
 
@@ -87,7 +88,7 @@ export const WorkplaceLogo = styled.img`
   height: 100px;
   width: 100px;
   margin-top: 70px;
-  padding-right: 10px;
+  padding-right: 30px;
 `;
 
 export const ProfilePicture = styled.div`
