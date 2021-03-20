@@ -5,6 +5,7 @@ export const FooterWrapper = styled.div`
     bottom: 0;
     margin-top: 500px;
     flex-direction: column;
+    background: black;
 `;
 
 export const FooterDiv = styled.div`
