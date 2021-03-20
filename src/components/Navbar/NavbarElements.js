@@ -3,6 +3,7 @@ import { NavLink as Link } from 'react-router-dom'
 
 export const Nav = styled.nav`
     background: rgba(0, 0, 0, 0.3);
+    font-family: "Wotfard", "Futura", sans-serif;
     backdrop-filter: blur(5px);
     position: sticky;
     height: 80px;

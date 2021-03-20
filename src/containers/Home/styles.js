@@ -32,7 +32,8 @@ export const Workplace = styled.div`
   height: 100px;
   display: flex;
   color: white;
-  font-size: 50px;
+  font-size: 40px;
+  font-family: "Wotfard", "Futura", sans-serif;
   background: black;
   margin-top: 50px;
   text-align: center;
@@ -48,7 +49,7 @@ export const WorkplaceLogo = styled.div`
   margin-top: 20px;
   margin-left: 20px;
   width: 173px;
-  font-size: 50px;
+  font-size: 40px;
   text-align: center;
   vertical-align: middle;
   line-height: 80px; 
