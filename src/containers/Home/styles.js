@@ -32,16 +32,44 @@ export const Workplace = styled.div`
   height: 100px;
   display: flex;
   color: white;
-  font-size: 40px;
+  font-size: 35px;
+  padding-left: 130px;
   font-family: "Wotfard", "Futura", sans-serif;
   background: black;
-  margin-top: 50px;
+  margin-top: 10px;
   text-align: center;
   vertical-align: middle;
   line-height: 120px; 
 `;
 
-export const WorkplaceLogo = styled.div`
+export const GradientAnimated = styled.div`
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    width: 100%;
+    height: 10px;
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+`;
+
+export const WorkplaceTime = styled.div`
+  font-family: "Wotfard", "Futura", sans-serif;
+  font-size: 25px;
+  font-weight: normal;
+  color: white;
+  margin-top: 20px;
+
+`;
+
+export const WorkplaceNameDiv = styled.div`
   background-image: url(${Background});
   background-size: contain;
   background-image-color: white;
@@ -49,10 +77,17 @@ export const WorkplaceLogo = styled.div`
   margin-top: 20px;
   margin-left: 20px;
   width: 173px;
-  font-size: 40px;
+  font-size: 35px;
   text-align: center;
   vertical-align: middle;
   line-height: 80px; 
+`;
+
+export const WorkplaceLogo = styled.img`
+  height: 100px;
+  width: 100px;
+  margin-top: 70px;
+  padding-right: 10px;
 `;
 
 export const ProfilePicture = styled.div`
