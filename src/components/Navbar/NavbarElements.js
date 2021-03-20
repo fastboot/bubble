@@ -2,7 +2,9 @@ import styled from 'styled-components'
 import { NavLink as Link } from 'react-router-dom'
 
 export const Nav = styled.nav`
-    background: black;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    position: sticky;
     height: 80px;
     width: 100%;
     top: 0;
