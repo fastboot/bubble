@@ -28,6 +28,9 @@ function Navbar(props) {
                     <StyledLink to = '/watch&play' activeStyle>
                         Watch & Play
                     </StyledLink> 
+                    <StyledLink to = '/whoami' activeStyle>
+                        $whoami
+                    </StyledLink> 
                 </NavMenu>
                 <NavButtons>
                     <Button type="image" src = { props.currTheme.mode === 'dark' ? Moon: Sun } onClick = { changeTheme } />

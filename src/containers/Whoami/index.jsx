@@ -14,8 +14,8 @@ import Profile from '../../assets/profile/pranjal.jpeg'
 import LogoWhite  from '../../assets/logos/PeakWhite.png'
 import LogoBlack from '../../assets/logos/PeakBlack.png'
 
-function Home(props) {
-    console.log(props);
+function Whoami(props) {
+
     return (
         <React.Fragment>
             <HomeWrapper>
@@ -44,4 +44,4 @@ function Home(props) {
     )
 }
 
-export default Home
+export default Whoami

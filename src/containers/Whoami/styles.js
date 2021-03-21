@@ -7,7 +7,7 @@ export const Card = styled.div`
   width: 1000px;
   height: 100%;
   margin-top: 50px;
-  margin-left: 200px;
+  margin-left: 230px;
   justify-content: space-around;
   font-size: 5em;
   align-items: center;
@@ -80,7 +80,7 @@ export const WorkplaceNameDiv = styled.div`
 export const WorkplaceLogo = styled.img`
   height: 100px;
   width: 100px;
-  margin-top: 70px;
+  margin-top: 50px;
   padding-right: 30px;
 `;
 

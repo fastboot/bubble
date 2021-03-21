@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { NavLink as Link } from 'react-router-dom'
 
 export const Nav = styled.nav`
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0.5, 0, 0, 0);
     backdrop-filter: blur(5px);
     position: sticky;
     height: 80px;
@@ -14,19 +14,22 @@ export const Nav = styled.nav`
 `
 
 export const StyledLink = styled(Link)`
-    color: white;
     display: flex;
+    color: ${props => props.theme.mode === 'dark' ? 'white': 'black'};
     width: 80px;
     text-decoration: none;
     white-space: nowrap;
     &.active {
       color: red;
     }
+    &:last-child {
+      margin-left: 50px;
+  }
 `
 
 export const LogoLink = styled(Link)`
-  color: white;
   text-decoration: none;
+  color: ${props => props.theme.mode === 'dark' ? 'white': 'black'};
 `
 
 export const NavMenu = styled.div`
@@ -45,5 +48,4 @@ export const NavButtons = styled.nav`
   display: flex;
   align-items: center;
   margin-right: 24px;
-  color: white;
 `
