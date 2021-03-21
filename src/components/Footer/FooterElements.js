@@ -5,7 +5,6 @@ export const FooterWrapper = styled.div`
     bottom: 0;
     margin-top: 500px;
     flex-direction: column;
-    background: black;
 `;
 
 export const FooterDiv = styled.div`
@@ -14,7 +13,6 @@ export const FooterDiv = styled.div`
     height: 200px;
     align-items: center;
     width: 100%;
-    background: black;
     justify-content: space-around;
 `;
 
@@ -30,12 +28,10 @@ export const GradientDiv = styled.div`
 `;
 
 export const FooterInfo = styled.div`
-    color: white;
     display: flex;
 `;
 
 export const FooterIcons = styled.div`
-    background: black;
     margin: 0px;
     display: flex;
     width: 250px;

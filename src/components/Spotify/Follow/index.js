@@ -1,15 +1,16 @@
 import React from 'react'
 
-function Follow() {
+function Follow(props) {
+
     return (
         <iframe 
-            src="https://open.spotify.com/follow/1/?uri=spotify:user:pranjal_mishra&size=detail&theme=light" 
+            src={props.src} 
             title='follow'
-            width="300" 
-            height="56" 
+            width={props.width} 
+            height={props.height} 
             scrolling="no" 
             frameborder="0"
-            allowtransparency="true"
+            allowtransparency="false"
         >
         </iframe>
     )
