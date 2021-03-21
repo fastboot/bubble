@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${ props => props.theme.mode === 'dark' ? 'black': 'white' };
     color: ${ props => props.theme.mode === 'dark' ? 'white': 'black' };
     transition: all 0.55s linear;
+    font-family: "Wotfard", Futura, -apple-system, sans-serif;
   }
 `
 

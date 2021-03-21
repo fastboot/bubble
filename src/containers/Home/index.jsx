@@ -15,7 +15,7 @@ import LogoWhite  from '../../assets/logos/PeakWhite.png'
 import LogoBlack from '../../assets/logos/PeakBlack.png'
 
 function Home(props) {
-
+    console.log(props);
     return (
         <React.Fragment>
             <HomeWrapper>

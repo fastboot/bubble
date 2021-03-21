@@ -12,7 +12,6 @@ export const StyledDiv = styled.div`
 
 export const Message = styled.div`
     font-size: 14px;
-    font-family: Roboto;
     color: white;
     margin-left: 400px;
 `;

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import Background from '../../assets/shapes/PeakBackground.png'
+import BackgroundLight from '../../assets/shapes/PeakBackground.png'
+import BackgroundDark from '../../assets/shapes/PeakBackgroundDark.png'
 
 export const Card = styled.div`
   display: flex;
@@ -30,7 +31,6 @@ export const Workplace = styled.div`
   display: flex;
   font-size: 35px;
   padding-left: 130px;
-  font-family: "Wotfard", "Futura", sans-serif;
   margin-top: 10px;
   text-align: center;
   vertical-align: middle;
@@ -56,7 +56,6 @@ export const GradientAnimated = styled.div`
 `;
 
 export const WorkplaceTime = styled.div`
-  font-family: "Wotfard", "Futura", sans-serif;
   font-size: 25px;
   font-weight: normal;
   margin-top: 20px;
@@ -65,7 +64,8 @@ export const WorkplaceTime = styled.div`
 `;
 
 export const WorkplaceNameDiv = styled.div`
-  background-image: url(${Background});
+  background-image: url(${props => props.theme.mode === 'dark' ? BackgroundLight: BackgroundDark});
+  color: ${props => props.theme.mode === 'dark' ? 'black': 'white'};
   background-size: contain;
   height: 90px;
   margin-top: 20px;

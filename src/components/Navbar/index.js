@@ -1,8 +1,10 @@
 import React from 'react'
-import { NavButtons, NavMenu, Nav, StyledLink, LogoLink } from './NavbarElements'
+import { NavButtons, NavMenu, Nav, StyledLink, LogoLink, Button } from './NavbarElements'
+import Moon from '../../assets/icons/sun.png'
+import Sun from '../../assets/icons/moon.png'
 
 function Navbar(props) {
-
+    console.log(props)
     const changeTheme = () => {
         props.updateTheme((props.currTheme.mode === 'dark' ? { mode: 'light' }: { mode: 'dark' }))
     }
@@ -28,7 +30,7 @@ function Navbar(props) {
                     </StyledLink> 
                 </NavMenu>
                 <NavButtons>
-                    <button onClick = { changeTheme }>ToggleMode</button>
+                    <Button type="image" src = { props.currTheme.mode === 'dark' ? Moon: Sun } onClick = { changeTheme } />
                 </NavButtons>
             </Nav>
         </React.Fragment>
