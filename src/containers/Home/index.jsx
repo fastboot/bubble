@@ -1,6 +1,4 @@
 import React from 'react'
-import Navbar from '../../components/Navbar'
-import Footer from '../../components/Footer'
 import { 
     Card, 
     ProfilePicture, 
@@ -15,11 +13,10 @@ import {
 import Profile from '../../assets/profile/pranjal.jpeg'
 import Logo from '../../assets/logos/PeakWhite.png'
 
-function Home() {
+function Home(props) {
     return (
         <React.Fragment>
             <HomeWrapper>
-                <Navbar />
                 <GradientAnimated />
                     <Card>
                         <ProfilePicture>
@@ -35,12 +32,12 @@ function Home() {
                                 </WorkplaceNameDiv>
                             </StyledA>
                         </Workplace>
+                        {console.log(props.theme)}
                         <WorkplaceLogo src = { Logo } alt = 'Logo' /> 
                         <WorkplaceTime>
                             2020 - present
                         </WorkplaceTime>
                     </Card>
-                <Footer />
             </HomeWrapper>
         </React.Fragment>
     )

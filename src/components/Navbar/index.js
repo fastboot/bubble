@@ -1,7 +1,11 @@
 import React from 'react'
 import { NavButtons, NavMenu, Nav, StyledLink, LogoLink } from './NavbarElements'
 
-function Navbar() {
+function Navbar(props) {
+
+    const changeTheme = () => {
+        props.updateTheme((props.currTheme.mode === 'dark' ? { mode: 'light' }: { mode: 'dark' }))
+    }
 
     return (
         <React.Fragment>
@@ -24,7 +28,7 @@ function Navbar() {
                     </StyledLink> 
                 </NavMenu>
                 <NavButtons>
-                    <h2>buttons</h2>
+                    <button onClick = { changeTheme }>ToggleMode</button>
                 </NavButtons>
             </Nav>
         </React.Fragment>

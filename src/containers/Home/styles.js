@@ -5,20 +5,17 @@ export const Card = styled.div`
   display: flex;
   width: 1000px;
   height: 100%;
-  border: 3px solid;
   margin-top: 50px;
   margin-left: 200px;
   justify-content: space-around;
   font-size: 5em;
   align-items: center;
-  background: black;
   flex-direction: column;
 `;
 
 export const HomeWrapper = styled.div`
   height: 100%;
   width: 100%;
-  background: black;
 `;
 
 export const StyledA = styled.a`
@@ -31,11 +28,9 @@ export const Workplace = styled.div`
   width: 640px;
   height: 100px;
   display: flex;
-  color: white;
   font-size: 35px;
   padding-left: 130px;
   font-family: "Wotfard", "Futura", sans-serif;
-  background: black;
   margin-top: 10px;
   text-align: center;
   vertical-align: middle;
@@ -64,7 +59,6 @@ export const WorkplaceTime = styled.div`
   font-family: "Wotfard", "Futura", sans-serif;
   font-size: 25px;
   font-weight: normal;
-  color: white;
   margin-top: 20px;
   padding-right: 20px;
 
@@ -73,7 +67,6 @@ export const WorkplaceTime = styled.div`
 export const WorkplaceNameDiv = styled.div`
   background-image: url(${Background});
   background-size: contain;
-  background-image-color: white;
   height: 90px;
   margin-top: 20px;
   margin-left: 20px;
