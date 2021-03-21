@@ -11,9 +11,11 @@ import {
     GradientAnimated,
 } from './styles'
 import Profile from '../../assets/profile/pranjal.jpeg'
-import Logo from '../../assets/logos/PeakWhite.png'
+import LogoWhite  from '../../assets/logos/PeakWhite.png'
+import LogoBlack from '../../assets/logos/PeakBlack.png'
 
 function Home(props) {
+
     return (
         <React.Fragment>
             <HomeWrapper>
@@ -32,8 +34,7 @@ function Home(props) {
                                 </WorkplaceNameDiv>
                             </StyledA>
                         </Workplace>
-                        {console.log(props.theme)}
-                        <WorkplaceLogo src = { Logo } alt = 'Logo' /> 
+                        <WorkplaceLogo src = { props.currTheme.mode ==='dark'? LogoWhite: LogoBlack } alt = 'Logo' /> 
                         <WorkplaceTime>
                             2020 - present
                         </WorkplaceTime>

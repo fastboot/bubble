@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     background-color: ${ props => props.theme.mode === 'dark' ? 'black': 'white' };
     color: ${ props => props.theme.mode === 'dark' ? 'white': 'black' };
+    transition: all 0.55s linear;
   }
 `
 
@@ -19,8 +20,7 @@ function getInitialTheme() {
   return savedTheme ? JSON.parse(savedTheme) : { mode: 'light' }
 }
 
-function App() {
-
+function App(props) {
   const [theme, setTheme] = useState(getInitialTheme)
   useEffect(() => {
     storage.setItem('theme', JSON.stringify(theme))
@@ -33,11 +33,11 @@ function App() {
         <GlobalStyle />
         <Navbar updateTheme = {setTheme} currTheme = {theme} />
         <Switch>
-          <Route exact path = '/' component = {Home} />
-          <Route exact path = '/posts' component = {Home} />
-          <Route exact path = '/geeky' component = {Home} />
-          <Route exact path = '/social' component = {Home} />
-          <Route exact path = '/watch&play' component = {Home} />
+          <Route exact path = '/' component={() => (<Home currTheme = {theme} />)} />
+          <Route exact path = '/posts' component={() => (<Home currTheme = {theme} />)} />
+          <Route exact path = '/geeky' component={() => (<Home currTheme = {theme} />)} />
+          <Route exact path = '/social' component={() => (<Home currTheme = {theme} />)} />
+          <Route exact path = '/watch&play' component={() => (<Home currTheme = {theme} />)} />
           <Route component = {Notfound} />
         </Switch>
         <Footer />
