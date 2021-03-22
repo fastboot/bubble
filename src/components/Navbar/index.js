@@ -13,7 +13,7 @@ function Navbar(props) {
         <React.Fragment>
             <Nav>
                 <LogoLink to = '/' >
-                    <h1> Logo </h1>
+                    <h1> ?¿ </h1>
                 </LogoLink>
                 <NavMenu>
                     <StyledLink to = '/posts' activeStyle>
