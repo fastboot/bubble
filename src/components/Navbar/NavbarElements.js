@@ -10,6 +10,7 @@ export const Nav = styled.nav`
     top: 0;
     left: 0;
     display: flex;
+    z-index: 999999999;
     justify-content: space-around;
 `
 

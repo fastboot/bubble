@@ -5,14 +5,13 @@ export const BlockCard = styled.div`
     height: 500px;
     width: 100%;
     margin-top: 0px;
-    position: absolute;
-    .BlockCard:hover {
-        display:block;
-    }
+    display: block;
+    color: black;
+    position: relative;
 `
 
 export const FollowDiv = styled.div`
-    margin-top: 350px;
+    margin-top: -300px;
     margin-left: 1000px;
 
 `

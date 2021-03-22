@@ -1,55 +1,38 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-
-// const getData = async (name) => {
-
-//     const url = 'https://api.spotify.com/v1/me/player?market=IN&additional_types=episode'
-//     const response = await axios.get(url, {
-//         headers: {
-//             'Authorization': 'Bearer BQBFNBEpohZTMErHumstckpZDPVs_731pJPjZeTYO4Kk3MV_7KwoPstQxaHAOq7O3N9rkpzXY7Zx6hgnlOJYSYDdWjeL7LV8LDw9j-97ccD0wFjbtqsjSJTsbhpr12G495m2vOtwMir_CzwNx-Br5S6LwokScGrXFIMhamIJFn-IQ3fTF6EmniY',
-//         }
-//     })
-//     console.log(response.data)
-//     return (response.data)
-//     // return {status:400, message: JSON.stringify(response.data)};
-// }
-
-// useEffect(() => {     
-//     const getData = async () => {  
-//       await axios.get('your_url')  
-//       .then(res => {  
-//         console.log(res)  
-//       })  
-//       .catch(err => {  
-//         console.log(err)  
-//       });  
-//     }  
-//     getData()  
-//   }, [])
+import { AlbumArt, DetailsWrapper, NowPlayingWrapper } from './styles'
 
 function NowPlaying() {
-    
-    // getData();
-    const [track, setTrack] = useState('');
+    const [track, setTrack] = useState('')
+    const [artist, setArtist] = useState('')
+    const [device, setDevice] = useState('')
+    const [albumart, setAlbumart] = useState()
     useEffect(() => {
         const getData = async () => {
         const url = 'https://api.spotify.com/v1/me/player?market=IN&additional_types=episode'
         const response = await axios.get(url, {
             headers: {
-                'Authorization': 'Bearer BQBFNBEpohZTMErHumstckpZDPVs_731pJPjZeTYO4Kk3MV_7KwoPstQxaHAOq7O3N9rkpzXY7Zx6hgnlOJYSYDdWjeL7LV8LDw9j-97ccD0wFjbtqsjSJTsbhpr12G495m2vOtwMir_CzwNx-Br5S6LwokScGrXFIMhamIJFn-IQ3fTF6EmniY',
+                'Authorization': 'Bearer BQDvtbgDT2JMBqG3NBxlocr5uQj6EGYTSw8zSMoS50DwGeDA20l6mbuQbIoVmKm2c68wYCEOpSMM2-nIa7rkX1F5ns_dynYAOvB67U9A9GxMhlc_pF-sK0VLlxjCeXiqJvmZUKbZyuOb3ZB977QcHtjKr0i4N7Uu4cjr-ADpILUzQNLz3WYQEwA',
             }
         })
         console.log(response.data)
         setTrack(response.data.item.name)
+        setArtist(response.data.item.album.artists[0].name)
+        setDevice(response.data.device.name)
+        setAlbumart(response.data.item.album.images[0].url)
     };
-        getData();
+        getData()
     },[])
-    // const song = getData().then((res) => res.data);
 
     return (
-        <div>
-            <h1> {track} </h1>
-        </div>
+        <NowPlayingWrapper>
+            <AlbumArt src = {albumart} alt = 'albumart' />
+            <DetailsWrapper>
+                <p> {track} </p>
+                <p> {artist} </p>
+                <p> {device} </p>
+            </DetailsWrapper>
+        </NowPlayingWrapper>
     )
 }
 
