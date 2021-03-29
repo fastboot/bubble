@@ -22,9 +22,6 @@ function Navbar(props) {
                     <StyledLink to = '/geeky' activeStyle>
                         Geeky
                     </StyledLink> 
-                    <StyledLink to = '/social' activeStyle>
-                        Social
-                    </StyledLink> 
                     <StyledLink to = '/watch&play' activeStyle>
                         Watch & Play
                     </StyledLink> 

@@ -1,13 +1,22 @@
 import React from 'react'
 import Follow from '../../components/Spotify/Follow'
 import NowPlaying from '../../components/Spotify/NowPlaying'
-import { BlockCard, FollowDiv } from './styles'
+import { 
+    BlockCard, 
+    FollowDiv,
+    GradientAnimated,
+    PageHeading,
+} from './styles'
 import { CONSTANTS } from './links'
 
 function WatchPlay(props) {
-    const srcUrl = props.currTheme.mode === 'dark' ? CONSTANTS.dark: CONSTANTS.light;
+    const srcUrl = props.currTheme.mode === 'light' ? CONSTANTS.dark: CONSTANTS.light;
     return (
         <React.Fragment>
+            <GradientAnimated />
+            <PageHeading> 
+                Watch & Play
+            </PageHeading>
             <BlockCard color = 'white' >
                 <NowPlaying />
                 <FollowDiv>

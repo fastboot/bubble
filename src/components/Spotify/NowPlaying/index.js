@@ -12,10 +12,10 @@ function NowPlaying() {
         const url = 'https://api.spotify.com/v1/me/player?market=IN&additional_types=episode'
         const response = await axios.get(url, {
             headers: {
-                'Authorization': 'Bearer BQDvtbgDT2JMBqG3NBxlocr5uQj6EGYTSw8zSMoS50DwGeDA20l6mbuQbIoVmKm2c68wYCEOpSMM2-nIa7rkX1F5ns_dynYAOvB67U9A9GxMhlc_pF-sK0VLlxjCeXiqJvmZUKbZyuOb3ZB977QcHtjKr0i4N7Uu4cjr-ADpILUzQNLz3WYQEwA',
+                'Authorization': 'Bearer BQAAhb03Iagbz7J0612cR88-kfg5_bBVJWJIj0H2-WXwL3JS2_ce5xJR_UBaCAfrmpGWxBDnPXQ1-LVURgeUJFoz7J6vknD8h5V5rEDmlxNNwDUyTY0aMWmY56CyVr2g8MgKI3Hzjlr--xjJK3KcWmMuVNRpKSDuv3_XySaYQS6mzQlwH1BpTM8Ugw',
             }
         })
-        console.log(response.data)
+        
         setTrack(response.data.item.name)
         setArtist(response.data.item.album.artists[0].name)
         setDevice(response.data.device.name)

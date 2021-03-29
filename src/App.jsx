@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import storage from 'local-storage-fallback'
-import Whoami from './containers/Whoami'
+import  Whoami from './containers/Whoami'
 import WatchPlay from './containers/Watch&Play'
+import Home from './containers/Home'
+import Post from './containers/Posts'
+import Geeky from './containers/Geeky'
 import Notfound from './containers/NotFound'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -35,11 +38,10 @@ function App(props) {
         <GlobalStyle />
         <Navbar updateTheme = {setTheme} currTheme = {theme} />
         <Switch>
-          <Route exact path = '/' component={() => (<Whoami currTheme = {theme} />)} />
+          <Route exact path = '/' component={() => (<Home currTheme = {theme} />)} />
           <Route exact path = '/whoami' component={() => (<Whoami currTheme = {theme} />)} />
-          <Route exact path = '/posts' component={() => (<Whoami currTheme = {theme} />)} />
-          <Route exact path = '/geeky' component={() => (<Whoami currTheme = {theme} />)} />
-          <Route exact path = '/social' component={() => (<Whoami currTheme = {theme} />)} />
+          <Route exact path = '/posts' component={() => (<Post currTheme = {theme} />)} />
+          <Route exact path = '/geeky' component={() => (<Geeky currTheme = {theme} />)} />
           <Route exact path = '/watch&play' component={() => (<WatchPlay currTheme = {theme} />)} />
           <Route component = {Notfound} />
         </Switch>
