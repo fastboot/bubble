@@ -26,6 +26,6 @@ export const PageHeading = styled.div`
     padding-top: 50px;
     font-size: 120px;
     font-weight: bold;
-    background: ${props => props.theme.mode == 'black'? 'white': 'black'}
-    color: ${props => props.theme.mode == 'black'? 'black': 'white'};
+    background: ${props => props.theme.mode === 'black'? 'white': 'black'}
+    color: ${props => props.theme.mode === 'black'? 'black': 'white'};
 `

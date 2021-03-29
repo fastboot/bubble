@@ -8,7 +8,6 @@ import {
     PageHeading,
     WorkplaceLogo, 
     WorkplaceTime, 
-    GradientWrapper,
     StyledA,
     Device,
     GradientAnimated,
