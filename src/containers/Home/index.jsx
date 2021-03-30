@@ -14,13 +14,13 @@ import Typer from '../../components/Typer'
 import NowPlaying from '../../components/Spotify/NowPlaying'
 
 function HOME(props) {
-    const msgs = ["Bonjour", "Hola", "Olá", "Asalaam alaikum", "Namaste", "Hello"];
+    const msgs = ["Bonjour", "Hola", "Olá", "Namaste", "Hello"];
     return (
         <PageWrapper>
             <GradientAnimated> 
                 <PageHeading> <Typer heading={"Things I want to type:"} messages={msgs} /> </PageHeading>
             </GradientAnimated>
-            <StyledDiv> <h1>StyledDiv</h1> </StyledDiv>
+            <StyledDiv></StyledDiv>
             <Strip stripcolor = "#1DB954" > 
                 <CurrentStreamStripWrapper>
                     <CurrentStreamHeader>Now Playing</CurrentStreamHeader>
@@ -28,8 +28,8 @@ function HOME(props) {
                     <CurrentStreamButton />
                 </CurrentStreamStripWrapper>
             </Strip>
-            <StyledDiv2X> <h1> Liar </h1> </StyledDiv2X>
-            <Strip stripcolor = "#FF0000" > Another one! </Strip> 
+            <StyledDiv2X></StyledDiv2X>
+            <Strip stripcolor = "white" ></Strip> 
         </PageWrapper>
     )
 }

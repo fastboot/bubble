@@ -16,6 +16,7 @@ export const Card = styled.div`
 export const HomeWrapper = styled.div`
   height: 100%;
   width: 100%;
+  margin-bottom: 50px;
 `
 
 export const StyledA = styled.a`
@@ -52,6 +53,7 @@ export const GradientAnimated = styled.div`
         100% {
             background-position: 0% 50%;
         }
+    }
 `
 
 export const WorkplaceTime = styled.div`
