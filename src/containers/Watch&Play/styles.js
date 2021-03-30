@@ -18,8 +18,8 @@ export const FollowDiv = styled.div`
 export const PageHeading = styled.div`
     width: 100%;
     height: 400px;
+    line-height: 350px;
     text-align: center;
-    padding-top: 50px;
     position: block;
     font-size: 120px;
     font-weight: bold;

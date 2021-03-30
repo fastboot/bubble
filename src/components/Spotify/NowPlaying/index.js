@@ -12,7 +12,7 @@ function NowPlaying() {
         const url = 'https://api.spotify.com/v1/me/player?market=IN&additional_types=episode'
         const response = await axios.get(url, {
             headers: {
-                'Authorization': 'Bearer BQAAhb03Iagbz7J0612cR88-kfg5_bBVJWJIj0H2-WXwL3JS2_ce5xJR_UBaCAfrmpGWxBDnPXQ1-LVURgeUJFoz7J6vknD8h5V5rEDmlxNNwDUyTY0aMWmY56CyVr2g8MgKI3Hzjlr--xjJK3KcWmMuVNRpKSDuv3_XySaYQS6mzQlwH1BpTM8Ugw',
+                'Authorization': 'Bearer BQD54uqRDXtdZVlkxzTrvOz-DG8QtdvAn_wiZ2uWOhw8lG_2qZFTHTIG9LsS35qYn2KSmPDB5H6zkhZa3gU_teVc-NIIFXVFKXSNMdcDFuRsCGHPiM2rkyTbAwrexQIGIi1hx8dncoNe6fyaqBqoPPMq8arSXx3N3T2G57nV40Z5sG-tR1mwzPGcXw',
             }
         })
         

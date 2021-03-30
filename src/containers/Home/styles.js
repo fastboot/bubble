@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const GradientAnimated = styled.div`
-    background: linear-gradient(45deg, #e92efb, #ff2079, #440bd4, #04005e);
+    background: linear-gradient(45deg, #08f7fe, #09fbd3, #fe53bb, #f5d300);
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
     width: 100%;
@@ -26,4 +26,29 @@ export const PageHeading = styled.h1`
     font-weight: bold;
     margin-left: 35%;
     margin-top: 100px;
+`
+export const PageWrapper = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+`
+
+export const StyledDiv = styled.div`
+    width: 100%;
+    height: 400px;
+    background: ${props => props.theme.mode === 'dark'? 'black': 'white'};
+    color: ${props => props.theme.mode === 'dark'? 'white': 'black'};
+`
+
+export const StyledDiv2X = styled.div`
+    width: 100%;
+    height: 800px;
+    background: ${props => props.theme.mode === 'dark'? 'black': 'white'};
+    color: ${props => props.theme.mode === 'dark'? 'white': 'black'};
+`
+export const Strip = styled.div`
+    width: 100%;
+    height: 70px;
+    background: ${props => props.stripcolor};
+    color: white;
 `

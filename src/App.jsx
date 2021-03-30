@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Route, Switch } from 'react-router-dom'
+import useSound from 'use-sound'
 import storage from 'local-storage-fallback'
 import  Whoami from './containers/Whoami'
 import WatchPlay from './containers/Watch&Play'
@@ -9,7 +10,8 @@ import Geeky from './containers/Geeky'
 import Notfound from './containers/NotFound'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import { ThemeProvider, createGlobalStyle } from 'styled-components';
+import { ThemeProvider, createGlobalStyle } from 'styled-components'
+import Intro from './assets/sounds/Intro.mp3'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -32,6 +34,8 @@ function App(props) {
   },[theme]
   )
 
+  const [play] = useSound(Intro);
+
   return (
     <ThemeProvider theme = {theme}>
       <React.Fragment>
@@ -39,7 +43,7 @@ function App(props) {
         <Navbar updateTheme = {setTheme} currTheme = {theme} />
         <Switch>
           <Route exact path = '/' component={() => (<Home currTheme = {theme} />)} />
-          <Route exact path = '/whoami' component={() => (<Whoami currTheme = {theme} />)} />
+          <Route exact path = '/whoami' component={() => (<Whoami currTheme = {theme} onClick = {play} />)} />
           <Route exact path = '/posts' component={() => (<Post currTheme = {theme} />)} />
           <Route exact path = '/geeky' component={() => (<Geeky currTheme = {theme} />)} />
           <Route exact path = '/watch&play' component={() => (<WatchPlay currTheme = {theme} />)} />
