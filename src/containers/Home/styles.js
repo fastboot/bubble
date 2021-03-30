@@ -19,6 +19,31 @@ export const GradientAnimated = styled.div`
         }
     }
 `
+
+export const CurrentStreamStripWrapper = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 12px;
+    padding-left: 12px;
+`
+
+export const CurrentStreamHeader = styled.h1`
+    color: white;
+    font-size: 20px;
+    display: flex;
+    width: 170px;
+    flex-direction: row;
+    line-height: 15px;
+`
+export const CurrentStreamButton = styled.button`
+    display: flex;
+    width: 100px;
+    background: transparent;
+    radius: 30%;
+    margin-left: -100px;
+`
+
 export const PageHeading = styled.h1`
     color: white;
     position: absolute;

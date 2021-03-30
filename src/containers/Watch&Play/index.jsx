@@ -18,7 +18,7 @@ function WatchPlay(props) {
                 Watch & Play
             </PageHeading>
             <BlockCard color = 'white' >
-                <NowPlaying />
+                <NowPlaying strip = 'noshow' />
                 <FollowDiv>
                     <Follow src = { srcUrl } width = '300px' height = '200px' />
                 </FollowDiv>
