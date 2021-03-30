@@ -49,7 +49,6 @@ export const PageHeading = styled.h1`
     position: absolute;
     font-size: 150px;
     font-weight: bold;
-    margin-left: 35%;
     margin-top: 100px;
 `
 export const PageWrapper = styled.div`
