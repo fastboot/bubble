@@ -37,6 +37,7 @@ function App(props) {
   const [play] = useSound(Intro);
 
   return (
+    
     <ThemeProvider theme = {theme}>
       <React.Fragment>
         <GlobalStyle />
@@ -46,7 +47,7 @@ function App(props) {
           <Route exact path = '/whoami' component={() => (<Whoami currTheme = {theme} onClick = {play} />)} />
           <Route exact path = '/posts' component={() => (<Post currTheme = {theme} />)} />
           <Route exact path = '/geeky' component={() => (<Geeky currTheme = {theme} />)} />
-          <Route exact path = '/watch&play' component={() => (<WatchPlay currTheme = {theme} />)} />
+          <Route exact path = '/watchplay' component={() => (<WatchPlay currTheme = {theme} />)} />
           <Route component = {Notfound} />
         </Switch>
         <Footer />

@@ -14,11 +14,12 @@ function WatchPlay(props) {
     return (
         <React.Fragment>
             <GradientAnimated />
+            <NowPlaying />
             <PageHeading> 
                 Watch & Play
             </PageHeading>
             <BlockCard color = 'white' >
-                <NowPlaying strip = 'noshow' />
+   
                 <FollowDiv>
                     <Follow src = { srcUrl } width = '300px' height = '200px' />
                 </FollowDiv>

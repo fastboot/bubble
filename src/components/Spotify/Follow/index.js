@@ -9,7 +9,7 @@ function Follow(props) {
             width={props.width} 
             height={props.height} 
             scrolling="no" 
-            frameborder="0"
+            frameBorder="0"
             allowtransparency="false"
         >
         </iframe>
