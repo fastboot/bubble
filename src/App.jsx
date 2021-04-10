@@ -11,7 +11,6 @@ import Notfound from './containers/NotFound'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
-import Intro from './assets/sounds/Intro.mp3'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -34,17 +33,14 @@ function App(props) {
   },[theme]
   )
 
-  const [play] = useSound(Intro);
-
   return (
-    
     <ThemeProvider theme = {theme}>
       <React.Fragment>
         <GlobalStyle />
-        <Navbar updateTheme = {setTheme} currTheme = {theme} />
+        <Navbar />
         <Switch>
           <Route exact path = '/' component={() => (<Home currTheme = {theme} />)} />
-          <Route exact path = '/whoami' component={() => (<Whoami currTheme = {theme} onClick = {play} />)} />
+          <Route exact path = '/whoami' component={() => (<Whoami currTheme = {theme} />)} />
           <Route exact path = '/posts' component={() => (<Post currTheme = {theme} />)} />
           <Route exact path = '/geeky' component={() => (<Geeky currTheme = {theme} />)} />
           <Route exact path = '/watchplay' component={() => (<WatchPlay currTheme = {theme} />)} />

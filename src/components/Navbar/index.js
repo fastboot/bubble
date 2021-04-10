@@ -5,9 +5,9 @@ import Sun from '../../assets/icons/moon.png'
 
 function Navbar(props) {
     console.log(props)
-    // const changeTheme = () => {
-    //     props.updateTheme((props.currTheme.mode === 'dark' ? { mode: 'light' }: { mode: 'dark' }))
-    // }
+    const changeTheme = () => {
+        props.updateTheme((props.currTheme.mode === 'dark' ? { mode: 'light' }: { mode: 'dark' }))
+    }
 
     return (
         <React.Fragment>
@@ -30,7 +30,7 @@ function Navbar(props) {
                     </StyledLink> 
                 </NavMenu>
                 <NavButtons>
-                    {/* <Button type="image" src = { props.currTheme.mode === 'dark' ? Moon: Sun } onClick = { changeTheme } /> */}
+                    <Button type="image" src = { Sun }  />
                 </NavButtons>
             </Nav>
         </React.Fragment>

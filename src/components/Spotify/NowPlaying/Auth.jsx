@@ -1,26 +1,27 @@
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect } from "react"
 import axios from "axios"
+import storage from 'local-storage-fallback'
 
 export default function Auth(code) {
-  const [accessToken, setAccessToken] = useState()
-  const [refreshToken, setRefreshToken] = useState()
-  const [expiresIn, setExpiresIn] = useState()
+
+  const accessToken = storage.getItem('accessToken')
+  const refreshToken = storage.getItem('refreshToken')
+  const expiresIn = storage.getItem('expiresIn')
 
   useEffect(() => {
-
     axios
       .post("http://localhost:8000/callback", { 
           code,
     })
       .then(res => {
-        setAccessToken(res.data.accessToken)
-        setRefreshToken(res.data.refreshToken)
-        setExpiresIn(res.data.expiresIn)
-        window.history.pushState({}, null, "/")
+        storage.setItem('accessToken', res.data.accessToken)
+        storage.setItem('refreshToken', res.data.refreshToken)
+        storage.setItem('expiresIn', res.data.expiresIn)
+        window.history.pushState({}, null, '/watchplay')
       })
       .catch((err) => {
-        // window.location = "/"
-      },[])
+        console.log(err)
+      },[code])
   })
 
   useEffect(() => {
@@ -31,11 +32,12 @@ export default function Auth(code) {
           refreshToken,
         })
         .then(res => {
-          setAccessToken(res.data.accessToken)
-          setExpiresIn(res.data.expiresIn)
+          storage.setItem('accessToken', res.data.accessToken)
+          storage.setItem('refreshToken', res.data.refreshToken)
+          storage.setItem('expiresIn', res.data.expiresIn)
         })
-        .catch(() => {
-          window.location = "/"
+        .catch((err) => {
+          console.log(err)
         })
     }, (expiresIn - 60) * 1000)
 
