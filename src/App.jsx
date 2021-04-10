@@ -37,7 +37,7 @@ function App(props) {
     <ThemeProvider theme = {theme}>
       <React.Fragment>
         <GlobalStyle />
-        <Navbar />
+        <Navbar updateTheme = {setTheme} currTheme = {theme} />
         <Switch>
           <Route exact path = '/' component={() => (<Home currTheme = {theme} />)} />
           <Route exact path = '/whoami' component={() => (<Whoami currTheme = {theme} />)} />

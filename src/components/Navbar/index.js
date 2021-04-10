@@ -30,7 +30,7 @@ function Navbar(props) {
                     </StyledLink> 
                 </NavMenu>
                 <NavButtons>
-                    <Button type="image" src = { Sun }  />
+                    <Button type="image" src = { props.currTheme.mode === 'dark' ? Moon: Sun } onClick = { changeTheme } />
                 </NavButtons>
             </Nav>
         </React.Fragment>
