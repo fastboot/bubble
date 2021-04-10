@@ -18,7 +18,7 @@ function WatchPlay(props) {
                 Watch & Play
             </PageHeading>
             <BlockCard color = 'white' >
-                 <NowPlaying />
+                 <NowPlaying strip = "noshow"/>
             </BlockCard>
             <BlockCard color = '#fc274f' style = {{ marginTop: '-25px'}}>
     

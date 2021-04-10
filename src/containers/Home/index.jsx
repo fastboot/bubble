@@ -11,6 +11,7 @@ import {
     CurrentStreamButton
 } from './styles'
 import Typer from '../../components/Typer'
+import NowPlaying from '../../components/Spotify/NowPlaying';
 
 function HOME(props) {
     const msgs = ["Bonjour", "Hola", "Olá", "Namaste", "Hello"];
@@ -23,6 +24,7 @@ function HOME(props) {
             <Strip stripcolor = "#1DB954" > 
                 <CurrentStreamStripWrapper>
                     <CurrentStreamHeader>Now Playing</CurrentStreamHeader>
+                    <NowPlaying />
                     <CurrentStreamButton />
                 </CurrentStreamStripWrapper>
             </Strip>

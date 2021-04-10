@@ -5,10 +5,11 @@ import storage from 'local-storage-fallback'
 
 const code = new URLSearchParams(window.location.search).get("code")
 
-function NowPlaying() {
+function NowPlaying(props) {
     const accessToken = storage.getItem('accessToken')
+    const strip = props.strip
     return (
-       code || accessToken ? <Dashboard code={code} /> : <Login />
+       code || accessToken ? <Dashboard code={code} strip = {strip} /> : <Login />
     )
   }
 
