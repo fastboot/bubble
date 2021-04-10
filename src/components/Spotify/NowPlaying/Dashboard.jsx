@@ -21,7 +21,6 @@ function Dashboard({code}) {
     const [device, setDevice] = useState('')
 
     useEffect(() => {
-        
         axios.get('https://api.spotify.com/v1/me/player', {
             headers: {
                 'Authorization': `Bearer ` + accessToken
