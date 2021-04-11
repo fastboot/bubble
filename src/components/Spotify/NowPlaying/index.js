@@ -9,7 +9,7 @@ function NowPlaying(props) {
     const accessToken = storage.getItem('accessToken')
     const strip = props.strip
     return (
-       code || accessToken ? <Dashboard code={code} strip = {strip} /> : <Login />
+       code? <Dashboard code={code} strip = {strip} /> : <Login />
     )
   }
 

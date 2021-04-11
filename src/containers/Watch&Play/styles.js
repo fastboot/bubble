@@ -3,8 +3,9 @@ import styled from 'styled-components'
 export const BlockCard = styled.div`
     background-color: ${props => props.color};
     height: 500px;
+    overflow: hidden;
     width: 100%;
-    margin-top: 0px;
+    margin-bottom: 25px;
     display: block;
     color: black;
     position: relative;

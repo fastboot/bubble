@@ -1,24 +1,28 @@
 import React, {useState, useEffect, useRef} from 'react'
 import Auth from './Auth'
 import axios from 'axios'
-import SpotifyWebApi from 'spotify-web-api-node'
 import {
     NowPlayingWrapper,
     AlbumArt,
+    Device,
     DetailsWrapper,
     StripDetailsWrapper,
     StripAlbumArt,
     StripTrack,
     StripArtist,
     StripTypography,
-    StripDeviceIcon 
+    StripDeviceIcon,
+    ArrowDiv,
+    ArrowSpan,
+    StyledLink,
+    NowPlayingArtist,
+    NowPlayingDevice,
+    NowPlayingTrack,
+    StripLogo
 } from './styles.js'
 import computer from '../../../assets/icons/computer.png'
 import smartphone from '../../../assets/icons/smartphone.png'
-
-const spotifyApi = new SpotifyWebApi({
-    clientId: "a387b036bc294f72ae868b39e38a2ad0",
-})
+import spotifyoriginal from '../../../assets/icons/spotifyoriginal.png'
 
 function Dashboard({code, strip}) {
     const accessToken = Auth(code)
@@ -55,12 +59,16 @@ function Dashboard({code, strip}) {
     return (
         <React.Fragment>
             { showStrip === 'noshow' ? ( 
-                    <NowPlayingWrapper>
+                    <NowPlayingWrapper albumart = {albumart}>
+                        <StripLogo src = { spotifyoriginal } alt = 'spotify' />
                         <AlbumArt src = { albumart } alt = 'albumart' />
                         <DetailsWrapper>
-                            <p> { track } </p>
-                            <p> { artist } </p>
-                            <p> { device } </p>
+                            <NowPlayingTrack> { track } </NowPlayingTrack>
+                            <NowPlayingArtist> { artist } </NowPlayingArtist>
+                            <Device>
+                                <StripDeviceIcon src = { deviceType === 'Computer'? computer: smartphone } alt = 'computer' />
+                                <NowPlayingDevice> { device } </NowPlayingDevice>
+                            </Device>
                         </DetailsWrapper>
                     </NowPlayingWrapper>
                 ) :
@@ -72,6 +80,13 @@ function Dashboard({code, strip}) {
                                     <StripArtist> { artist } </StripArtist>
                                 </StripTypography>
                             <StripDeviceIcon src = { deviceType === 'Computer'? computer: smartphone } alt = 'computer' />
+                            <StyledLink to = '/watchplay' >
+                                <ArrowDiv>
+                                    <ArrowSpan />
+                                    <ArrowSpan />
+                                    <ArrowSpan />
+                                </ArrowDiv>
+                            </StyledLink>
                     </StripDetailsWrapper>
                 )
             }

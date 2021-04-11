@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { NavLink as Link } from 'react-router-dom'
 
 export const GradientAnimated = styled.div`
     background: linear-gradient(45deg, #08f7fe, #09fbd3, #fe53bb, #f5d300);
@@ -75,4 +76,13 @@ export const Strip = styled.div`
     height: 70px;
     background: ${props => props.stripcolor};
     color: white;
+`
+export const StyledLink = styled(Link)`
+    text-decoration: none;
+`
+export const StripLogo = styled.img`
+    padding-right: 10px;
+    padding-left: 20px;
+    width: 45px;
+    height: 45px;
 `

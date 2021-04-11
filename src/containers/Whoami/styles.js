@@ -24,7 +24,6 @@ export const StyledA = styled.a`
   color: black;
 `
 
-
 export const Workplace = styled.div`
   width: 640px;
   height: 100px;
