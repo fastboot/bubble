@@ -79,7 +79,6 @@ export const DetailsWrapper = styled.div`
 export const ArrowDiv = styled.div`
     position: relative;
     display: flex;
-    padding-left: 500px;
     transform: translate(50%,50%);
 `
 export const ArrowSpan = styled.span`

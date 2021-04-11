@@ -8,7 +8,8 @@ import {
     PageWrapper, 
     CurrentStreamHeader,
     CurrentStreamStripWrapper,
-    StripLogo
+    StripLogo,
+    Triangle
 } from './styles'
 import Typer from '../../components/Typer'
 import NowPlaying from '../../components/Spotify/NowPlaying';
@@ -27,6 +28,7 @@ function HOME(props) {
                         <StripLogo src = { spotify } alt = 'Logo' />
                         <CurrentStreamHeader>Now Playing</CurrentStreamHeader>
                         <NowPlaying />
+                        <Triangle />
                     </CurrentStreamStripWrapper>
                 </Strip>
             <StyledDiv2X></StyledDiv2X>

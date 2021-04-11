@@ -72,10 +72,19 @@ export const StyledDiv2X = styled.div`
     color: ${props => props.theme.mode === 'dark'? 'white': 'black'};
 `
 export const Strip = styled.div`
-    width: 100%;
+    width: 60%;
     height: 70px;
     background: ${props => props.stripcolor};
     color: white;
+`
+export const Triangle = styled.div`
+    width: 0; 
+    height: 0; 
+    margin-top: -12px;
+    margin-right: -23px;
+    border-top: 35px solid transparent;
+    border-bottom: 35px solid transparent;
+    border-left: 35px solid #1DB954;
 `
 export const StyledLink = styled(Link)`
     text-decoration: none;
