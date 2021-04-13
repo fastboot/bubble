@@ -1,6 +1,6 @@
 import React from 'react'
 import { GradientAnimated, PageHeading } from './styles'
-import Block from '../../components/Blocks'
+import HeatmapComponent from './components/github/Heatmap'
 
 function Geeky(props) {
     return (
@@ -9,9 +9,8 @@ function Geeky(props) {
             <PageHeading>
                 Geeky
             </PageHeading>
-            <Block variant = 'standard' color = 'white'>
-                <h1> Hello </h1>
-            </Block>
+                <HeatmapComponent />
+
         </React.Fragment>
     )
 }

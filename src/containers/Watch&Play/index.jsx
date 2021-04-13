@@ -2,15 +2,12 @@ import React from 'react'
 
 import { 
     BlockCard, 
-    FollowDiv,
     GradientAnimated,
     PageHeading,
 } from './styles'
-import { CONSTANTS } from './links'
 import NowPlaying from '../../components/Spotify/NowPlaying';
 
-function WatchPlay(props) {
-    const srcUrl = props.currTheme.mode === 'light' ? CONSTANTS.dark: CONSTANTS.light;
+function WatchPlay() {
     return (
         <React.Fragment>
             <GradientAnimated />

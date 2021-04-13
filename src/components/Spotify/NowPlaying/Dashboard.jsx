@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react'
+import React, {useState, useEffect} from 'react'
 import Auth from './Auth'
 import axios from 'axios'
 import {
@@ -28,7 +28,6 @@ function Dashboard({code, strip}) {
     const accessToken = Auth(code)
     const [track, setTrack] = useState('')
     const [artist, setArtist] = useState('')
-    const [album, setAlbum] = useState('')
     const [albumart, setAlbumart] = useState('')
     const [device, setDevice] = useState('')
     const [deviceType, setDeviceType] = useState('')
@@ -44,7 +43,6 @@ function Dashboard({code, strip}) {
             setArtist(res.data.item.artists[0].name)
             setDevice(res.data.device.name)
             setTrack(res.data.item.name)
-            setAlbum(res.data.item.album.name)
             setAlbumart(res.data.item.album.images[0].url)
             setDeviceType(res.data.device.type)
 
@@ -52,7 +50,7 @@ function Dashboard({code, strip}) {
          .catch((error) => {
             console.error(error)
           })
-    },[])
+    })
 
     const showStrip = strip
     

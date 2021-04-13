@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { Route, Switch } from 'react-router-dom'
-import useSound from 'use-sound'
 import storage from 'local-storage-fallback'
 import  Whoami from './containers/Whoami'
 import WatchPlay from './containers/Watch&Play'
