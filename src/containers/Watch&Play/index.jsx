@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { 
-    BlockCard, 
+    GradientBlockCard,
     GradientAnimated,
     PageHeading,
 } from './styles'
@@ -14,12 +14,8 @@ function WatchPlay() {
             <PageHeading> 
                 Watch & Play
             </PageHeading>
-            <BlockCard color = 'white' >
-                 <NowPlaying strip = "noshow"/>
-            </BlockCard>
-            <BlockCard color = '#fc274f' style = {{ marginTop: '-25px'}}>
-    
-            </BlockCard>
+            <NowPlaying strip = "noshow"/>
+            <GradientBlockCard />
         </React.Fragment>
     )
 } 

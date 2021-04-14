@@ -10,6 +10,17 @@ export const BlockCard = styled.div`
     color: black;
     position: relative;
 `
+export const GradientBlockCard = styled.div`
+    // background-color: ${props => props.color};
+    background: radial-gradient(ellipse at center, #36383f 0%, #1a1d22 60%, #000 90%);
+    height: 500px;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 25px;
+    display: block;
+    color: black;
+    position: relative;
+`
 
 export const FollowDiv = styled.div`
     margin-top: -300px;
