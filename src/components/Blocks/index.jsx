@@ -1,13 +1,22 @@
-import React from 'react'
-import { BlockDiv } from './styles'
+import { Fragment } from 'react'
+import { BlockDiv, CardDiv } from './styles'
 
 function Block(props) {
     return (
-        <BlockDiv 
-            variant = {props.variant} 
-            color = {props.color} 
-            icon = {props.icon}
-        />
+        <Fragment>
+        { props.isCard &&
+            <CardDiv 
+
+            />
+        }
+        { !props.isCard &&   
+            <BlockDiv 
+                variant = {props.variant} 
+                color = {props.color} 
+                icon = {props.icon}
+            />
+        }
+        </Fragment>
     )
 }
 
