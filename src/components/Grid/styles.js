@@ -7,6 +7,8 @@ export const StyledUl = styled.ul`
     overflow: scroll;
     margin-left: -40px;
     height: 750px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 
     @media (max-aspect-ratio: 1/1) and (max-width: 480px) {
         flex-direction: row;

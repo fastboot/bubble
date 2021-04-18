@@ -1,5 +1,5 @@
 import React from 'react'
-import { GradientAnimated, PageHeading } from './styles'
+import { GradientAnimated, PageHeading, StyledDiv } from './styles'
 import HeatmapComponent from './components/github/Heatmap'
 import Block from '../../components/Blocks'
 import facebookhackercup from '../../assets/logos/facebookhackercup.png'
@@ -37,8 +37,7 @@ function Geeky(props) {
                                 <Block 
                                     isCard 
                                     variant = 'nonstandard'
-                                    CardTitle = 'Google code jam'
-                                    CardSection = 'Ranked 1931 globally in Round 1'
+                                    CardTitle = 'Over 1000 problems solved'
                                     fromcolor = 'black'
                                     tocolor = 'black'
                                     width = '100%'
@@ -46,7 +45,7 @@ function Geeky(props) {
                                 />
                             </Block>
                         </Block> 
-                        <Block color = 'black' width = '40%' height = '100%'>
+                        <Block color = 'black' width = '60%' height = '100%'>
                             <Block 
                                 isCard 
                                 variant = 'nonstandard'
@@ -121,8 +120,7 @@ function Geeky(props) {
                     <Block 
                         isCard 
                         variant = 'nonstandard'
-                        CardTitle = '#3 Address Code'
-                        CardSection = 'Ranked 74 on onsite finals'
+                        CardTitle = 'Follow me @fastboot'
                         fromcolor = 'black'
                         tocolor = 'black'
                         width = '100%'
@@ -141,6 +139,13 @@ function Geeky(props) {
                         flexDirection = 'column'
                     />
                 </Block>
+
+            </Block>
+            <Block
+                width = '100%'
+                height = '700px'
+                color = 'black'
+            >
 
             </Block>
         </React.Fragment>

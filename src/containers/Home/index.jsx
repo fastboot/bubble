@@ -9,18 +9,20 @@ import {
     CurrentStreamHeader,
     CurrentStreamStripWrapper,
     StripLogo,
-    Triangle
+    Triangle,
+    Heading
 } from './styles'
 import Typer from '../../components/Typer'
 import NowPlaying from '../../components/Spotify/NowPlaying';
 import spotify from '../../assets/icons/spotify.png'
 import Grid from '../../components/Grid'
+import camera from '../../assets/icons/camera.png'
 
 function HOME(props) {
     const msgs = ["Bonjour", "Hola", "Olá", "Namaste", "Hello"];
     return (
         <PageWrapper>
-            <GradientAnimated> 
+            <GradientAnimated>
                 <PageHeading> <Typer heading={"Things I want to type:"} messages={msgs} /> </PageHeading>
             </GradientAnimated>
             <StyledDiv></StyledDiv>
@@ -32,7 +34,12 @@ function HOME(props) {
                         <Triangle />
                     </CurrentStreamStripWrapper>
                 </Strip>
+                <Heading> 
+                    <h1> My Clicks </h1>
+                    <StripLogo src = { camera } alt = 'camera' />
+                </Heading>
             <StyledDiv2X>
+                
                 <Grid />
             </StyledDiv2X>
         </PageWrapper>

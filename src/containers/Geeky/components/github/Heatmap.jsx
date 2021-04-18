@@ -4,7 +4,6 @@ import ReactTooltip from 'react-tooltip'
 import axios from 'axios'
 
 function HeatmapComponent(props) {
-    console.log('ye batao', props);
     const [data, setData] = useState()
     const [isLoading, setIsLoading] = useState(false)
 

@@ -29,3 +29,9 @@ export const PageHeading = styled.div`
     background: ${props => props.theme.mode === 'black'? 'white': 'black'}
     color: ${props => props.theme.mode === 'black'? 'black': 'white'};
 `
+export const StyledDiv = styled.div`
+    width: 100%;
+    height: 400px;
+    background: ${props => props.theme.mode === 'dark'? 'black': 'white'};
+    color: ${props => props.theme.mode === 'dark'? 'white': 'black'};
+`
