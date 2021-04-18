@@ -4,7 +4,8 @@ import {
     CardButton, 
     CardDiv,
     CardDivHeading,
-    CardDivSection
+    CardDivSection,
+    StyledHyperlink
 } from './styles'
 
 function Block(props) {
@@ -19,7 +20,7 @@ function Block(props) {
                     { props.CardSection }
                 </CardDivSection>
                 <CardButton>
-                    Scoreacard
+                    <StyledHyperlink> Scorecard </StyledHyperlink>
                 </CardButton>
             </CardDiv>
         }

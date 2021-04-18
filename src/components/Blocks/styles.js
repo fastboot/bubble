@@ -13,13 +13,14 @@ export const IconDiv = styled.div`
     height: 20px;
 `
 export const CardDiv = styled.div`
-    width: ${ props => props.variant === 'standard'? '50%' : '30%' };
+    width: ${ props => props.variant === 'standard'? '50%' : '33%' };
     border-radius: 30px;
     min-height: ${ props => props.variant === 'standard'? '680px' : '600px' };
     margin: 30px;
+    margin-right: ${ props => props.marginR };
     display: flex;
     flex-direction: column;
-    background: linear-gradient(215deg, #43cea2 0%, #185a9d 100%);
+    background: linear-gradient(215deg, ${ props => props.fromcolor } 0%, ${ props => props.tocolor } 100%);
     align-items: center;
 `
 export const CardDivSection = styled.div`
@@ -35,20 +36,20 @@ export const CardDivHeading = styled.div`
     padding: 20px
 `
 export const CardButton = styled.div`
-    color: #202129;
-    background-color: #f2f2f2;
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: white;
+    border: solid 2px white;
+    border-radius: 3px;
+    transition: .4s;
     border-radius: 30px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    width: 120px;
-    height: 30px;
-
-    &:hover {
-        color: #202129;
-        background-color: #e1e2e2;
-        opacity: 1;
+  
+    &:hover{
+        background: black;
+        color: white;
     }
-    &:active {
-        background-color: #d5d6d6;
-        opacity: 1;
-    }
+`
+export const StyledHyperlink = styled.a`
+    text-decoration: none;
 `
