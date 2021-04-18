@@ -14,6 +14,7 @@ import {
 import Typer from '../../components/Typer'
 import NowPlaying from '../../components/Spotify/NowPlaying';
 import spotify from '../../assets/icons/spotify.png'
+import Grid from '../../components/Grid'
 
 function HOME(props) {
     const msgs = ["Bonjour", "Hola", "Olá", "Namaste", "Hello"];
@@ -31,8 +32,9 @@ function HOME(props) {
                         <Triangle />
                     </CurrentStreamStripWrapper>
                 </Strip>
-            <StyledDiv2X></StyledDiv2X>
-            <Strip stripcolor = "white" ></Strip> 
+            <StyledDiv2X>
+                <Grid />
+            </StyledDiv2X>
         </PageWrapper>
     )
 }

@@ -66,8 +66,10 @@ export const StyledDiv = styled.div`
 `
 
 export const StyledDiv2X = styled.div`
-    width: 100%;
-    height: 800px;
+
+    width: 80vw;
+    margin: 30px;
+    margin-left: 150px;
     background: ${props => props.theme.mode === 'dark'? 'black': 'white'};
     color: ${props => props.theme.mode === 'dark'? 'white': 'black'};
 `
