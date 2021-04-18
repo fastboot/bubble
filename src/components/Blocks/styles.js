@@ -1,25 +1,26 @@
 import styled from 'styled-components'
 
 export const BlockDiv = styled.div`
-    width: 100%;
+    width: ${ props => props.width };   
     display: flex;
     background: cyan;
     position: relative;
-    height: ${props => props.variant === 'standard'? '680px': '1000px'};
+    height: ${ props => props.height };
     background-color: ${props => props.color};
+    flex-direction: ${ props => props.flexDirection };
 `
 export const IconDiv = styled.div`
     width: 100px;
     height: 20px;
 `
 export const CardDiv = styled.div`
-    width: ${ props => props.variant === 'standard'? '50%' : '33%' };
+    width: ${ props => props.width };
     border-radius: 30px;
-    min-height: ${ props => props.variant === 'standard'? '680px' : '600px' };
-    margin: 30px;
-    margin-right: ${ props => props.marginR };
+    height: ${ props => props.height };
+    margin: 7px;
+    padding: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: ${ props => props.flexDirection };
     background: linear-gradient(215deg, ${ props => props.fromcolor } 0%, ${ props => props.tocolor } 100%);
     align-items: center;
 `
