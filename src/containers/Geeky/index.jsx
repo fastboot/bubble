@@ -39,8 +39,8 @@ function Geeky(props) {
                                     variant = 'nonstandard'
                                     CardTitle = 'Google code jam'
                                     CardSection = 'Ranked 1931 globally in Round 1'
-                                    fromcolor = '#aa076b'
-                                    tocolor = '#61045f'
+                                    fromcolor = 'black'
+                                    tocolor = 'black'
                                     width = '100%'
                                     flexDirection = 'column'
                                 />
@@ -89,16 +89,59 @@ function Geeky(props) {
                         <Block 
                             isCard 
                             variant = 'nonstandard'
-                            CardTitle = '#3 Address Code'
-                            CardSection = 'Ranked 74 on onsite finals'
-                            fromcolor = '#ff512f'
-                            tocolor = '#dd2476'
+                            CardTitle = 'Read a post I made for my experiences here'
+                            fromcolor = 'black'
+                            tocolor = 'black'
                             width = '100%'
                             flexDirection = 'column'
                         />
                     </Block>
                 </Block>
                 
+            </Block>
+            <Block
+                color = 'black'
+                width = '100%'
+                height = '400px'
+                flexDirection = 'row'
+            > 
+                <Block color = 'black' width = '33%' height ='100%'> 
+                    <Block 
+                        isCard 
+                        variant = 'nonstandard'
+                        CardTitle = '#3 Address Code'
+                        CardSection = 'Ranked 74 on onsite finals'
+                        fromcolor = '#56ab2f'
+                        tocolor = '#a8e063'
+                        width = '100%'
+                        flexDirection = 'column'
+                    />
+                </Block>
+                <Block color = 'black' width = '33%' height ='100%'> 
+                    <Block 
+                        isCard 
+                        variant = 'nonstandard'
+                        CardTitle = '#3 Address Code'
+                        CardSection = 'Ranked 74 on onsite finals'
+                        fromcolor = 'black'
+                        tocolor = 'black'
+                        width = '100%'
+                        flexDirection = 'column'
+                    />
+                </Block>
+                <Block color = 'black' width = '33%' height ='100%'> 
+                    <Block 
+                        isCard 
+                        variant = 'nonstandard'
+                        CardTitle = '#3 Address Code'
+                        CardSection = 'Ranked 74 on onsite finals'
+                        fromcolor = '#56ab2f'
+                        tocolor = '#a8e063'
+                        width = '100%'
+                        flexDirection = 'column'
+                    />
+                </Block>
+
             </Block>
         </React.Fragment>
     )
