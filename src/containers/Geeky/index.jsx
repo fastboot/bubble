@@ -1,8 +1,26 @@
 import React from 'react'
-import { GradientAnimated, PageHeading, StyledDiv } from './styles'
+import { 
+    GradientAnimated, 
+    PageHeading, 
+    Wrapper, 
+    StripLogo, 
+    Heading,
+    GadgetDiv, 
+    GadgetIpod,
+    GadgetAir,
+    GadgetPro,
+    GadgetSam,
+    GadgetPixel,
+    Backpack,
+} from './styles'
 import HeatmapComponent from './components/github/Heatmap'
 import Block from '../../components/Blocks'
-import facebookhackercup from '../../assets/logos/facebookhackercup.png'
+import backpack from '../../assets/icons/backpack.png'
+import ipod from '../../assets/devices/ipodShuffle.png'
+import macAir from '../../assets/devices/macAir.png'
+import macPro from '../../assets/devices/macPro.png'
+import samPro from '../../assets/devices/samPro.png'
+import pixel from '../../assets/devices/pixel.png'
 
 function Geeky(props) {
     return (
@@ -38,8 +56,8 @@ function Geeky(props) {
                                     isCard 
                                     variant = 'nonstandard'
                                     CardTitle = 'Over 1000 problems solved'
-                                    fromcolor = 'black'
-                                    tocolor = 'black'
+                                    fromcolor = { props.currTheme.mode === 'light'? 'white': 'black' }
+                                    tocolor = { props.currTheme.mode === 'light'? 'white': 'black' }
                                     width = '100%'
                                     flexDirection = 'column'
                                 />
@@ -51,8 +69,8 @@ function Geeky(props) {
                                 variant = 'nonstandard'
                                 CardTitle = '#3 Address Code'
                                 CardSection = 'Ranked 74 on onsite finals'
-                                fromcolor = '#4568dc'
-                                tocolor = '#b06ab3'
+                                fromcolor = '#aa076b'
+                                tocolor = '#61045f'
                                 width = '100%'
                                 flexDirection = 'column'
                             />
@@ -78,8 +96,8 @@ function Geeky(props) {
                             variant = 'nonstandard'
                             CardTitle = '#3 Address Code'
                             CardSection = 'Ranked 74 on onsite finals'
-                            fromcolor = '#56ab2f'
-                            tocolor = '#a8e063'
+                            fromcolor = '#ffe259'
+                            tocolor = '#ffa751'
                             width = '100%'
                             flexDirection = 'column'
                         />
@@ -89,8 +107,8 @@ function Geeky(props) {
                             isCard 
                             variant = 'nonstandard'
                             CardTitle = 'Read a post I made for my experiences here'
-                            fromcolor = 'black'
-                            tocolor = 'black'
+                            fromcolor = { props.currTheme.mode === 'light'? 'white': 'black' }
+                            tocolor = { props.currTheme.mode === 'light'? 'white': 'black' }
                             width = '100%'
                             flexDirection = 'column'
                         />
@@ -121,8 +139,8 @@ function Geeky(props) {
                         isCard 
                         variant = 'nonstandard'
                         CardTitle = 'Follow me @fastboot'
-                        fromcolor = 'black'
-                        tocolor = 'black'
+                        fromcolor = { props.currTheme.mode === 'light'? 'white': 'black' }
+                        tocolor = { props.currTheme.mode === 'light'? 'white': 'black' }
                         width = '100%'
                         flexDirection = 'column'
                     />
@@ -133,8 +151,8 @@ function Geeky(props) {
                         variant = 'nonstandard'
                         CardTitle = '#3 Address Code'
                         CardSection = 'Ranked 74 on onsite finals'
-                        fromcolor = '#56ab2f'
-                        tocolor = '#a8e063'
+                        fromcolor = '#ff512f'
+                        tocolor = '#dd2476'
                         width = '100%'
                         flexDirection = 'column'
                     />
@@ -146,8 +164,31 @@ function Geeky(props) {
                 height = '700px'
                 color = 'black'
             >
-
+            <Backpack>
+            <Wrapper>
+                <Heading> 
+                    <h1> Tech I use </h1>
+                    <StripLogo src = { backpack } alt = 'backpack' />
+                </Heading>
+            </Wrapper>
+            <GadgetDiv>
+                <GadgetIpod src = { ipod } alt = 'ipod' />
+            </GadgetDiv>
+            <GadgetDiv>
+                <GadgetAir src = { macAir } alt = 'macAir' />
+            </GadgetDiv>
+            <GadgetDiv>
+                <GadgetPro src = { macPro } alt = 'macPro' />
+            </GadgetDiv>
+            <GadgetDiv>
+                <GadgetSam src = { samPro } alt = 'samPro' />
+            </GadgetDiv>
+            <GadgetDiv>
+                <GadgetPixel src = { pixel } alt = 'pixel' />
+            </GadgetDiv>
+            </Backpack>
             </Block>
+
         </React.Fragment>
     )
 }

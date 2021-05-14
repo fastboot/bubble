@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, Fragment} from 'react'
 import Auth from './Auth'
 import axios from 'axios'
 import {
@@ -71,21 +71,24 @@ function Dashboard({code, strip}) {
                     </NowPlayingWrapper>
                 ) :
                 (
-                    <StripDetailsWrapper>
-                            <StripAlbumArt src = { albumart } alt = 'albumart' />
-                                <StripTypography>
-                                    <StripTrack> { track } </StripTrack>
-                                    <StripArtist> { artist } </StripArtist>
-                                </StripTypography>
-                            <StripDeviceIcon src = { deviceType === 'Computer'? computer: smartphone } alt = 'computer' />
-                            <StyledLink to = '/watchplay' >
-                                <ArrowDiv>
-                                    <ArrowSpan />
-                                    <ArrowSpan />
-                                    <ArrowSpan />
-                                </ArrowDiv>
-                            </StyledLink>
-                    </StripDetailsWrapper>
+                    <Fragment>
+                        <StripDetailsWrapper>
+                                <StripAlbumArt src = { albumart } alt = 'albumart' />
+                                    <StripTypography>
+                                        <StripTrack> { track } </StripTrack>
+                                        <StripArtist> { artist } </StripArtist>
+                                    </StripTypography>
+                                <StripDeviceIcon src = { deviceType === 'Computer'? computer: smartphone } alt = 'computer' />
+                                <StyledLink to = '/watchplay' >
+                                    <ArrowDiv>
+                                        <ArrowSpan />
+                                        <ArrowSpan />
+                                        <ArrowSpan />
+                                    </ArrowDiv>
+                                </StyledLink>
+                            
+                        </StripDetailsWrapper>
+                    </Fragment>
                 )
             }
         </React.Fragment>

@@ -10,6 +10,9 @@ import {
     CurrentStreamStripWrapper,
     StripLogo,
     Triangle,
+    TriangleRev,
+    Wrapper,
+    WrapperRev,
     Heading
 } from './styles'
 import Typer from '../../components/Typer'
@@ -26,20 +29,22 @@ function HOME(props) {
                 <PageHeading> <Typer heading={"Things I want to type:"} messages={msgs} /> </PageHeading>
             </GradientAnimated>
             <StyledDiv></StyledDiv>
+            <Wrapper>
                 <Strip stripcolor = "#1DB954" > 
                     <CurrentStreamStripWrapper>
                         <StripLogo src = { spotify } alt = 'Logo' />
                         <CurrentStreamHeader>Now Playing</CurrentStreamHeader>
                         <NowPlaying />
-                        <Triangle />
                     </CurrentStreamStripWrapper>
-                </Strip>
+                </Strip><Triangle />
+            </Wrapper>
+            <Wrapper>
                 <Heading> 
                     <h1> My Clicks </h1>
                     <StripLogo src = { camera } alt = 'camera' />
                 </Heading>
+            </Wrapper>
             <StyledDiv2X>
-                
                 <Grid />
             </StyledDiv2X>
         </PageWrapper>

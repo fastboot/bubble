@@ -77,7 +77,7 @@ export const DetailsWrapper = styled.div`
     flex-direction: column;
 `
 export const ArrowDiv = styled.div`
-    position: relative;
+    position: absolute;
     display: flex;
     transform: translate(50%,50%);
 `

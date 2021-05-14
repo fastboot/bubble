@@ -58,6 +58,22 @@ export const PageWrapper = styled.div`
     flex-direction: column;
 `
 
+export const Wrapper = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+`
+
+export const WrapperRev = styled.div`
+    width: 100%;
+    position: relative;
+    right: 0px;
+    float: right;
+    display: flex;
+    margin-right: 0px;
+    flex-direction: row;
+`
+
 export const StyledDiv = styled.div`
     width: 100%;
     height: 400px;
@@ -67,7 +83,7 @@ export const StyledDiv = styled.div`
 
 export const StyledDiv2X = styled.div`
     align-items: center;
-    border: 10px solid white;
+    border: 10px solid ${props => props.theme.mode === 'dark'? 'white': 'black'};
     width: 80vw;
     margin: 30px;
     margin-left: 150px;
@@ -91,15 +107,22 @@ export const Strip = styled.div`
     background: ${props => props.stripcolor};
     color: white;
 `
+
 export const Triangle = styled.div`
     width: 0; 
     height: 0; 
-    margin-top: -12px;
-    margin-right: -23px;
     border-top: 35px solid transparent;
     border-bottom: 35px solid transparent;
     border-left: 35px solid #1DB954;
 `
+export const TriangleRev = styled.div`
+    width: 0; 
+    height: 0; 
+    border-top: 35px solid transparent;
+    border-bottom: 35px solid transparent;
+    border-right: 35px solid red;
+`
+
 export const StyledLink = styled(Link)`
     text-decoration: none;
 `

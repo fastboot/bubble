@@ -3,10 +3,9 @@ import styled from 'styled-components'
 export const BlockDiv = styled.div`
     width: ${ props => props.width };   
     display: flex;
-    background: cyan;
     position: relative;
     height: ${ props => props.height };
-    background-color: ${props => props.color};
+    background-color: ${props => props.theme.mode === 'light'? 'white': 'black'};
     flex-direction: ${ props => props.flexDirection };
 `
 export const IconDiv = styled.div`
@@ -24,6 +23,7 @@ export const CardDiv = styled.div`
     background: linear-gradient(215deg, ${ props => props.fromcolor } 0%, ${ props => props.tocolor } 100%);
     align-items: center;
 `
+
 export const CardDivSection = styled.div`
     display: flex;
     font-size: 20px; 
