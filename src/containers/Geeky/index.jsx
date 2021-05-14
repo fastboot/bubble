@@ -216,8 +216,8 @@ function Geeky(props) {
                         src = { ipod } 
                         width = '30%'
                         height = '300px'
-                        imageWidth = '150px'
-                        imageHeight = '150px'
+                        imageWidth = '140px'
+                        imageHeight = '120px'
                         CardTitle = 'Ipod Shuffle'
                         flexDirection = 'column'
                         noButton
