@@ -47,7 +47,7 @@ export const Heading = styled.div`
     height: 70px;
     width: 100%;
     line-height: 10px;
-    margin-left: 170px;
+    margin-left: 110px;
     margin-top: 100px;
     padding-left: 450px;
 `
@@ -65,28 +65,31 @@ export const GadgetIpod = styled.img`
     width: 100px;
     height: 120px;
 `
-
-export const GadgetAir = styled.img`
-    padding: 24px;
-    width: 220px;
-    height: 130px;
-`
-export const GadgetPro = styled.img`
-    padding: 24px;
-    width: 220px;
-    height: 130px;
-`
-export const GadgetSam = styled.img`
-    padding: 24px;
-    width: 180px;
-    height: 140px;
-`
 export const GadgetPixel = styled.img`
     padding: 24px;
     width: 100px;
     height: 120px;
 `
+export const GadgetPS4 = styled.img`
+    padding: 24px;
+    width: 230px;
+    height: 150px;
+`
+export const GadgetWrapper = styled.div`
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+`
 
+export const GadgetRow = styled.div`
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+`
 export const Backpack = styled.div`
     display: flex;
     flex-direction: column;

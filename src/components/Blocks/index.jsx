@@ -5,6 +5,7 @@ import {
     CardDiv,
     CardDivHeading,
     CardDivSection,
+    CardImage,
     StyledHyperlink
 } from './styles'
 
@@ -13,15 +14,25 @@ function Block(props) {
         <Fragment>
         { props.isCard &&
             <CardDiv {...props} >
+                { props.src && <img 
+                    src = { props.src }
+                    style = {{
+                        width: props.imageWidth,
+                        height: props.imageHeight,
+                        display: 'flex',
+                    }}
+                    />
+                }
                 <CardDivHeading>
                     { props.CardTitle }
                 </CardDivHeading>
                 <CardDivSection>
                     { props.CardSection }
                 </CardDivSection>
-                <CardButton>
-                    <StyledHyperlink> Scorecard </StyledHyperlink>
-                </CardButton>
+                { !props.noButton && <CardButton>
+                        <StyledHyperlink> Scorecard </StyledHyperlink>
+                    </CardButton>
+                }
             </CardDiv>
         }
         { !props.isCard &&   

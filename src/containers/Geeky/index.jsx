@@ -5,22 +5,19 @@ import {
     Wrapper, 
     StripLogo, 
     Heading,
-    GadgetDiv, 
-    GadgetIpod,
-    GadgetAir,
-    GadgetPro,
-    GadgetSam,
-    GadgetPixel,
+    GadgetWrapper,
+    GadgetRow,
     Backpack,
 } from './styles'
 import HeatmapComponent from './components/github/Heatmap'
 import Block from '../../components/Blocks'
-import backpack from '../../assets/icons/backpack.png'
+import gadgets from '../../assets/icons/gadget.png'
 import ipod from '../../assets/devices/ipodShuffle.png'
 import macAir from '../../assets/devices/macAir.png'
 import macPro from '../../assets/devices/macPro.png'
 import samPro from '../../assets/devices/samPro.png'
 import pixel from '../../assets/devices/pixel.png'
+import ps4 from '../../assets/devices/ps4.png'
 
 function Geeky(props) {
     return (
@@ -159,35 +156,87 @@ function Geeky(props) {
                 </Block>
 
             </Block>
-            <Block
-                width = '100%'
-                height = '700px'
-                color = 'black'
-            >
             <Backpack>
             <Wrapper>
                 <Heading> 
-                    <h1> Tech I use </h1>
-                    <StripLogo src = { backpack } alt = 'backpack' />
+                    <h1> Gadgets I Use</h1>
+                    <StripLogo src = { gadgets } alt = 'gadgets' />
                 </Heading>
             </Wrapper>
-            <GadgetDiv>
-                <GadgetIpod src = { ipod } alt = 'ipod' />
-            </GadgetDiv>
-            <GadgetDiv>
-                <GadgetAir src = { macAir } alt = 'macAir' />
-            </GadgetDiv>
-            <GadgetDiv>
-                <GadgetPro src = { macPro } alt = 'macPro' />
-            </GadgetDiv>
-            <GadgetDiv>
-                <GadgetSam src = { samPro } alt = 'samPro' />
-            </GadgetDiv>
-            <GadgetDiv>
-                <GadgetPixel src = { pixel } alt = 'pixel' />
-            </GadgetDiv>
+            <GadgetWrapper>
+                <GadgetRow>
+                    <Block 
+                        isCard
+                        src = { macPro } 
+                        width = '30%'
+                        height = '300px'
+                        imageWidth = '220px'
+                        imageHeight = '130px'
+                        CardTitle = 'MacBook Pro'
+                        flexDirection = 'column'
+                        noButton
+                    />
+                    <Block 
+                        isCard
+                        src = { macAir } 
+                        width = '30%'
+                        height = '300px'
+                        imageWidth = '240px'
+                        imageHeight = '130px'
+                        CardTitle = 'MacBook Air'
+                        flexDirection = 'column'
+                        noButton
+                    />
+                    <Block 
+                        isCard
+                        src = { samPro } 
+                        width = '30%'
+                        height = '300px'
+                        imageWidth = '150px'
+                        imageHeight = '120px'
+                        CardTitle = 'Samsung Chromebook Pro'
+                        flexDirection = 'column'
+                        noButton
+                    />
+                </GadgetRow>
+                <GadgetRow>
+                    <Block 
+                        isCard
+                        src = { pixel } 
+                        width = '30%'
+                        height = '300px'
+                        imageWidth = '90px'
+                        imageHeight = '130px'
+                        CardTitle = 'Google Pixel 4a'
+                        flexDirection = 'column'
+                        noButton
+                    />
+                    <Block 
+                        isCard
+                        src = { ipod } 
+                        width = '30%'
+                        height = '300px'
+                        imageWidth = '150px'
+                        imageHeight = '150px'
+                        CardTitle = 'Ipod Shuffle'
+                        flexDirection = 'column'
+                        noButton
+                    />
+                    <Block 
+                        isCard
+                        src = { ps4 } 
+                        width = '30%'
+                        height = '300px'
+                        imageWidth = '200px'
+                        imageHeight = '190px'
+                        CardTitle = 'Playstation 4'
+                        flexDirection = 'column'
+                        noButton
+                    />
+                </GadgetRow>
+            </GadgetWrapper>
             </Backpack>
-            </Block>
+            
 
         </React.Fragment>
     )

@@ -36,6 +36,7 @@ export const CardDivHeading = styled.div`
     font-weight: bold; 
     padding: 20px
 `
+
 export const CardButton = styled.div`
     display: inline-block;
     padding: 0.3em 1em;
