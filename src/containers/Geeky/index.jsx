@@ -5,9 +5,20 @@ import {
     Wrapper, 
     StripLogo, 
     Heading,
-    GadgetWrapper,
-    GadgetRow,
     Backpack,
+    EmptyBar,
+    FilledBar,
+    Card,
+    Gadget,
+    Title,
+    Bar,
+    Circle,
+    FilledBarMacPro,
+    FilledBarMacAir,
+    FilledBarSamPro,
+    FilledBarPixel,
+    FilledBarIpod,
+    FilledBarPS4
 } from './styles'
 import HeatmapComponent from './components/github/Heatmap'
 import Block from '../../components/Blocks'
@@ -156,86 +167,81 @@ function Geeky(props) {
                 </Block>
 
             </Block>
-            <Backpack>
             <Wrapper>
                 <Heading> 
                     <h1> Gadgets I Use</h1>
                     <StripLogo src = { gadgets } alt = 'gadgets' />
                 </Heading>
             </Wrapper>
-            <GadgetWrapper>
-                <GadgetRow>
-                    <Block 
-                        isCard
-                        src = { macPro } 
-                        width = '30%'
-                        height = '300px'
-                        imageWidth = '220px'
-                        imageHeight = '130px'
-                        CardTitle = 'MacBook Pro'
-                        flexDirection = 'column'
-                        noButton
-                    />
-                    <Block 
-                        isCard
-                        src = { macAir } 
-                        width = '30%'
-                        height = '300px'
-                        imageWidth = '240px'
-                        imageHeight = '130px'
-                        CardTitle = 'MacBook Air'
-                        flexDirection = 'column'
-                        noButton
-                    />
-                    <Block 
-                        isCard
-                        src = { samPro } 
-                        width = '30%'
-                        height = '300px'
-                        imageWidth = '150px'
-                        imageHeight = '120px'
-                        CardTitle = 'Samsung Chromebook Pro'
-                        flexDirection = 'column'
-                        noButton
-                    />
-                </GadgetRow>
-                <GadgetRow>
-                    <Block 
-                        isCard
-                        src = { pixel } 
-                        width = '30%'
-                        height = '300px'
-                        imageWidth = '90px'
-                        imageHeight = '130px'
-                        CardTitle = 'Google Pixel 4a'
-                        flexDirection = 'column'
-                        noButton
-                    />
-                    <Block 
-                        isCard
-                        src = { ipod } 
-                        width = '30%'
-                        height = '300px'
-                        imageWidth = '140px'
-                        imageHeight = '120px'
-                        CardTitle = 'Ipod Shuffle'
-                        flexDirection = 'column'
-                        noButton
-                    />
-                    <Block 
-                        isCard
-                        src = { ps4 } 
-                        width = '30%'
-                        height = '300px'
-                        imageWidth = '200px'
-                        imageHeight = '190px'
-                        CardTitle = 'Playstation 4'
-                        flexDirection = 'column'
-                        noButton
-                    />
-                </GadgetRow>
-            </GadgetWrapper>
+            <Block 
+                color = 'white'
+                width = '100%'
+                height = '700px'
+                flexDirection = 'row'
+            >
+            <Backpack>
+                <Card>
+                    <Title>MacBook Pro</Title>
+                    <Bar>
+                        <EmptyBar />
+                        <FilledBarMacPro />
+                    </Bar>
+                    <Gadget>
+                        <img src = { macPro } style ={{ width: '150px', height: '70px' }}/>
+                    </Gadget>
+                </Card>
+                <Card>
+                    <Title>MacBook Air</Title>
+                    <Bar>
+                        <EmptyBar />
+                        <FilledBarMacAir />
+                    </Bar>
+                    <Gadget>
+                        <img src = { macAir } style ={{ width: '150px', height: '70px' }}/>
+                    </Gadget>
+                </Card>
+                <Card>
+                    <Title>Chromebook Pro</Title>
+                    <Bar>
+                        <EmptyBar />
+                        <FilledBarSamPro />
+                    </Bar>
+                    <Gadget>
+                        <img src = { samPro } style ={{ width: '150px', height: '70px' }}/>
+                    </Gadget>
+                </Card>
+                <Card>
+                    <Title>Pixel 4a</Title>
+                    <Bar>
+                        <EmptyBar />
+                        <FilledBarPixel />
+                    </Bar>
+                    <Gadget>
+                        <img src = { pixel } style ={{ width: '40px', height: '70px' }}/>
+                    </Gadget>
+                </Card>
+                <Card>
+                    <Title>Ipod Shuffle</Title>
+                    <Bar>
+                        <EmptyBar />
+                        <FilledBarIpod />
+                    </Bar>
+                    <Gadget>
+                        <img src = { ipod } style ={{ width: '80px', height: '70px' }}/>
+                    </Gadget>
+                </Card>
+                <Card>
+                    <Title>Playstation 4</Title>
+                    <Bar>
+                        <EmptyBar />
+                        <FilledBarPS4 />
+                    </Bar>
+                    <Gadget>
+                        <img src = { ps4 } style ={{ width: '150px', height: '100px', marginTop: '-10px' }}/>
+                    </Gadget>
+                </Card>
             </Backpack>
+            </Block>
             
 
         </React.Fragment>
@@ -243,3 +249,58 @@ function Geeky(props) {
 }
 
 export default Geeky
+
+/*
+
+  <div class="card">
+    <h3 class="title">MacBook Air</h3>
+    <div class="bar">
+      <div class="emptybar"></div>
+      <div class="filledbar"></div>
+    </div>
+    <div class="circle">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <circle class="stroke" cx="60" cy="60" r="50"/>
+    </svg>
+    </div>
+  </div>
+  <div class="card">
+    <h3 class="title">Card 2</h3>
+    <div class="bar">
+      <div class="emptybar"></div>
+      <div class="filledbar"></div>
+    </div>
+    <div class="circle">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <circle class="stroke" cx="60" cy="60" r="50"/>
+    </svg>
+    </div>
+  </div>
+  <div class="card">
+    <h3 class="title">Card 3</h3>
+    <div class="bar">
+      <div class="emptybar"></div>
+      <div class="filledbar"></div>
+    </div>
+    <div class="circle">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <circle class="stroke" cx="60" cy="60" r="50"/>
+    </svg>
+    </div>
+  </div>
+  <div class="card">
+    <h3 class="title">Card 4</h3>
+    <div class="bar">
+      <div class="emptybar"></div>
+      <div class="filledbar"></div>
+    </div>
+    <div class="circle">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <circle class="stroke" cx="60" cy="60" r="50"/>
+    </svg>
+    </div>
+  </div>
+</div>
+</body>
+
+*/

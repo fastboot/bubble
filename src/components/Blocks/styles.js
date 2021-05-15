@@ -14,7 +14,7 @@ export const IconDiv = styled.div`
 `
 export const CardDiv = styled.div`
     width: ${ props => props.width };
-    border-radius: 30px;
+    border-radius: 10px;
     height: ${ props => props.height };
     margin: 7px;
     padding: 10px;
@@ -35,6 +35,10 @@ export const CardDivHeading = styled.div`
     font-size: 20px;
     font-weight: bold; 
     padding: 20px
+`
+
+export const CardImage = styled.div`
+    display: flex;
 `
 
 export const CardButton = styled.div`
