@@ -87,6 +87,7 @@ export const ProfilePicture = styled.div`
   height: 250px;
   width: 250px;
   border-radius: 50%;
+  border: 5px solid ${ props => props.theme.mode === 'dark' ? 'white' : 'black' };
   overflow: hidden;
   display:flex;
   flex-direction: row;

@@ -7,12 +7,10 @@ import {
     Heading,
     Backpack,
     EmptyBar,
-    FilledBar,
     Card,
     Gadget,
     Title,
     Bar,
-    Circle,
     FilledBarMacPro,
     FilledBarMacAir,
     FilledBarSamPro,
@@ -187,7 +185,7 @@ function Geeky(props) {
                         <FilledBarMacPro />
                     </Bar>
                     <Gadget>
-                        <img src = { macPro } style ={{ width: '150px', height: '70px' }}/>
+                        <img src = { macPro } alt = 'device' style ={{ width: '150px', height: '70px' }}/>
                     </Gadget>
                 </Card>
                 <Card>
@@ -197,7 +195,7 @@ function Geeky(props) {
                         <FilledBarMacAir />
                     </Bar>
                     <Gadget>
-                        <img src = { macAir } style ={{ width: '150px', height: '70px' }}/>
+                        <img src = { macAir } alt = 'device' style ={{ width: '150px', height: '70px' }}/>
                     </Gadget>
                 </Card>
                 <Card>
@@ -207,7 +205,7 @@ function Geeky(props) {
                         <FilledBarSamPro />
                     </Bar>
                     <Gadget>
-                        <img src = { samPro } style ={{ width: '150px', height: '70px' }}/>
+                        <img src = { samPro } alt = 'device' style ={{ width: '150px', height: '70px' }}/>
                     </Gadget>
                 </Card>
                 <Card>
@@ -217,7 +215,7 @@ function Geeky(props) {
                         <FilledBarPixel />
                     </Bar>
                     <Gadget>
-                        <img src = { pixel } style ={{ width: '40px', height: '70px' }}/>
+                        <img src = { pixel } alt = 'device' style ={{ width: '40px', height: '70px' }}/>
                     </Gadget>
                 </Card>
                 <Card>
@@ -227,7 +225,7 @@ function Geeky(props) {
                         <FilledBarIpod />
                     </Bar>
                     <Gadget>
-                        <img src = { ipod } style ={{ width: '80px', height: '70px' }}/>
+                        <img src = { ipod } alt = 'device' style ={{ width: '80px', height: '70px' }}/>
                     </Gadget>
                 </Card>
                 <Card>
@@ -237,7 +235,7 @@ function Geeky(props) {
                         <FilledBarPS4 />
                     </Bar>
                     <Gadget>
-                        <img src = { ps4 } style ={{ width: '150px', height: '100px', marginTop: '-10px' }}/>
+                        <img src = { ps4 } alt = 'device' style ={{ width: '150px', height: '100px', marginTop: '-10px' }}/>
                     </Gadget>
                 </Card>
             </Backpack>

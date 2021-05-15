@@ -5,7 +5,6 @@ import {
     CardDiv,
     CardDivHeading,
     CardDivSection,
-    CardImage,
     StyledHyperlink
 } from './styles'
 
@@ -16,6 +15,7 @@ function Block(props) {
             <CardDiv {...props} >
                 { props.src && <img 
                     src = { props.src }
+                    alt = 'default'
                     style = {{
                         width: props.imageWidth,
                         height: props.imageHeight,

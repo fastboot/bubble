@@ -56,3 +56,35 @@ export const GradientAnimated = styled.div`
             background-position: 0% 50%;
         }
 `
+export const StripLogo = styled.img`
+    padding-right: 10px;
+    padding-left: 20px;
+    width: 45px;
+    height: 45px;
+`
+export const Heading = styled.div`
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    width: 100%;
+    line-height: 10px;
+    margin-left: 170px;
+    margin-top: 100px;
+    padding-left: 450px;
+`
+export const StyledDiv2X = styled.div`
+    align-items: center;
+    border: 5px solid ${props => props.theme.mode === 'dark'? 'white': 'black'};
+    width: 80vw;
+    margin: 30px;
+    margin-left: 150px;
+    background: ${props => props.theme.mode === 'dark'? 'black': 'white'};
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem #000;
+    color: ${props => props.theme.mode === 'dark'? 'white': 'black'};
+`
+export const Wrapper = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+`
