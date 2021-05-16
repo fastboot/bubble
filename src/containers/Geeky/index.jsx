@@ -10,7 +10,8 @@ import {
     AchievementRow,
     AchievementCol
 } from './styles'
-import HeatmapComponent from './components/github/Heatmap'
+import HeatmapComponent from './components/heatmap/Heatmap'
+import Languages from './components/stats/Languages'
 import trophy from '../../assets/icons/trophy.png'
 
 
@@ -22,6 +23,7 @@ function Geeky(props) {
                 Geeky
             </PageHeading>
             <HeatmapComponent currTheme = {props.currTheme} />
+            <Languages />
             <Wrapper>
                 <Heading> 
                     <h1> I Love Competing! </h1>
