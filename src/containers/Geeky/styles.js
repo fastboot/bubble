@@ -225,6 +225,36 @@ export const Card = styled.div`
     }
 `
 
+export const PageRow = styled.div`
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 90px;
+    height: ${ props => props.height };
+    display: flex;
+    flex-direction: row;
+`
+
+export const AchieveCard = styled.div`
+    display: flex;
+    height: ${ props => props.height };
+    width: ${ props => props.width };
+    background: linear-gradient(215deg, ${ props => props.fromcolor } 0%, ${ props => props.tocolor } 100%);
+    border-radius: 10px;
+    box-shadow: ${props => props.noShadow === 'true' ? null : `-1rem 0 3rem ${ props.tocolor }` };
+    transition: 0.4s ease-out;
+    position: relative;
+    margin-left: ${props => props.marginLeft};
+    margin-right: ${props => props.marginRight};
+    margin-top: ${props => props.marginTop};
+    margin-bottom: ${props => props.marginBottom};
+
+    &:hover {
+        transition: 0.4s ease-out;
+        position: relative;
+        transition: 0.4s ease-out;
+    }
+`
+
 export const Title = styled.div`
     color: white;
     font-weight: 300;
@@ -254,4 +284,30 @@ export const Gadget = styled.div`
     justify-content: center;
     align-content: flex-start;
     align-items: center;
+`
+export const AchievementWrapper = styled.div`
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 100%;
+    width: 1115px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 100px;
+`
+
+export const AchievementRow = styled.div`
+    display: flex;
+    flex-direction: row;
+    height: ${ props => props.height};
+    max-width: 100%;
+    margin: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+`
+export const AchievementCol = styled.div`
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    width: ${ props => props.width }; 
 `

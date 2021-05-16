@@ -16,11 +16,17 @@ import {
     FilledBarSamPro,
     FilledBarPixel,
     FilledBarIpod,
-    FilledBarPS4
+    FilledBarPS4,
+    AchieveCard,
+    PageRow,
+    AchievementWrapper,
+    AchievementRow,
+    AchievementCol
 } from './styles'
 import HeatmapComponent from './components/github/Heatmap'
 import Block from '../../components/Blocks'
 import gadgets from '../../assets/icons/gadget.png'
+import trophy from '../../assets/icons/trophy.png'
 import ipod from '../../assets/devices/ipodShuffle.png'
 import macAir from '../../assets/devices/macAir.png'
 import macPro from '../../assets/devices/macPro.png'
@@ -35,136 +41,125 @@ function Geeky(props) {
             <PageHeading>
                 Geeky
             </PageHeading>
-                <HeatmapComponent currTheme = {props.currTheme} />
-            <Block 
-                color = 'white'
-                width = '100%'
-                height = '700px'
-                flexDirection = 'row'
-            >
-                <Block color = 'red' width = '75%' height = '100%' flexDirection = 'column'>
-                    <Block color = 'blue' width = '100%' height = '80%' flexDirection = 'row' >
-                        <Block color = 'red' width = '60%' height = '100%' flexDirection = 'column'>
-                            <Block color = 'black' width = '100%' height = '60%' >
-                                <Block 
-                                    isCard 
-                                    variant = 'nonstandard'
-                                    CardTitle = 'Facebook HackerCup'
-                                    CardSection = 'Ranked 934 globally in Round 2'
-                                    fromcolor = '#36d1dc'
-                                    tocolor = '#5b86e5'
-                                    width = '100%'
-                                    flexDirection = 'column'
-                                />
-                            </Block>
-                            <Block color = 'black' width = '100%' height = '40%'>
-                                <Block 
-                                    isCard 
-                                    variant = 'nonstandard'
-                                    CardTitle = 'Over 1000 problems solved'
-                                    fromcolor = { props.currTheme.mode === 'light'? 'white': 'black' }
-                                    tocolor = { props.currTheme.mode === 'light'? 'white': 'black' }
-                                    width = '100%'
-                                    flexDirection = 'column'
-                                />
-                            </Block>
-                        </Block> 
-                        <Block color = 'black' width = '60%' height = '100%'>
-                            <Block 
-                                isCard 
-                                variant = 'nonstandard'
-                                CardTitle = '#3 Address Code'
-                                CardSection = 'Ranked 74 on onsite finals'
-                                fromcolor = '#aa076b'
-                                tocolor = '#61045f'
-                                width = '100%'
-                                flexDirection = 'column'
-                            />
-                        </Block>
-                    </Block>
-                    <Block color = 'black' width = '100%' height = '20%'>
-                        <Block 
-                            isCard 
-                            variant = 'nonstandard'
-                            CardTitle = 'HackWithInfy'
-                            CardSection = 'Ranked amongst top 200'
-                            fromcolor = '#ff9966'
-                            tocolor = '#ff5e62'
-                            width = '100%'
-                            flexDirection = 'row'
-                        />
-                    </Block>
-                </Block>
-                <Block color = 'orange' width = '25%' height = '100%' flexDirection = 'column'>
-                    <Block color = 'black' width = '100%' height = '40%'>
-                        <Block 
-                            isCard 
-                            variant = 'nonstandard'
-                            CardTitle = '#3 Address Code'
-                            CardSection = 'Ranked 74 on onsite finals'
-                            fromcolor = '#ffe259'
-                            tocolor = '#ffa751'
-                            width = '100%'
-                            flexDirection = 'column'
-                        />
-                    </Block>
-                    <Block color = 'black' width = '100%' height ='60%'>
-                        <Block 
-                            isCard 
-                            variant = 'nonstandard'
-                            CardTitle = 'Read a post I made for my experiences here'
-                            fromcolor = { props.currTheme.mode === 'light'? 'white': 'black' }
-                            tocolor = { props.currTheme.mode === 'light'? 'white': 'black' }
-                            width = '100%'
-                            flexDirection = 'column'
-                        />
-                    </Block>
-                </Block>
-                
-            </Block>
-            <Block
-                color = 'black'
-                width = '100%'
-                height = '400px'
-                flexDirection = 'row'
-            > 
-                <Block color = 'black' width = '33%' height ='100%'> 
-                    <Block 
-                        isCard 
-                        variant = 'nonstandard'
-                        CardTitle = '#3 Address Code'
-                        CardSection = 'Ranked 74 on onsite finals'
-                        fromcolor = '#56ab2f'
-                        tocolor = '#a8e063'
+            <HeatmapComponent currTheme = {props.currTheme} />
+            <Wrapper>
+                <Heading> 
+                    <h1> I Love Competing! </h1>
+                    <StripLogo src = { trophy } alt = 'trophy' />
+                </Heading>
+            </Wrapper>
+            <AchievementWrapper>
+                <AchievementRow
+                    height = '648px'
+                >
+                    <AchieveCard
+                        height = '89%'
+                        width = '50%'
+                        fromcolor = '#11998e'
+                        tocolor = '#38ef7d'
+                        marginLeft = '24px'
+                        marginRight = '24px'
+                        marginTop = '24px'
+                        marginBottom = '24px'
+                    >
+                    </AchieveCard>
+                    <AchievementCol
+                        width = '50%'
+                    >
+                        <AchieveCard
+                            height = '50%'
+                            width = '90%'
+                            fromcolor = '#4776E6'
+                            tocolor = '#8E54E9'
+                            marginLeft = '24px'
+                            marginRight = '24px'
+                            marginTop = '24px'
+                            marginBottom = '24px'
+                        >
+                        </AchieveCard>
+                        <AchieveCard
+                            height = '50%'
+                            width = '90%'
+                            fromcolor = {props.currTheme.mode === 'dark' ? 'black' : 'white'}
+                            tocolor = {props.currTheme.mode === 'dark' ? 'black' : 'white'}
+                            marginLeft = '24px'
+                            marginRight = '24px'
+                            marginTop = '24px'
+                            marginBottom = '48px'
+                            noShadow = 'true'
+                        >
+                        </AchieveCard>
+                    </AchievementCol>
+                </AchievementRow>
+                <AchievementRow
+                    height = '200px'
+                >
+                    <AchieveCard
+                        height = '100%'
                         width = '100%'
-                        flexDirection = 'column'
-                    />
-                </Block>
-                <Block color = 'black' width = '33%' height ='100%'> 
-                    <Block 
-                        isCard 
-                        variant = 'nonstandard'
-                        CardTitle = 'Follow me @fastboot'
-                        fromcolor = { props.currTheme.mode === 'light'? 'white': 'black' }
-                        tocolor = { props.currTheme.mode === 'light'? 'white': 'black' }
+                        fromcolor = '#FF512F'
+                        tocolor = '#DD2476'
+                        marginLeft = '24px'
+                        marginRight = '24px'
+                        marginTop = '0px'
+                        marginBottom = '0px'
+                    >
+                    </AchieveCard>
+                </AchievementRow>
+                <AchievementRow
+                    height = '300px'
+                >
+                    <AchieveCard
+                        height = '85%'
                         width = '100%'
-                        flexDirection = 'column'
-                    />
-                </Block>
-                <Block color = 'black' width = '33%' height ='100%'> 
-                    <Block 
-                        isCard 
-                        variant = 'nonstandard'
-                        CardTitle = '#3 Address Code'
-                        CardSection = 'Ranked 74 on onsite finals'
-                        fromcolor = '#ff512f'
-                        tocolor = '#dd2476'
+                        fromcolor = {props.currTheme.mode === 'dark' ? 'black' : 'white'}
+                        tocolor = {props.currTheme.mode === 'dark' ? 'black' : 'white'}
+                        marginLeft = '24px'
+                        marginRight = '24px'
+                        marginTop = '48px'
+                        marginBottom = '48px'
+                        noShadow = 'true'
+                    >
+                    </AchieveCard>
+                    <AchieveCard
+                        height = '85%'
                         width = '100%'
-                        flexDirection = 'column'
-                    />
-                </Block>
-
-            </Block>
+                        fromcolor = '#232526'
+                        tocolor = '#414345'
+                        marginLeft = '24px'
+                        marginRight = '24px'
+                        marginTop = '48px'
+                        marginBottom = '48px'
+                    >
+                    </AchieveCard>
+                </AchievementRow>
+                <AchievementRow
+                    height = '270px'
+                >
+                    <AchieveCard
+                        height = '100%'
+                        width = '100%'
+                        fromcolor = '#e65c00'
+                        tocolor = '#F9D423'
+                        marginLeft = '24px'
+                        marginRight = '24px'
+                        marginTop = '48px'
+                        marginBottom = '48px'
+                    >
+                    </AchieveCard>
+                    <AchieveCard
+                        height = '100%'
+                        width = '100%'
+                        fromcolor = '#0575E6'
+                        tocolor = '#021B79'
+                        marginLeft = '24px'
+                        marginRight = '24px'
+                        marginTop = '48px'
+                        marginBottom = '48px'
+                    >
+                    </AchieveCard>
+                </AchievementRow>
+            </AchievementWrapper>
             <Wrapper>
                 <Heading> 
                     <h1> Gadgets I Use</h1>
@@ -247,58 +242,3 @@ function Geeky(props) {
 }
 
 export default Geeky
-
-/*
-
-  <div class="card">
-    <h3 class="title">MacBook Air</h3>
-    <div class="bar">
-      <div class="emptybar"></div>
-      <div class="filledbar"></div>
-    </div>
-    <div class="circle">
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-      <circle class="stroke" cx="60" cy="60" r="50"/>
-    </svg>
-    </div>
-  </div>
-  <div class="card">
-    <h3 class="title">Card 2</h3>
-    <div class="bar">
-      <div class="emptybar"></div>
-      <div class="filledbar"></div>
-    </div>
-    <div class="circle">
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-      <circle class="stroke" cx="60" cy="60" r="50"/>
-    </svg>
-    </div>
-  </div>
-  <div class="card">
-    <h3 class="title">Card 3</h3>
-    <div class="bar">
-      <div class="emptybar"></div>
-      <div class="filledbar"></div>
-    </div>
-    <div class="circle">
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-      <circle class="stroke" cx="60" cy="60" r="50"/>
-    </svg>
-    </div>
-  </div>
-  <div class="card">
-    <h3 class="title">Card 4</h3>
-    <div class="bar">
-      <div class="emptybar"></div>
-      <div class="filledbar"></div>
-    </div>
-    <div class="circle">
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-      <circle class="stroke" cx="60" cy="60" r="50"/>
-    </svg>
-    </div>
-  </div>
-</div>
-</body>
-
-*/

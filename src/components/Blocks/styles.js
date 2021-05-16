@@ -15,6 +15,7 @@ export const IconDiv = styled.div`
 export const CardDiv = styled.div`
     width: ${ props => props.width };
     border-radius: 10px;
+    box-shadow: -5px 5px 5px ${props => props.shadow !== 'null' ? props.shadow : null};
     height: ${ props => props.height };
     margin: 7px;
     padding: 10px;

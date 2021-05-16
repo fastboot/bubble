@@ -2,10 +2,7 @@ import React from 'react'
 import { 
     GradientAnimated, 
     PageHeading,
-    PageWrapper,
     PageRow,
-    PostCard,
-    Backpack,
     Card,
     Title
 } from './styles'
@@ -24,14 +21,6 @@ function Posts(props) {
                 height = '900px'
                 flexDirection = 'column'
             >
-            <PageRow>
-                <Card>
-                    <Title>Post</Title>
-                </Card>
-                <Card>
-                    <Title>Post</Title>
-                </Card>
-            </PageRow>
             <PageRow>
                 <Card>
                     <Title>Post</Title>

@@ -29,6 +29,7 @@ export const PageHeading = styled.div`
     background: ${props => props.theme.mode === 'black'? 'white': 'black'}
     color: ${props => props.theme.mode === 'black'? 'black': 'white'};
 `
+
 export const PageWrapper = styled.div`
     width: 96.70%;
     height: 100%;
@@ -39,11 +40,11 @@ export const PageWrapper = styled.div`
 export const PageRow = styled.div`
     margin-left: 100px;
     margin-right: 100px;
+    margin-top: 90px;
     height: 250px;
     display: flex;
     flex-direction: row;
 `
-
 
 export const Title = styled.div`
     color: white;
@@ -52,7 +53,6 @@ export const Title = styled.div`
     left: 20px;
     top: 35px;
 `
-
 
 export const Card = styled.div`
     display: flex;
