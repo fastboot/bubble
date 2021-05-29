@@ -45,7 +45,7 @@ function HeatmapComponent(props) {
       }
       
     return (
-        <div style = {{ width: '90%', height: '500px', marginLeft: '50px' }}>
+        <div style = {{ width: '90%', height: '300px', marginLeft: '150px' }}>
             {isLoading && <span>Loading...</span>}
             {data && 
             <Heatmap 

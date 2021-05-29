@@ -12,7 +12,9 @@ import {
 } from './styles'
 import HeatmapComponent from './components/heatmap/Heatmap'
 import Languages from './components/stats/Languages'
+import Followers from './components/stats/Followers'
 import trophy from '../../assets/icons/trophy.png'
+import contribution from '../../assets/icons/contribution.png'
 
 
 function Geeky(props) {
@@ -22,8 +24,20 @@ function Geeky(props) {
             <PageHeading>
                 Geeky
             </PageHeading>
+            <Wrapper>
+                <Heading> 
+                    <h1> Code Contribution </h1>
+                    <StripLogo src = { contribution } alt = 'contribution' />
+                </Heading>
+            </Wrapper>
             <HeatmapComponent currTheme = {props.currTheme} />
+            <Wrapper>
+                <Heading> 
+                    Most used languages
+                </Heading>
+            </Wrapper>
             <Languages />
+            <Followers />
             <Wrapper>
                 <Heading> 
                     <h1> I Love Competing! </h1>

@@ -21,7 +21,7 @@ export const GradientAnimated = styled.div`
 
 export const PageHeading = styled.div`
     width: 100%;
-    height: 400px;
+    height: 300px;
     text-align: center;
     padding-top: 50px;
     font-size: 120px;
@@ -73,7 +73,7 @@ export const AchieveCard = styled.div`
     width: ${ props => props.width };
     background: linear-gradient(215deg, ${ props => props.fromcolor } 0%, ${ props => props.tocolor } 100%);
     border-radius: 10px;
-    box-shadow: ${props => props.noShadow === 'true' ? null : `-1rem 0 3rem ${ props.tocolor }` };
+    box-shadow: ${props => props.noShadow === 'true' || props.theme.mode === 'dark' ? null : `-1rem 0 3rem ${ props.tocolor }` };
     transition: 0.4s ease-out;
     position: relative;
     margin-left: ${props => props.marginLeft};
