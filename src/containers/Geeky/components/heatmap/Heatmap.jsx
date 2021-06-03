@@ -33,7 +33,9 @@ function HeatmapComponent(props) {
 
     const fetchData = async () => {
         setIsLoading(true);
-        await axios.get("https://github-contributions.vercel.app/api/v1/fastboot")
+        await axios.get("https://cors-anywhere-herokuapp.com/https://github-contributions.vercel.app/api/v1/fastboot", {
+
+        })
         .then((res) => {
             console.log(res.data)
             setData(res.data)
