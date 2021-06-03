@@ -19,6 +19,7 @@ import {
     NowPlayingTrack,
     StripLogo,
     Filler,
+    Dot,
     Bar,
 } from './styles.js'
 import computer from '../../../assets/icons/computer.png'
@@ -77,6 +78,7 @@ function Dashboard({ strip }) {
                             </Device>
                             <Bar>
                                 <Filler percent = {timeStamp}/>
+                                <Dot />
                             </Bar>
                         </DetailsWrapper>
                     </NowPlayingWrapper>
