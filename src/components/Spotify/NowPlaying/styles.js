@@ -138,3 +138,19 @@ export const StripLogo = styled.img`
     height: 45px;
     margin-left: 30px;
 `
+export const Bar = styled.div`
+    width: 600px;
+    height: 10px;
+    display: flex;
+    border-radius: 10px;
+    background: gray;
+    flex-direction: row;
+    overflow: hidden;
+`
+export const Filler = styled.div`
+    width: ${props => props.percent}%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    background: white;
+`
