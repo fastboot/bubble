@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+
 export const GradientAnimated = styled.div`
     background: linear-gradient(45deg, #e92efb, #ff2079, #440bd4, #04005e);
     background-size: 400% 400%;
@@ -114,4 +115,39 @@ export const AchievementCol = styled.div`
     flex-direction: column;
     max-height: 100%;
     width: ${ props => props.width }; 
+`
+
+export const ShowcaseDivBorder = styled.div`
+    width: 550px;
+    height: 380px;
+    margin-left: 700px;
+    margin-top: 100px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 0 10px #000;
+`
+export const ShowcaseInfoWrapper = styled.div`
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    width: 400px;
+    height: 100px;
+    margin-left: 50px;
+    margin-top: 150px;
+`
+
+export const ShowCaseInfoHeading = styled.h1`
+    display: flex;
+    width: 100%;
+    height: 30%;
+    color: white;
+    font-size: 50px;
+`
+
+export const ShowcaseInfoDetail = styled.p`
+    display: flex;
+    width: 100%;
+    height: 100%;
+    color: white;
 `

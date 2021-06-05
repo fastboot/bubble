@@ -8,13 +8,20 @@ import {
     AchieveCard,
     AchievementWrapper,
     AchievementRow,
-    AchievementCol
+    AchievementCol,
+    ShowcaseDivBorder,
+    ShowcaseInfoWrapper,
+    ShowCaseInfoHeading,
+    ShowcaseInfoDetail
 } from './styles'
+import Block from '../../components/Blocks'
 import HeatmapComponent from './components/heatmap/Heatmap'
 import Languages from './components/stats/Languages'
 import Followers from './components/stats/Followers'
 import trophy from '../../assets/icons/trophy.png'
+import projects from '../../assets/icons/projects.png'
 import contribution from '../../assets/icons/contribution.png'
+import project2 from '../../assets/projects/project2.png'
 
 
 function Geeky(props) {
@@ -37,7 +44,47 @@ function Geeky(props) {
                 </Heading>
             </Wrapper>
             <Languages />
-            <Followers />
+            <Wrapper>
+                <Heading> 
+                    <h1> Showcase </h1>
+                    <StripLogo src = { projects } alt = 'projects' />
+                </Heading>
+            </Wrapper>
+            <Block 
+                height = '600px'
+                fromcolor = '#52155a'
+                tocolor = '#381146'
+            >
+                <ShowcaseInfoWrapper>
+                    <ShowCaseInfoHeading>
+                        Personal Site
+                    </ShowCaseInfoHeading>
+                    <ShowcaseInfoDetail>
+                        {'This was made just for fun used a lot of React in it 2021- Personal'}
+                    </ShowcaseInfoDetail>
+                </ShowcaseInfoWrapper>
+                <ShowcaseDivBorder>
+                    <img src = { project2 } alt = 'project1' style = {{ width: '760px', height: '400px'}}/>
+                </ShowcaseDivBorder>
+            </Block>
+            <Block 
+                height = '600px'
+                fromcolor = '#52155a'
+                tocolor = '#381146'
+            >
+                <ShowcaseDivBorder>
+                    <img src = { project2 } alt = 'project1' style = {{ width: '760px', height: '400px'}}/>
+                </ShowcaseDivBorder>
+                <ShowcaseInfoWrapper>
+                    <ShowCaseInfoHeading>
+                        Personal Site
+                    </ShowCaseInfoHeading>
+                    <ShowcaseInfoDetail>
+                        {'This was made just for fun used a lot of React in it 2021- Personal'}
+                    </ShowcaseInfoDetail>
+                </ShowcaseInfoWrapper>
+                
+            </Block>
             <Wrapper>
                 <Heading> 
                     <h1> I Love Competing! </h1>

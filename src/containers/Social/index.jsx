@@ -13,15 +13,14 @@ import NowPlaying from '../../components/Spotify/NowPlaying';
 import Grid from '../../components/Grid'
 import camera from '../../assets/icons/camera.png'
 
-function WatchPlay() {
+function Social() {
     return (
         <React.Fragment>
             <GradientAnimated />
             <PageHeading> 
-                Watch & Play
+                 Social
             </PageHeading>
             <NowPlaying strip = "noshow"/>
-            <GradientBlockCard />
             <Wrapper>
                 <Heading> 
                     <h1> My Clicks </h1>
@@ -35,4 +34,4 @@ function WatchPlay() {
     )
 } 
 
-export default WatchPlay
+export default Social

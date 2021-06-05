@@ -33,6 +33,7 @@ function Dashboard({ strip }) {
     const [device, setDevice] = useState('')
     const [deviceType, setDeviceType] = useState('')
     const [timeStamp, setTimeStamp] = useState('')
+    const [externalUrl, setExternalUrl] = useState('')
     /*
         duration = 600
         curr     = (curr / duration) * 600;
@@ -47,6 +48,7 @@ function Dashboard({ strip }) {
                 setTrack(res.data.item.name)
                 setAlbumart(res.data.item.album.images[0].url)
                 setDeviceType(res.data.device.type)
+                setExternalUrl(res.data.item.external_urls.spotify);
                 const duration = res.data.item.duration_ms;
                 const currTime = res.data.progress_ms;
                 // console.log(currTime);
@@ -68,7 +70,7 @@ function Dashboard({ strip }) {
             { showStrip === 'noshow' && artist? ( 
                     <NowPlayingWrapper albumart = {albumart}>
                         <StripLogo src = { spotifyoriginal } alt = 'spotify' />
-                        <AlbumArt src = { albumart } alt = 'albumart' />
+                        <a href = {externalUrl} target="_blank" rel="noreferrer"><AlbumArt src = { albumart } alt = 'albumart' /></a>
                         <DetailsWrapper>
                             <NowPlayingTrack> { track } </NowPlayingTrack>
                             <NowPlayingArtist> { artist } </NowPlayingArtist>
@@ -105,6 +107,11 @@ function Dashboard({ strip }) {
                         )}
                     </Fragment>
                 )
+            }
+            { showStrip === 'noshow' && !artist && 
+                <NowPlayingWrapper albumart = {albumart}>
+                    <StripLogo src = { spotifyoriginal } alt = 'spotify' />
+                </NowPlayingWrapper>
             }
         </React.Fragment>
     )

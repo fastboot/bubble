@@ -23,9 +23,6 @@ export const StyledLink = styled(Link)`
     &.active {
       color: red;
     }
-    &:last-child {
-      margin-left: 50px;
-  }
 `
 
 export const LogoLink = styled(Link)`
@@ -37,7 +34,6 @@ export const NavMenu = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: -24px;
 `
 
 export const Button = styled.input`
