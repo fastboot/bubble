@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import storage from 'local-storage-fallback'
 import  Whoami from './containers/Whoami'
-import WatchPlay from './containers/Watch&Play'
+import Social from './containers/Social'
 import Home from './containers/Home'
 import Post from './containers/Posts'
 import Geeky from './containers/Geeky'
@@ -42,7 +42,7 @@ function App(props) {
           <Route exact path = '/whoami' component={() => (<Whoami currTheme = {theme} />)} />
           <Route exact path = '/posts' component={() => (<Post currTheme = {theme} />)} />
           <Route exact path = '/geeky' component={() => (<Geeky currTheme = {theme} />)} />
-          <Route exact path = '/watchplay' component={() => (<WatchPlay currTheme = {theme} />)} />
+          <Route exact path = '/social' component={() => (<Social currTheme = {theme} />)} />
           <Route component = {Notfound} />
         </Switch>
         <Footer />

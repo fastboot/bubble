@@ -15,7 +15,7 @@ export const NowPlayingWrapper = styled.div`
         position: absolute;
         width: 100%; 
         height: 500px; 
-        filter: blur(20px);
+        filter: blur(15px);
         z-index: -1;
         background: url(${ props => props.albumart }) no-repeat 50% 50% fixed;
         background-size: cover;
@@ -72,7 +72,6 @@ export const DetailsWrapper = styled.div`
     height: 300px;
     margin-top: 100px;
     margin-left: 50px;
-    color: white;
     display: flex;
     flex-direction: column;
 `

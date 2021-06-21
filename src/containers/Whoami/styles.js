@@ -16,7 +16,6 @@ export const ProfileCard = styled.div`
 export const HomeWrapper = styled.div`
   height: 100%;
   width: 100%;
-  margin-bottom: 50px;
 `
 
 export const StyledA = styled.a`
@@ -117,7 +116,7 @@ export const FlexDiv = styled.div`
 
 export const PageHeading = styled.div`
   width: 100%;
-  height: 400px;
+  height: 250px;
   text-align: center;
   padding-top: 50px;
   position: block;

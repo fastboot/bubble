@@ -5,7 +5,7 @@ export const BlockDiv = styled.div`
     display: flex;
     position: relative;
     height: ${ props => props.height };
-    background-color: ${props => props.theme.mode === 'light'? 'white': 'black'};
+    background: linear-gradient(215deg, ${ props => props.fromcolor } 0%, ${ props => props.tocolor } 100%);
     flex-direction: ${ props => props.flexDirection };
 `
 export const IconDiv = styled.div`
