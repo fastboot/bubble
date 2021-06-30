@@ -70,6 +70,7 @@ export const PageRow = styled.div`
 
 export const AchieveCard = styled.div`
     display: flex;
+    flex-direction: ${ props => props.flexDirection };
     height: ${ props => props.height };
     width: ${ props => props.width };
     background: linear-gradient(215deg, ${ props => props.fromcolor } 0%, ${ props => props.tocolor } 100%);
@@ -150,4 +151,20 @@ export const ShowcaseInfoDetail = styled.p`
     width: 100%;
     height: 100%;
     color: white;
+`
+
+export const AchieveCardHeading = styled.div`
+    margin-left: 60px;
+    margin-top: 40px;
+`
+
+export const AchieveCardDescription = styled.div`
+    
+`
+
+export const AchieveCardButton = styled.button`
+    width: 100px;
+    height: 50px;
+    
+  
 `

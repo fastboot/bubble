@@ -82,13 +82,12 @@ export const StyledDiv = styled.div`
 `
 
 export const StyledDiv2X = styled.div`
-    align-items: center;
-    border: 10px solid ${props => props.theme.mode === 'dark'? 'white': 'black'};
     width: 80vw;
+    height: 600px;
     margin: 30px;
-    margin-left: 150px;
     background: ${props => props.theme.mode === 'dark'? 'black': 'white'};
     color: ${props => props.theme.mode === 'dark'? 'white': 'black'};
+    position: relative;
 `
 export const Heading = styled.div`
     display: flex;
@@ -96,9 +95,8 @@ export const Heading = styled.div`
     height: 70px;
     width: 100%;
     line-height: 10px;
-    margin-left: 170px;
-    margin-top: 100px;
-    padding-left: 450px;
+    margin-top: 50px;
+    padding-left: 580px;
 `
 
 export const Strip = styled.div`
@@ -131,4 +129,33 @@ export const StripLogo = styled.img`
     padding-left: 20px;
     width: 45px;
     height: 45px;
+`
+
+export const PageRow = styled.div`
+    margin-top: 10px;
+    width: 95vw;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+`
+
+export const Title = styled.div`
+    color: white;
+    font-weight: 300;
+    position: absolute;
+    left: 20px;
+    top: 35px;
+`
+
+export const Card = styled.div`
+    display: flex;
+    height: 380px;
+    width: 700px;
+    margin: 24px;
+    background-color: #17141d;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem #000;
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
 `

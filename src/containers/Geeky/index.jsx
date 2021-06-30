@@ -9,6 +9,9 @@ import {
     AchievementWrapper,
     AchievementRow,
     AchievementCol,
+    AchieveCardHeading,
+    AchieveCardDescription,
+    AchieveCardButton,
     ShowcaseDivBorder,
     ShowcaseInfoWrapper,
     ShowCaseInfoHeading,
@@ -69,12 +72,11 @@ function Geeky(props) {
             </Block>
             <Block 
                 height = '600px'
-                fromcolor = '#52155a'
-                tocolor = '#381146'
+                // fromcolor = '#dcf4fe'
+                // tocolor = '#dcf4fe'
+                fromcolor = 'white'
+                tocolor = 'white'
             >
-                <ShowcaseDivBorder>
-                    <img src = { project2 } alt = 'project1' style = {{ width: '760px', height: '400px'}}/>
-                </ShowcaseDivBorder>
                 <ShowcaseInfoWrapper>
                     <ShowCaseInfoHeading>
                         Personal Site
@@ -83,6 +85,10 @@ function Geeky(props) {
                         {'This was made just for fun used a lot of React in it 2021- Personal'}
                     </ShowcaseInfoDetail>
                 </ShowcaseInfoWrapper>
+                <ShowcaseDivBorder>
+                    <img src = { project2 } alt = 'project1' style = {{ width: '760px', height: '400px'}}/>
+                </ShowcaseDivBorder>
+                
                 
             </Block>
             <Wrapper>
@@ -104,7 +110,11 @@ function Geeky(props) {
                         marginRight = '24px'
                         marginTop = '24px'
                         marginBottom = '24px'
+                        flexDirection = 'column'
                     >
+                        <AchieveCardHeading>Facebook Hacker Cup 2018</AchieveCardHeading>
+                        <AchieveCardDescription>Ranked 934 in round 2 (Quarter Finals)</AchieveCardDescription>
+                        <AchieveCardButton>Link</AchieveCardButton>
                     </AchieveCard>
                     <AchievementCol
                         width = '50%'

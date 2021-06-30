@@ -51,7 +51,6 @@ function Dashboard({ strip }) {
                 setExternalUrl(res.data.item.external_urls.spotify);
                 const duration = res.data.item.duration_ms;
                 const currTime = res.data.progress_ms;
-                // console.log(currTime);
                 for(let i = currTime; i <= duration; i++) {
                     setTimeStamp((currTime / duration) * 100);
                 }
