@@ -358,5 +358,11 @@ export const Gadget = styled.div`
     align-content: flex-start;
     align-items: center;
 `
+export const AboutParagraph = styled.p`
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+`
 
 

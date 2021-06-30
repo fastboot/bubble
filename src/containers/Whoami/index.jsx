@@ -18,6 +18,7 @@ import {
     Gadget,
     Title,
     Bar,
+    AboutParagraph,
     FilledBarMacPro,
     FilledBarMacAir,
     FilledBarSamPro,
@@ -63,6 +64,11 @@ function Whoami(props) {
                         <WorkplaceTime>
                             2020 - present
                         </WorkplaceTime>
+                        <AboutParagraph>
+                            I’m a software engineer by day, a sports player by evening, a philospher by midnight and consistence always. <br></br><br></br>
+                            If you can’t find me, it’s because I’m competing in some programming contest, off for an Ice cream, or cheering for my favourite club in Premier League.<br></br><br></br>
+                            I am passionate about space tech (go Elon) and music. A fan of Pop. If I could have one super power it would be time travel though I like Spider Man.
+                        </AboutParagraph>
                     </ProfileCard>
             </HomeWrapper>
             <Wrapper>
@@ -74,7 +80,7 @@ function Whoami(props) {
             <Block 
                 color = 'white'
                 width = '100%'
-                height = '700px'
+                height = '500px'
                 flexDirection = 'row'
             >
             <Backpack>
