@@ -108,7 +108,7 @@ export const AchievementRow = styled.div`
     height: ${ props => props.height};
     max-width: 100%;
     margin: 48px;
-    margin-bottom: 0px;
+    margin-bottom: 48px;
     margin-top: 0px;
 `
 export const AchievementCol = styled.div`
@@ -154,8 +154,8 @@ export const ShowcaseInfoDetail = styled.p`
 `
 
 export const AchieveCardHeading = styled.div`
-    margin-left: 5px;
-    margin-top: 40px;
+    margin-left: ${ props => props.marginLeft };
+    margin-top: ${ props => props.marginTop };
     font-size: 40px;
     text-align: center;
     color: white;
@@ -164,7 +164,8 @@ export const AchieveCardHeading = styled.div`
 export const AchieveCardDescription = styled.div`
     font-size: 20px;
     text-align: center;
-    margin-top: 20px;
+    margin-left: ${ props => props.marginLeft };
+    margin-top: ${ props => props.marginTop };
     color: white;
 `
 
