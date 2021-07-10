@@ -34,7 +34,7 @@ function HeatmapComponent(props) {
     const fetchData = async () => {
         setIsLoading(true);
         await axios.get("https://github-contributions.vercel.app/api/v1/fastboot", {
-
+            headers: {"Access-Control-Allow-Origin": "*"}
         })
         .then((res) => {
             console.log(res.data)

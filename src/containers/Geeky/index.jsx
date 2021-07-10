@@ -74,10 +74,10 @@ function Geeky(props) {
             </Wrapper>
             
             <Wrapper>
-                <Heading> 
+                <SubHeading> 
                     <h1> Showcase </h1>
                     <StripLogo src = { projects } alt = 'projects' />
-                </Heading>
+                </SubHeading>
             </Wrapper>
             <Block 
                 height = '600px'
