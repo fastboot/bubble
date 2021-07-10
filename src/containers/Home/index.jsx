@@ -2,7 +2,6 @@ import React from 'react'
 import { 
     GradientAnimated, 
     PageHeading, 
-    StyledDiv, 
     StyledDiv2X, 
     Strip, 
     PageWrapper, 
@@ -17,7 +16,6 @@ import {
     Wrapper,
 } from './styles'
 import Typer from '../../components/Typer'
-import Block from '../../components/Blocks'
 import NowPlaying from '../../components/Spotify/NowPlaying';
 import spotify from '../../assets/icons/spotify.png'
 import flash from '../../assets/icons/flash.png'

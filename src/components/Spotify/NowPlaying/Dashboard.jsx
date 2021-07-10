@@ -54,8 +54,7 @@ function Dashboard({ strip }) {
                 for(let i = currTime; i <= duration; i++) {
                     setTimeStamp((currTime / duration) * 100);
                 }
-            } 
-            console.log("Tick");
+            }
           })
           .catch((err) => {
             console.log(err)

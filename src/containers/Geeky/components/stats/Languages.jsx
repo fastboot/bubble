@@ -59,7 +59,6 @@ function Languages(props) {
             {isLoading && <span>Loading...</span>}
             {data && stat && 
             <Fragment>
-                {console.log(stat[3].percent)}
                 <Bar>
                     <FirstDiv
                         width = {stat[0].percent.toString()}

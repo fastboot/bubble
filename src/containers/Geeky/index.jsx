@@ -9,10 +9,8 @@ import {
     AchieveCard,
     AchievementWrapper,
     AchievementRow,
-    AchievementCol,
     AchieveCardHeading,
     AchieveCardDescription,
-    AchieveCardButton,
     ShowcaseDivBorder,
     ShowcaseInfoWrapper,
     ShowCaseInfoHeading,
@@ -22,7 +20,6 @@ import {
 import Block from '../../components/Blocks'
 import HeatmapComponent from './components/heatmap/Heatmap'
 import Languages from './components/stats/Languages'
-import Followers from './components/stats/Followers'
 import trophy from '../../assets/icons/trophy.png'
 import projects from '../../assets/icons/projects.png'
 import contribution from '../../assets/icons/contribution.png'

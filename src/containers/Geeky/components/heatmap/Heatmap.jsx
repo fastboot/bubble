@@ -37,7 +37,6 @@ function HeatmapComponent(props) {
             headers: {"Access-Control-Allow-Origin": "*"}
         })
         .then((res) => {
-            console.log(res.data)
             setData(res.data)
         })
         .catch((err) => {

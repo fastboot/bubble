@@ -4,7 +4,6 @@ import Moon from '../../assets/icons/sun.png'
 import Sun from '../../assets/icons/moon.png'
 
 function Navbar(props) {
-    console.log(props)
     const changeTheme = () => {
         props.updateTheme((props.currTheme.mode === 'dark' ? { mode: 'light' }: { mode: 'dark' }))
     }
