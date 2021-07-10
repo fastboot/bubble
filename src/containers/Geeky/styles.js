@@ -154,17 +154,31 @@ export const ShowcaseInfoDetail = styled.p`
 `
 
 export const AchieveCardHeading = styled.div`
-    margin-left: 60px;
+    margin-left: 5px;
     margin-top: 40px;
+    font-size: 40px;
+    text-align: center;
+    color: white;
 `
 
 export const AchieveCardDescription = styled.div`
-    
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+`
+
+export const BetweenDescription = styled.div`
+    font-size: 25px;
+    text-align: center;
+    padding: 24px;
+    margin-top: ${props => props.marginTop};
 `
 
 export const AchieveCardButton = styled.button`
     width: 100px;
     height: 50px;
-    
-  
+    border-radius: 10px;
+    margin-top: ${props => props.marginTop};
+    margin-left: 190px;
 `

@@ -15,7 +15,8 @@ import {
     ShowcaseDivBorder,
     ShowcaseInfoWrapper,
     ShowCaseInfoHeading,
-    ShowcaseInfoDetail
+    ShowcaseInfoDetail,
+    BetweenDescription
 } from './styles'
 import Block from '../../components/Blocks'
 import HeatmapComponent from './components/heatmap/Heatmap'
@@ -25,7 +26,9 @@ import trophy from '../../assets/icons/trophy.png'
 import projects from '../../assets/icons/projects.png'
 import contribution from '../../assets/icons/contribution.png'
 import project2 from '../../assets/projects/project2.png'
-
+import facebook from '../../assets/logos/facebook.png'
+import google from '../../assets/logos/google.png'
+import hash from '../../assets/logos/hash.png'
 
 function Geeky(props) {
     return (
@@ -102,7 +105,7 @@ function Geeky(props) {
                     height = '648px'
                 >
                     <AchieveCard
-                        height = '89%'
+                        height = '45%'
                         width = '50%'
                         fromcolor = '#11998e'
                         tocolor = '#38ef7d'
@@ -111,10 +114,15 @@ function Geeky(props) {
                         marginTop = '24px'
                         marginBottom = '24px'
                         flexDirection = 'column'
-                    >
-                        <AchieveCardHeading>Facebook Hacker Cup 2018</AchieveCardHeading>
+                    >   
+                        <img src = {facebook} alt = "facebook" style = {{ height: '60px', width: '60px', marginTop: '50px', marginLeft: '220px' }}/>
+                        <AchieveCardHeading>Facebook Hacker Cup</AchieveCardHeading>
                         <AchieveCardDescription>Ranked 934 in round 2 (Quarter Finals)</AchieveCardDescription>
-                        <AchieveCardButton>Link</AchieveCardButton>
+                        {/* <AchieveCardButton
+                            marginTop = '100px'
+                        >
+                            Scoreboard
+                        </AchieveCardButton> */}
                     </AchieveCard>
                     <AchievementCol
                         width = '50%'
@@ -128,7 +136,16 @@ function Geeky(props) {
                             marginRight = '24px'
                             marginTop = '24px'
                             marginBottom = '24px'
+                            flexDirection = 'column'
                         >
+                            <img src = {google} alt = "google" style = {{ height: '40px', width: '40px', marginTop: '25px', marginLeft: '200px' }}/>
+                            <AchieveCardHeading>Google Code Jam</AchieveCardHeading>
+                            <AchieveCardDescription>Ranked 1961 in round 1B</AchieveCardDescription>
+                            {/* <AchieveCardButton
+                                marginTop = '10px'
+                            >
+                                Scoreboard
+                            </AchieveCardButton> */}
                         </AchieveCard>
                         <AchieveCard
                             height = '50%'
@@ -141,6 +158,11 @@ function Geeky(props) {
                             marginBottom = '48px'
                             noShadow = 'true'
                         >
+                            <BetweenDescription
+                                marginTop = '70px'
+                            >
+                                Over 1500+ problems solved across platforms
+                            </BetweenDescription>
                         </AchieveCard>
                     </AchievementCol>
                 </AchievementRow>
@@ -157,6 +179,9 @@ function Geeky(props) {
                         marginTop = '0px'
                         marginBottom = '0px'
                     >
+                        <img src = {hash} alt = "google" style = {{ height: '40px', width: '40px', marginTop: '70px', marginLeft: '100px' }}/>
+                        <AchieveCardHeading>3 Address Code</AchieveCardHeading>
+                        <AchieveCardDescription>Ranked 74 at the finals</AchieveCardDescription>
                     </AchieveCard>
                 </AchievementRow>
                 <AchievementRow
@@ -173,17 +198,11 @@ function Geeky(props) {
                         marginBottom = '48px'
                         noShadow = 'true'
                     >
-                    </AchieveCard>
-                    <AchieveCard
-                        height = '85%'
-                        width = '100%'
-                        fromcolor = '#232526'
-                        tocolor = '#414345'
-                        marginLeft = '24px'
-                        marginRight = '24px'
-                        marginTop = '48px'
-                        marginBottom = '48px'
-                    >
+                        <BetweenDescription
+                                marginTop = '70px'
+                            >
+                                Follow me @fastboot
+                        </BetweenDescription>
                     </AchieveCard>
                 </AchievementRow>
                 <AchievementRow
