@@ -5,6 +5,7 @@ import {
     Wrapper, 
     StripLogo, 
     Heading,
+    SubHeading,
     AchieveCard,
     AchievementWrapper,
     AchievementRow,
@@ -26,6 +27,7 @@ import trophy from '../../assets/icons/trophy.png'
 import projects from '../../assets/icons/projects.png'
 import contribution from '../../assets/icons/contribution.png'
 import project2 from '../../assets/projects/project2.png'
+import project1 from '../../assets/projects/project1.png'
 import facebook from '../../assets/logos/facebook.png'
 import google from '../../assets/logos/google.png'
 import hash from '../../assets/logos/hash.png'
@@ -33,6 +35,8 @@ import infy from '../../assets/logos/infy.png'
 import codechef from '../../assets/logos/codechef.png'
 import spoj from '../../assets/logos/spoj.png'
 import battle from '../../assets/logos/battle.png'
+
+import GitHubButton from 'react-github-btn'
 
 function Geeky(props) {
     return (
@@ -49,11 +53,26 @@ function Geeky(props) {
             </Wrapper>
             <HeatmapComponent currTheme = {props.currTheme} />
             <Wrapper>
-                <Heading> 
+                <SubHeading> 
                     Most used languages
-                </Heading>
+                </SubHeading>
             </Wrapper>
             <Languages />
+            <Wrapper>
+                <SubHeading> 
+                    <GitHubButton 
+                        href="https://github.com/fastboot" 
+                        data-color-scheme="no-preference: light; light: light; dark: light;" 
+                        data-size="large" 
+                        data-show-count="true" 
+                        aria-label="Follow @fastboot on GitHub"
+                        style = {{ marginLeft: '700px' }}
+                    >
+                        Follow @fastboot
+                    </GitHubButton>
+                </SubHeading>
+            </Wrapper>
+            
             <Wrapper>
                 <Heading> 
                     <h1> Showcase </h1>
@@ -74,22 +93,20 @@ function Geeky(props) {
                     </ShowcaseInfoDetail>
                 </ShowcaseInfoWrapper>
                 <ShowcaseDivBorder>
-                    <img src = { project2 } alt = 'project1' style = {{ width: '760px', height: '400px'}}/>
+                    <img src = { project1 } alt = 'project1' style = {{ width: '760px', height: '400px'}}/>
                 </ShowcaseDivBorder>
             </Block>
             <Block 
                 height = '600px'
-                // fromcolor = '#dcf4fe'
-                // tocolor = '#dcf4fe'
-                fromcolor = 'white'
-                tocolor = 'white'
+                fromcolor = 'black'
+                tocolor = 'black'
             >
                 <ShowcaseInfoWrapper>
                     <ShowCaseInfoHeading>
-                        Personal Site
+                        Wapco
                     </ShowCaseInfoHeading>
                     <ShowcaseInfoDetail>
-                        {'This was made just for fun used a lot of React in it 2021- Personal'}
+                        {'An application to compare your progress with others 2018- Personal'}
                     </ShowcaseInfoDetail>
                 </ShowcaseInfoWrapper>
                 <ShowcaseDivBorder>

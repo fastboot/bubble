@@ -52,6 +52,17 @@ export const Heading = styled.div`
     margin-top: 100px;
     padding-left: 450px;
 `
+
+export const SubHeading = styled.div`
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    width: 100%;
+    line-height: 10px;
+    margin-left: 190px;
+    margin-top: 40px;
+    padding-left: 450px;
+`
 export const StripLogo = styled.img`
     padding-right: 10px;
     padding-left: 20px;
