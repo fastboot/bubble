@@ -93,7 +93,7 @@ function Dashboard({ strip }) {
                                         <StripArtist> { artist } </StripArtist>
                                     </StripTypography>
                                 <StripDeviceIcon src = { deviceType === 'Computer'? computer: smartphone } alt = 'computer' />
-                                <StyledLink to = '/watchplay' >
+                                <StyledLink to = '/social' >
                                     <ArrowDiv>
                                         <ArrowSpan />
                                         <ArrowSpan />

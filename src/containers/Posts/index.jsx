@@ -8,7 +8,12 @@ import {
 } from './styles'
 import Block from '../../components/Blocks'
 
+import ReactMarkdown from 'react-markdown'
+
+import post from '../../blog/testingPost.mdx'
+
 function Posts(props) {
+    const markdown = post;
     return (
         <React.Fragment>
             <GradientAnimated />
@@ -23,7 +28,7 @@ function Posts(props) {
             >
             <PageRow>
                 <Card>
-                    <Title>Post</Title>
+                    <ReactMarkdown>{post}</ReactMarkdown> 
                 </Card>
                 <Card>
                     <Title>Post</Title>
