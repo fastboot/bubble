@@ -109,6 +109,9 @@ function Dashboard({ strip }) {
             { showStrip === 'noshow' && !artist && 
                 <NowPlayingWrapper albumart = {albumart}>
                     <StripLogo src = { spotifyoriginal } alt = 'spotify' />
+                    <StripDetailsWrapper>
+                        <h1> Busy somewhere, but can't stay away from music for long maybe check again later :) </h1>
+                    </StripDetailsWrapper>
                 </NowPlayingWrapper>
             }
         </React.Fragment>
