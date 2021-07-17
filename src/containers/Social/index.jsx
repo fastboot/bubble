@@ -10,6 +10,7 @@ import {
 } from './styles'
 import Slideshow from 'react-slidez'
 import NowPlaying from '../../components/Spotify/NowPlaying'
+import ScrollToTop from '../../components/ScrollTop'
 import camera from '../../assets/icons/camera.png'
 import p3 from '../../assets/clicks/p3.png'
 import p4 from '../../assets/clicks/p4.png'
@@ -24,6 +25,7 @@ function Social() {
     return (
         <React.Fragment>
             <GradientAnimated />
+            <ScrollToTop />
             <PageHeading> 
                  Social
             </PageHeading>

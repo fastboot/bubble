@@ -77,7 +77,7 @@ export const StyledDiv = styled.div`
 
 export const StyledDiv2X = styled.div`
     width: 80vw;
-    height: 600px;
+    height: 450px;
     margin: 30px;
     background: ${props => props.theme.mode === 'dark'? 'black': 'white'};
     color: ${props => props.theme.mode === 'dark'? 'white': 'black'};
@@ -159,4 +159,14 @@ export const Card = styled.div`
     transition: 0.4s ease-out;
     position: relative;
     left: 0px;
+`
+export const PicCard = styled.div`
+    display: flex;
+    height: 380px;
+    width: 400px;
+    margin: 24px;
+    overflow: hidden;
+    background-color: #17141d;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem #000;
 `

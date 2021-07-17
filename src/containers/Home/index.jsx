@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink as Link } from 'react-router-dom'
 import { 
     GradientAnimated, 
     PageHeading, 
@@ -12,6 +13,7 @@ import {
     Heading,
     Title,
     PageRow,
+    PicCard,
     Card,
     Wrapper,
 } from './styles'
@@ -20,6 +22,9 @@ import NowPlaying from '../../components/Spotify/NowPlaying';
 import spotify from '../../assets/icons/spotify.png'
 import flash from '../../assets/icons/flash.png'
 import social from '../../assets/icons/social.png'
+import p1 from '../../assets/clicks/p1.png'
+import p2 from '../../assets/clicks/p11.png'
+import p3 from '../../assets/clicks/p2.png'
 
 function HOME(props) {
     const msgs = ["Bonjour", "Hola", "Olá", "Namaste", "Hello"];
@@ -60,8 +65,23 @@ function HOME(props) {
                 </Heading>
             </Wrapper>
             <StyledDiv2X>
-                
+                <PageRow>
+                    <PicCard>
+                        <img src = {p3} alt = "click1" style = {{ width: '400px', height: '500px'}} />  
+                    </PicCard>
+                    <PicCard>
+                        <img src = {p1} alt = "click1" style = {{ width: '500px', marginLeft: '-100px'}} />
+                    </PicCard>
+                    <PicCard>
+                        <img src = {p2} alt = "click1" style = {{ width: '400px', height: '400px'}} />
+                    </PicCard>
+                </PageRow>
             </StyledDiv2X>
+            <Wrapper>
+                <Link to = '/social' style = {{ textDecoration: 'none' }}>
+                    <h1 style = {{ marginLeft: '620px' }}> See More </h1>
+                </Link>
+            </Wrapper>
         </PageWrapper>
     )
 }
