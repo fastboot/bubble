@@ -58,12 +58,6 @@ export const PageWrapper = styled.div`
     flex-direction: column;
 `
 
-export const Wrapper = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-`
-
 export const WrapperRev = styled.div`
     width: 100%;
     position: relative;
@@ -89,14 +83,21 @@ export const StyledDiv2X = styled.div`
     color: ${props => props.theme.mode === 'dark'? 'white': 'black'};
     position: relative;
 `
+export const Wrapper = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+`
+
 export const Heading = styled.div`
     display: flex;
     flex-direction: row;
     height: 70px;
     width: 100%;
     line-height: 10px;
-    margin-top: 50px;
-    padding-left: 580px;
+    margin-left: 110px;
+    margin-top: 100px;
+    padding-left: 450px;
 `
 
 export const Strip = styled.div`

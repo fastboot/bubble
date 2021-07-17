@@ -80,7 +80,18 @@ function Dashboard({ strip }) {
                                 <Filler percent = {timeStamp}/>
                                 <Dot />
                             </Bar>
+                            <iframe 
+                                src="https://open.spotify.com/follow/1/?uri=spotify:user:Pranjal_Mishra&size=detail&theme=light" 
+                                width="300" 
+                                height="56" 
+                                title="follow"
+                                scrolling="no" 
+                                frameborder="0" 
+                                style={{ border: 'none', overflow: 'hidden', marginTop: '50px'}} 
+                                allowtransparency="true">
+                            </iframe>
                         </DetailsWrapper>
+                        
                     </NowPlayingWrapper>
                 ) :
                 (

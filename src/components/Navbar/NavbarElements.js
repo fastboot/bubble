@@ -5,7 +5,7 @@ export const Nav = styled.nav`
     background: rgba(0.5, 0, 0, 0);
     backdrop-filter: blur(5px);
     position: sticky;
-    height: 80px;
+    height: 70px;
     width: 100%;
     top: 0;
     left: 0;
@@ -27,6 +27,7 @@ export const StyledLink = styled(Link)`
 
 export const LogoLink = styled(Link)`
   text-decoration: none;
+  line-height: 25px;
   color: ${props => props.theme.mode === 'dark' ? 'white': 'black'};
 `
 

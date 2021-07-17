@@ -28,11 +28,13 @@ function HOME(props) {
             <GradientAnimated>
                 <PageHeading> <Typer heading={"Things I want to type:"} messages={msgs} /> </PageHeading>
             </GradientAnimated>
-            <StyledDiv2X>
+            <Wrapper>
                 <Heading> 
-                    <h1> Wassup? </h1>
-                    <StripLogo src = { flash } alt = 'contribution' />
+                        <h1> Wassup? </h1>
+                        <StripLogo src = { flash } alt = 'contribution' />
                 </Heading>
+            </Wrapper>
+            <StyledDiv2X>
                 <PageRow>
                     <Card>
                         <Title>Latest Post</Title>
@@ -51,11 +53,14 @@ function HOME(props) {
                     </CurrentStreamStripWrapper>
                 </Strip><Triangle />
             </Wrapper>
-            <StyledDiv2X>
+            <Wrapper>
                 <Heading> 
                     <h1> !AntiSocial </h1>
                     <StripLogo src = { social } alt = 'contribution' />
                 </Heading>
+            </Wrapper>
+            <StyledDiv2X>
+                
             </StyledDiv2X>
         </PageWrapper>
     )

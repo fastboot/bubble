@@ -8,7 +8,6 @@ function Footer (){
     return (
         <React.Fragment>
             <FooterWrapper>
-                <GradientDiv />
                 <FooterDiv>
                     <FooterInfo>
                         Get In Touch!

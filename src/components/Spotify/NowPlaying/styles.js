@@ -6,7 +6,7 @@ export const NowPlayingWrapper = styled.div`
     position: relative;
     z-index: 1;
     display: flex;
-    height: 500px;
+    height: 600px;
     
     overflow: hidden;
 
@@ -14,7 +14,7 @@ export const NowPlayingWrapper = styled.div`
         content: "";
         position: absolute;
         width: 100%; 
-        height: 500px; 
+        height: 600px; 
         filter: blur(15px);
         z-index: -1;
         background: url(${ props => props.albumart }) no-repeat 50% 50% fixed;

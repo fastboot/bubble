@@ -27,7 +27,6 @@ function Social() {
             <PageHeading> 
                  Social
             </PageHeading>
-            <NowPlaying strip = "noshow"/>
             <Wrapper>
                 <Heading> 
                     <h1> My Clicks </h1>
@@ -49,6 +48,8 @@ function Social() {
                     width={'100%'} 
                 />
             </StyledDiv2X>
+            <NowPlaying strip = "noshow"/>
+            
         </React.Fragment>
     )
 } 

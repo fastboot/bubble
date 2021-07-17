@@ -30,7 +30,7 @@ export const FollowDiv = styled.div`
 export const PageHeading = styled.div`
     width: 100%;
     height: 400px;
-    line-height: 350px;
+    padding-top: 50px;
     text-align: center;
     position: block;
     font-size: 120px;
@@ -69,7 +69,6 @@ export const Heading = styled.div`
     width: 100%;
     line-height: 10px;
     margin-left: 170px;
-    margin-top: 100px;
     padding-left: 450px;
 `
 export const StyledDiv2X = styled.div`
