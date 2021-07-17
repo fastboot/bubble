@@ -13,7 +13,6 @@ import ReactMarkdown from 'react-markdown'
 import post from '../../blog/testingPost.mdx'
 
 function Posts(props) {
-    const markdown = post;
     return (
         <React.Fragment>
             <GradientAnimated />

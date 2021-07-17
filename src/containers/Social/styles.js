@@ -73,15 +73,10 @@ export const Heading = styled.div`
     padding-left: 450px;
 `
 export const StyledDiv2X = styled.div`
-    align-items: center;
-    border: 5px solid ${props => props.theme.mode === 'dark'? 'white': 'black'};
-    width: 80vw;
-    margin: 30px;
-    margin-left: 150px;
-    background: ${props => props.theme.mode === 'dark'? 'black': 'white'};
-    border-radius: 10px;
-    box-shadow: -1rem 0 3rem #000;
-    color: ${props => props.theme.mode === 'dark'? 'white': 'black'};
+    position: relative;
+    height: 800px;
+    width: 100%;
+    margin-bottom: 50px;
 `
 export const Wrapper = styled.div`
     width: 100%;
