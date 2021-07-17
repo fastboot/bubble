@@ -168,5 +168,4 @@ export const PicCard = styled.div`
     overflow: hidden;
     background-color: #17141d;
     border-radius: 10px;
-    box-shadow: -1rem 0 3rem #000;
 `
