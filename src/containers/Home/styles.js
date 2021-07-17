@@ -97,7 +97,7 @@ export const Heading = styled.div`
     line-height: 10px;
     margin-left: 110px;
     margin-top: 100px;
-    padding-left: 450px;
+    padding-left: 500px;
 `
 
 export const Strip = styled.div`

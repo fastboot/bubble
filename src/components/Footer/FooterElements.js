@@ -12,7 +12,7 @@ export const FooterDiv = styled.div`
     display: flex;
     background: white;
     height: 50px;
-    width: 1200px;
+    width: 900px;
     border-radius: 10px;
     margin-bottom: 30px;
     margin-top: 30px;
