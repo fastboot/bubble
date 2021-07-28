@@ -1,13 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 
 const ImageCarousel = ({ images }) => {
-  console.log(images);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [selectedImage, setSelectedImage] = useState();
   const carouselItemsRef = useRef([]);
 
   useEffect(() => {
-    console.log('yaha', images);
     if (images && images[0]) {
       carouselItemsRef.current = carouselItemsRef.current.slice(
         0,

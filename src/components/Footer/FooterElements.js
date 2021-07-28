@@ -10,7 +10,6 @@ export const FooterWrapper = styled.div`
 
 export const FooterDiv = styled.div`
     display: flex;
-    background: white;
     height: 50px;
     width: 900px;
     border-radius: 10px;
@@ -33,7 +32,7 @@ export const GradientDiv = styled.div`
 
 export const FooterInfo = styled.div`
     display: flex;
-    color: black;
+    color: ${props => props.theme.mode === 'dark' ? 'white' : 'black'};
 `;
 
 export const FooterIcons = styled.div`

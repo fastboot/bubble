@@ -45,7 +45,7 @@ function App(props) {
           <Route exact path = '/social' component={() => (<Social currTheme = {theme} />)} />
           <Route component = {Notfound} />
         </Switch>
-        <Footer />
+        <Footer updateTheme = {setTheme} currTheme = {theme} />
       </React.Fragment>  
     </ThemeProvider>
   )

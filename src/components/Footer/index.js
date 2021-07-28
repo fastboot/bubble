@@ -1,10 +1,10 @@
 import React from 'react'
-import { FooterWrapper, FooterDiv, FooterInfo, FooterIcons, GradientDiv } from './FooterElements'
+import { FooterWrapper, FooterDiv, FooterInfo, FooterIcons } from './FooterElements'
 import FooterLogos from './constants/FooterLogos'
 import Icon from '../Icons'
 import * as CONSTANTS from '../../constants'
 
-function Footer (){
+function Footer (props){
     return (
         <React.Fragment>
             <FooterWrapper>
@@ -13,11 +13,11 @@ function Footer (){
                         Get In Touch!
                     </FooterInfo>
                     <FooterIcons>
-                        <a target = '_blank' rel ='noreferrer' href = {CONSTANTS.FACEBOOK}><Icon imgsrc = { FooterLogos.Facebook } imgalt = 'Facebook' /></a>
-                        <a target = '_blank' rel ='noreferrer' href = {CONSTANTS.INSTAGRAM}><Icon imgsrc = { FooterLogos.Instagram } imgalt = 'Instagram' /></a>
-                        <a target = '_blank' rel ='noreferrer' href = {CONSTANTS.TWITTER}><Icon imgsrc = { FooterLogos.Twitter } imgalt = 'Twitter' /></a>
-                        <a target = '_blank' rel ='noreferrer' href = {CONSTANTS.LINKEDIN}><Icon imgsrc = { FooterLogos.Linkedin } imgalt = 'Linkedin' /></a>
-                        <a target = '_blank' rel ='noreferrer' href = {CONSTANTS.GITHUB}><Icon imgsrc = { FooterLogos.Github } imgalt = 'Github' /></a>
+                        <a target = '_blank' rel ='noreferrer' href = {CONSTANTS.FACEBOOK}><Icon imgsrc = { props.currTheme.mode === 'dark' ? FooterLogos.Facebooklight : FooterLogos.Facebook } imgalt = 'Facebook' /></a>
+                        <a target = '_blank' rel ='noreferrer' href = {CONSTANTS.INSTAGRAM}><Icon imgsrc = { props.currTheme.mode === 'dark' ? FooterLogos.Instagramlight : FooterLogos.Instagram } imgalt = 'Instagram' /></a>
+                        <a target = '_blank' rel ='noreferrer' href = {CONSTANTS.TWITTER}><Icon imgsrc = { props.currTheme.mode === 'dark' ? FooterLogos.Twitterlight : FooterLogos.Twitter } imgalt = 'Twitter' /></a>
+                        <a target = '_blank' rel ='noreferrer' href = {CONSTANTS.LINKEDIN}><Icon imgsrc = { props.currTheme.mode === 'dark' ? FooterLogos.Linkedinlight : FooterLogos.Linkedin } imgalt = 'Linkedin' /></a>
+                        <a target = '_blank' rel ='noreferrer' href = {CONSTANTS.GITHUB}><Icon imgsrc = { props.currTheme.mode === 'dark' ? FooterLogos.Githublight : FooterLogos.Github } imgalt = 'Github' /></a>
                     </FooterIcons>
                 </FooterDiv>
             </FooterWrapper>
