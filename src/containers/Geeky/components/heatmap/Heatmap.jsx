@@ -6,7 +6,6 @@ import axios from 'axios'
 function HeatmapComponent(props) {
     const [data, setData] = useState()
     const [isLoading, setIsLoading] = useState(false)
-    const [componentMounted, setComponentMounted] = useState(true)
 
     const defaultTheme = {
         background: 'transparent',
@@ -29,12 +28,7 @@ function HeatmapComponent(props) {
     }
     
     useEffect(() => {
-        if(componentMounted) {
             fetchData();
-        }
-        return () => {
-            setComponentMounted(false)
-        }
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 

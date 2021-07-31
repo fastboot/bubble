@@ -40,7 +40,7 @@ export const PageWrapper = styled.div`
 export const PageRow = styled.div`
     margin-left: 100px;
     margin-right: 100px;
-    margin-top: 90px;
+    margin-top: 130px;
     height: 250px;
     display: flex;
     flex-direction: row;
