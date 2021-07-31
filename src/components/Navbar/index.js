@@ -15,16 +15,16 @@ function Navbar(props) {
                     <h1> ?¿ </h1>
                 </LogoLink>
                 <NavMenu>
-                    <StyledLink to = '/posts' activeStyle>
+                    <StyledLink to = '/posts' activeStyle={{ color: "red" }} >
                         Posts
                     </StyledLink> 
-                    <StyledLink to = '/geeky' activeStyle>
+                    <StyledLink to = '/geeky' activeStyle={{ color: "red" }} >
                         Geeky
                     </StyledLink> 
-                    <StyledLink to = '/social' activeStyle>
+                    <StyledLink to = '/social' activeStyle={{ color: "red" }} >
                         Social
                     </StyledLink> 
-                    <StyledLink to = '/whoami' activeStyle>
+                    <StyledLink to = '/whoami' activeStyle={{ color: "red" }} >
                         $whoami
                     </StyledLink> 
                 </NavMenu>
