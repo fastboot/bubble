@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-
 export const GradientAnimated = styled.div`
     background: linear-gradient(45deg, #e92efb, #ff2079, #440bd4, #04005e);
     background-size: 400% 400%;
@@ -78,52 +77,6 @@ export const PageRow = styled.div`
     flex-direction: row;
 `
 
-export const AchieveCard = styled.div`
-    display: flex;
-    flex-direction: ${ props => props.flexDirection };
-    height: ${ props => props.height };
-    width: ${ props => props.width };
-    background: linear-gradient(215deg, ${ props => props.fromcolor } 0%, ${ props => props.tocolor } 100%);
-    border-radius: 10px;
-    box-shadow: ${props => props.noShadow === 'true' || props.theme.mode === 'dark' ? null : `-1rem 0 3rem ${ props.tocolor }` };
-    transition: 0.4s ease-out;
-    position: relative;
-    margin-left: ${props => props.marginLeft};
-    margin-right: ${props => props.marginRight};
-    margin-top: ${props => props.marginTop};
-    margin-bottom: ${props => props.marginBottom};
-
-    &:hover {
-        transition: 0.4s ease-out;
-        position: relative;
-        transition: 0.4s ease-out;
-    }
-`
-
-
-export const AchievementWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 1115px;
-    margin-left: 150px;
-    margin-right: 150px;
-    margin-bottom: 100px;
-`
-
-export const AchievementRow = styled.div`
-    display: flex;
-    flex-direction: row;
-    height: ${ props => props.height};
-    margin-bottom: 48px;
-`
-export const AchievementCol = styled.div`
-    display: flex;
-    flex-direction: column;
-    max-height: 100%;
-    width: ${ props => props.width }; 
-`
-
 export const ShowcaseDivBorder = styled.div`
     width: 550px;
     height: 380px;
@@ -159,26 +112,11 @@ export const ShowcaseInfoDetail = styled.p`
     color: white;
 `
 
-export const AchieveCardHeading = styled.div`
-    margin-left: ${ props => props.marginLeft };
-    margin-top: ${ props => props.marginTop };
-    font-size: 40px;
-    text-align: center;
-    color: white;
-`
-
-export const AchieveCardDescription = styled.div`
-    font-size: 20px;
-    text-align: center;
-    margin-left: ${ props => props.marginLeft };
-    margin-top: ${ props => props.marginTop };
-    color: white;
-`
-
 export const BetweenDescription = styled.div`
     font-size: 25px;
     text-align: center;
     padding: 24px;
+    color: ${ props => props.theme.mode === 'dark' ? 'white': 'black' };
     margin-top: ${props => props.marginTop};
 `
 
@@ -188,4 +126,80 @@ export const AchieveCardButton = styled.button`
     border-radius: 10px;
     margin-top: ${props => props.marginTop};
     margin-left: 190px;
+`
+
+export const ProWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 85vh;
+`
+export const MiddleProWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 25vh;
+    margin-top: -2.5vh;
+    margin-bottom: 2vh;
+`
+
+export const ProCard = styled.div`
+    display: flex;
+    width: 75vw;
+`
+export const ProRow = styled.div`
+    display: flex;
+    width: 100%;
+    height: 35vh;
+    margin-bottom: 40px;
+    flex-direction: row;
+`
+
+export const MiddleProRow = styled.div`
+    display: flex;
+    width: 100%;
+    height: 25vh;
+    flex-direction: row;
+`
+
+export const MiddleCard = styled.div`
+    display: flex;
+    flex-direction: row;
+    color: white;
+    width: 100%;
+    margin-right: 30px;
+    margin-left: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 10px;
+    transition: 0.4s ease-out;
+    background: linear-gradient(215deg, ${ props => props.fromcolor } 0%, ${ props => props.tocolor } 100%);
+    border-radius: 10px;
+    box-shadow: ${props => props.noShadow === 'true' || props.theme.mode === 'dark' ? null : `-1rem 0 3rem ${ props.tocolor }` };
+`
+
+export const Card = styled.div`
+    display: flex;
+    color: white;
+    width: 100%;
+    margin-right: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    margin-left: 30px;
+    transition: 0.4s ease-out;
+    background: linear-gradient(215deg, ${ props => props.fromcolor } 0%, ${ props => props.tocolor } 100%);
+    border-radius: 10px;
+    box-shadow: ${props => props.noShadow === 'true' || props.theme.mode === 'dark' ? null : `-1rem 0 3rem ${ props.tocolor }` };
+`
+export const CardHeading = styled.div`
+    font-size: 40px;
+    text-align: center;
+    color: white;
 `

@@ -8,10 +8,7 @@ import {
     Title
 } from './styles'
 import Block from '../../components/Blocks'
-
-import ReactMarkdown from 'react-markdown'
 import Markdown from 'markdown-to-jsx';
-
 import post from '../../blog/testingPost.md'
 
 function Posts(props) {

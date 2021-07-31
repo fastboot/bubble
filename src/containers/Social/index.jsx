@@ -6,7 +6,6 @@ import {
     StripLogo,
     Heading,
     StyledDiv2X,
-    Wrapper,
 } from './styles'
 import Slideshow from 'react-slidez'
 import NowPlaying from '../../components/Spotify/NowPlaying'
