@@ -78,7 +78,7 @@ export const PageRow = styled.div`
 `
 
 export const ShowcaseDivBorder = styled.div`
-    width: 550px;
+    width: 40vw;
     height: 380px;
     margin-left: 700px;
     margin-top: 100px;
@@ -155,6 +155,7 @@ export const ProRow = styled.div`
     display: flex;
     width: 100%;
     height: 35vh;
+    max-height: 270px;
     margin-bottom: 40px;
     flex-direction: row;
 `
@@ -163,6 +164,7 @@ export const MiddleProRow = styled.div`
     display: flex;
     width: 100%;
     height: 25vh;
+    max-height: 270px;
     flex-direction: row;
 `
 
