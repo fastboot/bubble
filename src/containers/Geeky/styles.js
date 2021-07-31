@@ -135,6 +135,7 @@ export const ProWrapper = styled.div`
     justify-content: center;
     width: 100vw;
     height: 85vh;
+    max-height: 540px;
 `
 export const MiddleProWrapper = styled.div`
     display: flex;
@@ -145,6 +146,7 @@ export const MiddleProWrapper = styled.div`
     height: 25vh;
     margin-top: -2.5vh;
     margin-bottom: 2vh;
+    max-height: 200px;
 `
 
 export const ProCard = styled.div`
@@ -164,7 +166,7 @@ export const MiddleProRow = styled.div`
     display: flex;
     width: 100%;
     height: 25vh;
-    max-height: 270px;
+    max-height: 200px;
     flex-direction: row;
 `
 
