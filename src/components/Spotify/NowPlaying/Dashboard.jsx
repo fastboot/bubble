@@ -34,6 +34,7 @@ function Dashboard({ strip }) {
     const [deviceType, setDeviceType] = useState('')
     const [timeStamp, setTimeStamp] = useState('')
     const [externalUrl, setExternalUrl] = useState('')
+    const [componentMounted, setComponentMounted] = useState(false);
     /*
         duration = 600
         curr     = (curr / duration) * 600;
@@ -42,7 +43,7 @@ function Dashboard({ strip }) {
         axios
           .get("https://pranjaltestapinodejs.herokuapp.com/currentTrack", {})
           .then(res => {
-            if(res.data.item) {
+            if(res.data.item && componentMounted) {
                 setArtist(res.data.item.artists[0].name)
                 setDevice(res.data.device.name)
                 setTrack(res.data.item.name)
@@ -59,6 +60,10 @@ function Dashboard({ strip }) {
           .catch((err) => {
             console.log(err)
           },[])
+
+          return () => {
+            setComponentMounted(false);
+        }
       });
 
     const showStrip = strip
