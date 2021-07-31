@@ -16,9 +16,16 @@ import {
 function Languages(props) {
     const [data, setData] = useState()
     const [isLoading, setIsLoading] = useState(false)
-    const [stat, setStat] = useState()     
+    const [stat, setStat] = useState()    
+    const [componentMounted, setComponentMounted] = useState(true)
     useEffect(() => {
-        fetchData();
+        if(componentMounted) {
+            fetchData();
+        }
+        return () => {
+            setComponentMounted(false)
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const fetchData = async () => {
