@@ -86,7 +86,7 @@ function Dashboard({ strip }) {
                                 height="56" 
                                 title="follow"
                                 scrolling="no" 
-                                frameborder="0" 
+                                frameBorder="0" 
                                 style={{ border: 'none', overflow: 'hidden', marginTop: '50px'}} 
                                 allowtransparency="true">
                             </iframe>
