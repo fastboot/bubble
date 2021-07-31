@@ -40,7 +40,7 @@ function Dashboard({ strip }) {
     */
     useEffect(() => {
         axios
-          .get("https://pranjaltestapinodejs.herokuapp.com", {})
+          .get("https://pranjaltestapinodejs.herokuapp.com/currentTrack", {})
           .then(res => {
             if(res.data.item) {
                 setArtist(res.data.item.artists[0].name)
