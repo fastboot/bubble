@@ -59,16 +59,6 @@ function Dashboard({ strip }) {
           .catch((err) => {
             console.log(err)
           },[])
-
-        return () => {
-            setArtist('')
-            setDevice('')
-            setTrack('')
-            setAlbumart('')
-            setDeviceType('')
-            setExternalUrl('');
-            setTimeStamp('');
-        }
       });
 
     const showStrip = strip
