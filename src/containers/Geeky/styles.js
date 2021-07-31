@@ -135,7 +135,7 @@ export const ProWrapper = styled.div`
     justify-content: center;
     width: 100vw;
     height: 85vh;
-    max-height: 560px;
+    max-height: 660px;
 `
 export const MiddleProWrapper = styled.div`
     display: flex;
