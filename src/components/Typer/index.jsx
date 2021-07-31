@@ -26,7 +26,16 @@ function Typer({ messages, heading }) {
       timer = setTimeout(handleType, state.typingSpeed);
     };
     handleType();
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      setState({
+        text: "",
+        message: "",
+        isDeleting: false,
+        loopNum: 0,
+        typingSpeed: CONSTANTS.TYPING_SPEED,
+      });
+    };
   }, [state.isDeleting, state.typingSpeed]);
 
   useEffect(() => {
@@ -45,6 +54,15 @@ function Typer({ messages, heading }) {
         message: getMessage(cs, messages)
       }));
     }
+    return () => {
+      setState({
+        text: "",
+        message: "",
+        isDeleting: false,
+        loopNum: 0,
+        typingSpeed: CONSTANTS.TYPING_SPEED,
+      });
+    };
   }, [state.text, state.message, state.isDeleting, messages]);
 
   function getCurrentText(currentState) {
