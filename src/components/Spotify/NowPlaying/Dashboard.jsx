@@ -32,7 +32,8 @@ function Dashboard({ strip }) {
     const [albumart, setAlbumart] = useState('')
     const [device, setDevice] = useState('')
     const [deviceType, setDeviceType] = useState('')
-    const [timeStamp, setTimeStamp] = useState('')
+    const [duration, setDuration] = useState(0)
+    const [progress, setProgress] = useState(0)
     const [externalUrl, setExternalUrl] = useState('')
     const [componentMounted, setComponentMounted] = useState(true);
     /*
@@ -49,12 +50,9 @@ function Dashboard({ strip }) {
                 setTrack(res.data.item.name)
                 setAlbumart(res.data.item.album.images[0].url)
                 setDeviceType(res.data.device.type)
-                setExternalUrl(res.data.item.external_urls.spotify);
-                const duration = res.data.item.duration_ms;
-                const currTime = res.data.progress_ms;
-                for(let i = currTime; i <= duration; i++) {
-                    setTimeStamp((currTime / duration) * 100);
-                }
+                setExternalUrl(res.data.item.external_urls.spotify)
+                setDuration(res.data.item.duration_ms)
+                setProgress(res.data.progress_ms)
             }
           })
           .catch((err) => {
@@ -82,7 +80,7 @@ function Dashboard({ strip }) {
                                 <NowPlayingDevice> { device } </NowPlayingDevice>
                             </Device>
                             <Bar>
-                                <Filler percent = {timeStamp}/>
+                                <Filler percent = {(progress / duration) * 100}/>
                                 <Dot />
                             </Bar>
                             <iframe 

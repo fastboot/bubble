@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import { Route, Switch } from 'react-router-dom'
 import { 
     GradientAnimated, 
     PageHeading,
@@ -9,16 +10,27 @@ import {
 import Block from '../../components/Blocks'
 
 import ReactMarkdown from 'react-markdown'
+import Markdown from 'markdown-to-jsx';
 
-import post from '../../blog/testingPost.mdx'
+import post from '../../blog/testingPost.md'
 
 function Posts(props) {
+    const [markdown, setMarkdown] = useState("");
+
+    useEffect(() => {
+        fetch(post)
+        .then((res) => res.text())
+        .then((text) => setMarkdown(text));
+    }, []);
     return (
         <React.Fragment>
+            
+            
             <GradientAnimated />
             <PageHeading>
                 Posts
             </PageHeading>
+            
             <Block 
                 color = 'white'
                 width = '100%'
@@ -27,7 +39,7 @@ function Posts(props) {
             >
             <PageRow>
                 <Card>
-                    <ReactMarkdown>{post}</ReactMarkdown> 
+                <Markdown children = {markdown} /> 
                 </Card>
                 <Card>
                     <Title>Post</Title>
@@ -42,6 +54,10 @@ function Posts(props) {
                 </Card>
             </PageRow>
             </Block>
+
+            <Switch>
+                <Route exact path = '/:postId' />
+            </Switch>
         </React.Fragment>
     )
 }

@@ -1,11 +1,14 @@
 import styled from 'styled-components'
 
 export const Bar = styled.div`
-    width: 1000px;
+    width: 88vw;
     height: 10px;
     display: flex;
     border-radius: 10px;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    marginLeft: 3%;
     overflow: hidden;
 `
 export const FirstDiv = styled.div`
@@ -35,9 +38,11 @@ export const FifthDiv = styled.div`
     background: #50a7fc;
 `
 export const ListDiv = styled.div`
-    width: 1200px;
+    width: 90vw;
     height: 50px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 10px;
     flex-direction: row;
 `

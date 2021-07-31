@@ -41,19 +41,15 @@ function Geeky(props) {
             <GradientAnimated />
             <PageHeading>
                 Geeky
-            </PageHeading>
-            <Wrapper>
-                <Heading> 
-                    <h1> Code Contribution </h1>
-                    <StripLogo src = { contribution } alt = 'contribution' />
-                </Heading>
-            </Wrapper>
+            </PageHeading> 
+            <Heading> 
+                <h1> Code Contribution </h1>
+                <StripLogo src = { contribution } alt = 'contribution' />
+            </Heading>
             <HeatmapComponent currTheme = {props.currTheme} />
-            <Wrapper>
-                <SubHeading> 
-                    Most used languages
-                </SubHeading>
-            </Wrapper>
+            <SubHeading> 
+                Most used languages
+            </SubHeading>
             <Languages />
             <Wrapper>
                 <SubHeading> 
@@ -69,13 +65,10 @@ function Geeky(props) {
                     </GitHubButton>
                 </SubHeading>
             </Wrapper>
-            
-            <Wrapper>
-                <SubHeading> 
-                    <h1> Showcase </h1>
-                    <StripLogo src = { projects } alt = 'projects' />
-                </SubHeading>
-            </Wrapper>
+            <Heading> 
+                <h1> Showcase </h1>
+                <StripLogo src = { projects } alt = 'projects' />
+            </Heading>
             <Block 
                 height = '600px'
                 fromcolor = '#52155a'
@@ -112,12 +105,10 @@ function Geeky(props) {
                 
                 
             </Block>
-            <Wrapper>
-                <Heading> 
-                    <h1> I Love Competing! </h1>
-                    <StripLogo src = { trophy } alt = 'trophy' />
-                </Heading>
-            </Wrapper>
+            <Heading> 
+                <h1> I Love Competing! </h1>
+                <StripLogo src = { trophy } alt = 'trophy' />
+            </Heading>
             <AchievementWrapper>
             <AchievementRow
                     height = '270px'

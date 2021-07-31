@@ -46,22 +46,21 @@ export const Heading = styled.div`
     display: flex;
     flex-direction: row;
     height: 70px;
-    width: 100%;
+    width: 100vw;
     line-height: 10px;
-    margin-left: 110px;
-    margin-top: 100px;
-    padding-left: 450px;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
 `
 
 export const SubHeading = styled.div`
     display: flex;
     flex-direction: row;
     height: 70px;
-    width: 100%;
+    width: 100vw;
     line-height: 10px;
-    margin-left: 190px;
-    margin-top: 40px;
-    padding-left: 450px;
+    justify-content: center;
+    align-items: center;
 `
 export const StripLogo = styled.img`
     padding-right: 10px;
@@ -104,7 +103,6 @@ export const AchieveCard = styled.div`
 
 export const AchievementWrapper = styled.div`
     display: flex;
-    position: relative;
     flex-direction: column;
     height: 100%;
     width: 1115px;
@@ -117,10 +115,7 @@ export const AchievementRow = styled.div`
     display: flex;
     flex-direction: row;
     height: ${ props => props.height};
-    max-width: 100%;
-    margin: 48px;
     margin-bottom: 48px;
-    margin-top: 0px;
 `
 export const AchievementCol = styled.div`
     display: flex;

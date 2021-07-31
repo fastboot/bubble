@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { NavLink as Link } from 'react-router-dom'
 
+
 export const GradientAnimated = styled.div`
     background: linear-gradient(45deg, #08f7fe, #09fbd3, #fe53bb, #f5d300);
     background-size: 400% 400%;
@@ -93,11 +94,11 @@ export const Heading = styled.div`
     display: flex;
     flex-direction: row;
     height: 70px;
-    width: 100%;
+    width: 100vw;
     line-height: 10px;
-    margin-left: 110px;
-    margin-top: 100px;
-    padding-left: 500px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
 `
 
 export const Strip = styled.div`
@@ -151,8 +152,11 @@ export const Title = styled.div`
 export const Card = styled.div`
     display: flex;
     height: 380px;
+    color: white;
     width: 700px;
     margin: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
     background-color: #17141d;
     border-radius: 10px;
     box-shadow: -1rem 0 3rem #000;

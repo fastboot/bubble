@@ -62,7 +62,7 @@ function Languages(props) {
     }
       
     return (
-        <div style = {{ width: '80%', height: '100px', marginLeft: '220px' }}>
+        <div style = {{ marginLeft: '5%'}}>
             {isLoading && <span>Loading...</span>}
             {data && stat && 
             <Fragment>

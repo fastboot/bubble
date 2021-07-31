@@ -53,13 +53,13 @@ function HeatmapComponent(props) {
       }
       
     return (
-        <div style = {{ width: '90%', height: '300px', marginLeft: '150px' }}>
+        <div style = {{ padding: '24px' }}>
             {isLoading && <span>Loading...</span>}
             {data && 
             <Heatmap 
                 data={data} 
-                blockSize={20} 
-                fontSize={16} 
+                blockSize={25} 
+                fontSize={20} 
                 theme={ props.currTheme.mode === 'dark' ? darkTheme: defaultTheme }
             >   
                 <ReactTooltip delayShow={30} html />

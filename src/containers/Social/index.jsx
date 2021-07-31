@@ -29,12 +29,10 @@ function Social() {
             <PageHeading> 
                  Social
             </PageHeading>
-            <Wrapper>
-                <Heading> 
-                    <h1> My Clicks </h1>
-                    <StripLogo src = { camera } alt = 'camera' />
-                </Heading>
-            </Wrapper>
+            <Heading> 
+                <h1> My Clicks </h1>
+                <StripLogo src = { camera } alt = 'camera' />
+            </Heading>
             <StyledDiv2X>
                 <Slideshow 
                     slides = { images }

@@ -4,7 +4,6 @@ import {
     ProfilePicture, 
     HomeWrapper, 
     Workplace, 
-    Wrapper,
     Heading, 
     StripLogo,
     WorkplaceNameDiv, 
@@ -71,12 +70,10 @@ function Whoami(props) {
                         </AboutParagraph>
                     </ProfileCard>
             </HomeWrapper>
-            <Wrapper>
-                <Heading> 
-                    <h1> Gadgets I Use</h1>
-                    <StripLogo src = { gadgets } alt = 'gadgets' />
-                </Heading>
-            </Wrapper>
+            <Heading> 
+                <h1> Gadgets I Use </h1>
+                <StripLogo src = { gadgets } alt = 'gadgets' />
+            </Heading>
             <Block 
                 color = 'white'
                 width = '100%'

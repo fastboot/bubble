@@ -66,10 +66,10 @@ export const Heading = styled.div`
     display: flex;
     flex-direction: row;
     height: 70px;
-    width: 100%;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
     line-height: 10px;
-    margin-left: 170px;
-    padding-left: 450px;
 `
 export const StyledDiv2X = styled.div`
     position: relative;

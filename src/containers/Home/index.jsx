@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { NavLink as Link } from 'react-router-dom'
 import { 
     GradientAnimated, 
@@ -25,24 +25,32 @@ import social from '../../assets/icons/social.png'
 import p1 from '../../assets/clicks/p1.png'
 import p2 from '../../assets/clicks/p11.png'
 import p3 from '../../assets/clicks/p2.png'
+import Markdown from 'markdown-to-jsx';
+
+import post from '../../blog/testingPost.md'
 
 function HOME(props) {
+    const [markdown, setMarkdown] = useState("");
+
+    useEffect(() => {
+        fetch(post)
+        .then((res) => res.text())
+        .then((text) => setMarkdown(text));
+    }, []);
     const msgs = ["Bonjour", "Hola", "Olá", "Namaste", "Hello"];
     return (
         <PageWrapper>
             <GradientAnimated>
                 <PageHeading> <Typer heading={"Things I want to type:"} messages={msgs} /> </PageHeading>
             </GradientAnimated>
-            <Wrapper>
-                <Heading> 
-                        <h1> Wassup? </h1>
-                        <StripLogo src = { flash } alt = 'contribution' />
-                </Heading>
-            </Wrapper>
+            <Heading> 
+                <h1> Wassup? </h1>
+                <StripLogo src = { flash } alt = 'contribution' />
+            </Heading>
             <StyledDiv2X>
                 <PageRow>
                     <Card>
-                        <Title>Latest Post</Title>
+                        <Markdown children = {markdown} /> 
                     </Card>
                     <Card>
                         <Title>Last Commit</Title>
@@ -58,12 +66,10 @@ function HOME(props) {
                     </CurrentStreamStripWrapper>
                 </Strip><Triangle />
             </Wrapper>
-            <Wrapper>
-                <Heading> 
-                    <h1> !AntiSocial </h1>
-                    <StripLogo src = { social } alt = 'contribution' />
-                </Heading>
-            </Wrapper>
+            <Heading> 
+                <h1> !AntiSocial </h1>
+                <StripLogo src = { social } alt = 'contribution' />
+            </Heading>
             <StyledDiv2X>
                 <PageRow>
                     <PicCard>
@@ -77,11 +83,11 @@ function HOME(props) {
                     </PicCard>
                 </PageRow>
             </StyledDiv2X>
-            <Wrapper>
+            <Heading>
                 <Link to = '/social' style = {{ textDecoration: 'none' }}>
-                    <h1 style = {{ marginLeft: '620px' }}> See More </h1>
+                    <h1> See More </h1>
                 </Link>
-            </Wrapper>
+            </Heading>
         </PageWrapper>
     )
 }

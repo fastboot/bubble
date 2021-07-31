@@ -41,6 +41,7 @@ function App(props) {
           <Route exact path = '/' component={() => (<Home currTheme = {theme} />)} />
           <Route exact path = '/whoami' component={() => (<Whoami currTheme = {theme} />)} />
           <Route exact path = '/posts' component={() => (<Post currTheme = {theme} />)} />
+          <Route exact path = '/posts/:postId' component={() => (<Post currTheme = {theme} />)} />
           <Route exact path = '/geeky' component={() => (<Geeky currTheme = {theme} />)} />
           <Route exact path = '/social' component={() => (<Social currTheme = {theme} />)} />
           <Route component = {Notfound} />

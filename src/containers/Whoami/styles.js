@@ -4,9 +4,8 @@ import BackgroundDark from '../../assets/shapes/PeakBackgroundDark.png'
 
 export const ProfileCard = styled.div`
   display: flex;
-  width: 1000px;
+  width: 100vw;
   height: 100%;
-  margin-left: 230px;
   justify-content: space-around;
   font-size: 5em;
   align-items: center;
@@ -172,9 +171,9 @@ export const GadgetRow = styled.div`
 export const Backpack = styled.div`
     position: relative;
     height: 300px;
-    width: 1200px;
+    width: 90vw;
     top: 60px;
-    left: calc(10%);
+    left: calc(5%);
     display: flex;
 `
 
@@ -215,11 +214,11 @@ export const Heading = styled.div`
     display: flex;
     flex-direction: row;
     height: 70px;
-    width: 100%;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
     line-height: 10px;
-    margin-left: 110px;
     margin-top: 100px;
-    padding-left: 450px;
 `
 export const StripLogo = styled.img`
     padding-right: 10px;
@@ -295,33 +294,33 @@ export const Card = styled.div`
         }
 
         ${FilledBarMacPro} {
-            width: 120px;
+            width: 85%;
             z-index: 1;
             transition: 0.4s ease-out;
         }
 
         ${FilledBarMacAir} {
-            width: 150px;
+            width: 100%;
             z-index: 1;
             transition: 0.4s ease-out;
         }
         ${FilledBarSamPro} {
-            width: 60px;
+            width: 60%;
             z-index: 1;
             transition: 0.4s ease-out;
         }
         ${FilledBarPixel} {
-            width: 150px;
+            width: 100%;
             z-index: 1;
             transition: 0.4s ease-out;
         }
         ${FilledBarIpod} {
-            width: 100px;
+            width: 75%;
             z-index: 1;
             transition: 0.4s ease-out;
         }
         ${FilledBarPS4} {
-            width: 30px;
+            width: 30%;
             z-index: 1;
             transition: 0.4s ease-out;
         }
@@ -341,7 +340,7 @@ export const Bar = styled.div`
     top: 100px;
     left: 20px;
     height: 5px;
-    width: 150px;
+    width: 80%;
 `
 
 export const Gadget = styled.div`
