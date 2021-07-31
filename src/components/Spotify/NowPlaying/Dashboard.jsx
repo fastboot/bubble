@@ -34,7 +34,7 @@ function Dashboard({ strip }) {
     const [deviceType, setDeviceType] = useState('')
     const [timeStamp, setTimeStamp] = useState('')
     const [externalUrl, setExternalUrl] = useState('')
-    const [componentMounted, setComponentMounted] = useState(false);
+    const [componentMounted, setComponentMounted] = useState(true);
     /*
         duration = 600
         curr     = (curr / duration) * 600;

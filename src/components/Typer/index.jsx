@@ -14,55 +14,52 @@ function Typer({ messages, heading }) {
     loopNum: 0,
     typingSpeed: CONSTANTS.TYPING_SPEED,
   });
+  const [componentMounted, setComponentMounted] = useState(true);
 
   useEffect(() => {
     let timer = "";
     const handleType = () => {
-      setState(cs => ({
-        ...cs, // cs means currentState
-        text: getCurrentText(cs),
-        typingSpeed: getTypingSpeed(cs)
-      }));
-      timer = setTimeout(handleType, state.typingSpeed);
+      if(componentMounted) { 
+        setState(cs => ({
+          ...cs, // cs means currentState
+          text: getCurrentText(cs),
+          typingSpeed: getTypingSpeed(cs)
+        }));
+        timer = setTimeout(handleType, state.typingSpeed);
+      }
     };
     handleType();
     return () => {
-      clearTimeout(timer);
-      setState({
-        text: "",
-        message: "",
-        isDeleting: false,
-        loopNum: 0,
-        typingSpeed: CONSTANTS.TYPING_SPEED,
-      });
+      clearTimeout(timer)
+      setComponentMounted(false)
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.isDeleting, state.typingSpeed]);
 
   useEffect(() => {
     if (!state.isDeleting && state.text === state.message) {
       setTimeout(() => {
-        setState(cs => ({
-          ...cs,
-          isDeleting: true
-        }))
+        if(componentMounted) {
+          setState(cs => ({
+            ...cs,
+            isDeleting: true
+          }))
+        }
       }, 2000);
     } else if (state.isDeleting && state.text === "") {
-      setState(cs => ({
-        ...cs, // cs means currentState
-        isDeleting: false,
-        loopNum: cs.loopNum + 1,
-        message: getMessage(cs, messages)
-      }));
+      if(componentMounted) {
+        setState(cs => ({
+          ...cs, // cs means currentState
+          isDeleting: false,
+          loopNum: cs.loopNum + 1,
+          message: getMessage(cs, messages)
+        }));
+      }
     }
     return () => {
-      setState({
-        text: "",
-        message: "",
-        isDeleting: false,
-        loopNum: 0,
-        typingSpeed: CONSTANTS.TYPING_SPEED,
-      });
+      setComponentMounted(false)
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.text, state.message, state.isDeleting, messages]);
 
   function getCurrentText(currentState) {
