@@ -171,5 +171,6 @@ export const PicCard = styled.div`
     margin: 24px;
     overflow: hidden;
     background-color: #17141d;
-    border-radius: 10px;
+    border: 15px solid white;
+    border-bottom: 70px solid white;
 `
