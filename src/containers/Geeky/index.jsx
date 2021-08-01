@@ -7,9 +7,6 @@ import {
     Heading,
     SubHeading,
     ShowcaseDivBorder,
-    ShowcaseInfoWrapper,
-    ShowCaseInfoHeading,
-    ShowcaseInfoDetail,
     BetweenDescription,
     ProWrapper,
     MiddleProWrapper,
@@ -18,8 +15,11 @@ import {
     ProRow,
     MiddleCard,
     MiddleProRow,
+    ShowWrapper,
+    ShowCard,
+    ShowInfo,
+    ShowPromo,
 } from './styles'
-import Block from '../../components/Blocks'
 import HeatmapComponent from './components/heatmap/Heatmap'
 import Languages from './components/stats/Languages'
 import trophy from '../../assets/icons/trophy.png'
@@ -71,42 +71,67 @@ function Geeky(props) {
                 <h1> Showcase </h1>
                 <StripLogo src = { projects } alt = 'projects' />
             </Heading>
-            <Block 
-                height = '600px'
-                fromcolor = '#52155a'
-                tocolor = '#381146'
+            <ShowWrapper
+                fromcolor = '#FFA103'
+                tocolor = '#FF5700'
             >
-                <ShowcaseInfoWrapper>
-                    <ShowCaseInfoHeading>
-                        Personal Site
-                    </ShowCaseInfoHeading>
-                    <ShowcaseInfoDetail>
-                        {'This was made just for fun used a lot of React in it 2021- Personal'}
-                    </ShowcaseInfoDetail>
-                </ShowcaseInfoWrapper>
-                <ShowcaseDivBorder>
-                    <img src = { project1 } alt = 'project1' style = {{ width: '760px', height: '400px'}}/>
-                </ShowcaseDivBorder>
-            </Block>
-            <Block 
-                height = '600px'
-                fromcolor = 'black'
-                tocolor = 'black'
+                <ShowCard
+                    shadow = '#9E1502'
+                >
+                    <ShowInfo
+                        width = '60%'
+                    >
+                        <h1> Personal Site </h1>
+                        <p> This was made just for fun used a lot of React in it 2021 - Personal </p>
+                    </ShowInfo>
+                    <ShowPromo
+                        width = '40%'
+                    >
+                        <ShowcaseDivBorder>
+                            <img src = { project1 } alt = 'project1' style = {{ 
+                                width: '400px', 
+                                height: '300px', 
+                                flexShrink: '0',
+                                minWidth: '100%',
+                                minHeight: '100%',
+                                borderRadius: '10px', 
+                            }}
+                            />
+                        </ShowcaseDivBorder>
+                    </ShowPromo>
+                </ShowCard>
+            </ShowWrapper>
+            <ShowWrapper
+                fromcolor = '#9F1FFE'
+                tocolor = '#5511FA'
             >
-                <ShowcaseInfoWrapper>
-                    <ShowCaseInfoHeading>
-                        Wapco
-                    </ShowCaseInfoHeading>
-                    <ShowcaseInfoDetail>
-                        {'An application to compare your progress with others 2018- Personal'}
-                    </ShowcaseInfoDetail>
-                </ShowcaseInfoWrapper>
-                <ShowcaseDivBorder>
-                    <img src = { project2 } alt = 'project1' style = {{ width: '760px', height: '400px'}}/>
-                </ShowcaseDivBorder>
-                
-                
-            </Block>
+                <ShowCard
+                    shadow = '#120296'
+                >
+                    <ShowPromo
+                        width = '40%'
+                    >
+                        <ShowcaseDivBorder>
+                            <img src = { project2 } alt = 'project2' style = {{ 
+                                width: '400px', 
+                                height: '300px', 
+                                flexShrink: '0',
+                                minWidth: '100%',
+                                minHeight: '100%',
+                                borderRadius: '10px', 
+                            }}
+                            />
+                        </ShowcaseDivBorder>
+                    </ShowPromo>
+                    <ShowInfo
+                        width = '60%'
+                    >
+                        <h1> Wapco </h1>
+                        <p> An application to compare your progress with others 2018 - Personal</p>
+                    </ShowInfo>
+                    
+                </ShowCard>
+            </ShowWrapper>
             <Heading> 
                 <h1> I Love Competing! </h1>
                 <StripLogo src = { trophy } alt = 'trophy' />
@@ -169,7 +194,6 @@ function Geeky(props) {
                     </MiddleProRow>
                 </ProCard>
             </MiddleProWrapper>
-
             <ProWrapper>
                 <ProCard>
                     <ProRow>

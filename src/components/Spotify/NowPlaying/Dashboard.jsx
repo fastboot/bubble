@@ -63,10 +63,10 @@ function Dashboard({ strip }) {
     
     return (
         <React.Fragment>
-            { showStrip === 'noshow' && artist? ( 
+            { showStrip === 'noshow' && artist ? ( 
                     <NowPlayingWrapper albumart = {albumart}>
                         <StripLogo src = { spotifyoriginal } alt = 'spotify' />
-                        <a href = {externalUrl} target="_blank" rel="noreferrer"><AlbumArt src = { albumart } alt = 'albumart' /></a>
+                        <a href = { externalUrl } target="_blank" rel="noreferrer"><AlbumArt src = { albumart } alt = 'albumart' /></a>
                         <DetailsWrapper>
                             <NowPlayingTrack> { track } </NowPlayingTrack>
                             <NowPlayingArtist> { artist } </NowPlayingArtist>

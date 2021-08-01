@@ -78,14 +78,11 @@ export const PageRow = styled.div`
 `
 
 export const ShowcaseDivBorder = styled.div`
-    width: 40vw;
-    height: 380px;
-    margin-left: 700px;
-    margin-top: 100px;
-    background: white;
+    width: 30vw;
+    height: 38vh;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 0 0 10px #000;
+    border: 10px solid #212124;
 `
 export const ShowcaseInfoWrapper = styled.div`
     display: flex;
@@ -206,4 +203,44 @@ export const CardHeading = styled.div`
     font-size: 40px;
     text-align: center;
     color: white;
+`
+
+export const ShowWrapper = styled.div`
+    height: 80vh;
+    max-height: 600px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background: linear-gradient(215deg, ${ props => props.fromcolor } 0%, ${ props => props.tocolor } 100%);
+`
+
+export const ShowCard = styled.div`
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    background: black;
+    box-shadow: -1rem 1.5rem 3rem ${ props => props.shadow };
+    display: flex;
+    border-radius: 10px;
+    flex-direction: row;
+`
+
+export const ShowInfo = styled.div`
+    width: ${ props => props.width };
+    height: 100%;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center; 
+    padding: 12px;
+    flex-direction: column;
+`
+export const ShowPromo = styled.div`
+    width: ${ props => props.width };
+    height: 100%;
+    display: flex;
+    padding: 24px;
+    justify-content: center;
+    align-items: center; 
 `
