@@ -68,7 +68,7 @@ export const AlbumArt = styled.img`
 `
 
 export const DetailsWrapper = styled.div`
-    width: 600px;
+    width: 50vw;
     height: 300px;
     margin-top: 100px;
     margin-left: 50px;

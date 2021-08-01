@@ -362,6 +362,9 @@ export const AboutParagraph = styled.p`
     font-size: 20px;
     font-weight: bold;
     text-align: center;
+    border-radius: 10px;
+    width: 80vw;
+    padding: 24px;
 `
 
 

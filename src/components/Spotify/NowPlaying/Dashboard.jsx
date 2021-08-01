@@ -75,7 +75,7 @@ function Dashboard({ strip }) {
                                 <NowPlayingDevice> { device } </NowPlayingDevice>
                             </Device>
                             <Bar>
-                                <Filler percent = {(progress / duration) * 100}/>
+                                <Filler percent = {(progress / duration) * 100} width = '100'/>
                                 <Dot />
                             </Bar>
                             <iframe 
@@ -119,7 +119,7 @@ function Dashboard({ strip }) {
                 <NowPlayingWrapper albumart = {albumart}>
                     <StripLogo src = { spotifyoriginal } alt = 'spotify' />
                     <StripDetailsWrapper>
-                        <h1> Away from headphones, maybe check again later :) </h1>
+                        <h1 style = {{ marginLeft: '120px', lineHeight: '55px' }}> Away from headphones, maybe check back again later :) </h1>
                     </StripDetailsWrapper>
                 </NowPlayingWrapper>
             }

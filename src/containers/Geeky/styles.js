@@ -80,6 +80,7 @@ export const PageRow = styled.div`
 export const ShowcaseDivBorder = styled.div`
     width: 30vw;
     height: 38vh;
+    max-height: 500px;
     border-radius: 10px;
     overflow: hidden;
     border: 10px solid #212124;
