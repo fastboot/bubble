@@ -26,7 +26,7 @@ import {
     FilledBarPS4,
     GradientAnimated,
 } from './styles'
-import Profile from '../../assets/profile/pranjal.jpeg'
+import Profile from '../../assets/profile/dp.png'
 import LogoWhite  from '../../assets/logos/PeakWhite.png'
 import LogoBlack from '../../assets/logos/PeakBlack.png'
 import ipod from '../../assets/devices/ipodShuffle.png'

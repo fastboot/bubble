@@ -4,19 +4,21 @@ export const FooterWrapper = styled.div`
     display: flex;
     bottom: 0;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
+    // background: red;
+    position: relative;
     
 `;
 
 export const FooterDiv = styled.div`
     display: flex;
     height: 50px;
-    width: 900px;
+    // background: red;
     border-radius: 10px;
     margin-bottom: 30px;
+    padding-left: 50px;
     margin-top: 30px;
-    align-items: center;
-    justify-content: space-around;
+    align-items: left;
 `
 
 
@@ -37,7 +39,6 @@ export const FooterInfo = styled.div`
 
 export const FooterIcons = styled.div`
     margin: 0px;
-
     display: flex;
-    width: 250px;
+    width: 50px;
 `;

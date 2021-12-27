@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import { NavLink as Link } from 'react-router-dom'
 import BackgroundLight from '../../assets/shapes/PeakBackground.png'
 import BackgroundDark from '../../assets/shapes/PeakBackgroundDark.png'
+import darkBackground from '../../assets/backgrounds/darkBackground.png'
+import lightBackground from '../../assets/backgrounds/lightBackground.png'
 
 
 // export const GradientAnimated = styled.div`
@@ -11,17 +13,17 @@ import BackgroundDark from '../../assets/shapes/PeakBackgroundDark.png'
 //     width: 100%;
 //     position: relativ;
 //     height: 400px;
-    // @keyframes gradient {
-    //     0% {
-    //         background-position: 0% 50%;
-    //     }
-    //     50% {
-    //         background-position: 100% 50%;
-    //     }
-    //     100% {
-    //         background-position: 0% 50%;
-    //     }
-    // }
+//     @keyframes gradient {
+//         0% {
+//             background-position: 0% 50%;
+//         }
+//         50% {
+//             background-position: 100% 50%;
+//         }
+//         100% {
+//             background-position: 0% 50%;
+//         }
+//     }
 // `
 
 export const CurrentStreamStripWrapper = styled.div`
@@ -49,11 +51,14 @@ export const CurrentStreamButton = styled.button`
 `
 
 export const PageHeading = styled.h1`
-    color: white;
     position: relative;
-    font-size: 56px;
+    font-size: 50px;
     -webkit-background-clip: text;
     background-clip: text;
+    align-items: center;
+    text-align: center;
+    // background: blue;
+    // line-height: 10px;
     -webkit-text-fill-color: transparent;
     width: 100vw;
     transition: all 0.55s linear;
@@ -61,15 +66,18 @@ export const PageHeading = styled.h1`
     font-weight: bold;
 `
 export const PageWrapper = styled.div`
-    width: 100%;
-    height: 77.2vh;
-    background: ${ props => props.theme.mode === 'dark' ? 'black': 'white' };
+    width: 100vw;
+    height: 77vh;
+    // background: red;
+    background-image: url(${ props => props.theme.mode === 'dark' ? darkBackground: lightBackground });
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    // background: ${ props => props.theme.mode === 'dark' ? 'black': 'white' };
     color: ${ props => props.theme.mode === 'dark' ? 'white': 'black' };
     display: flex;
     position: relative;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
 `
 
 export const WrapperRev = styled.div`
@@ -265,14 +273,14 @@ export const WorkplaceLogo = styled.img`
 export const ProfilePicture = styled.div`
   height: 250px;
   width: 250px;
+//   margin-top: 50px;
   border-radius: 50%;
   border: 3px solid ${ props => props.theme.mode === 'dark' ? 'white' : 'black' };
   overflow: hidden;
-  display:flex;
-  flex-direction: row;
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: flex-start;
   align-items: center;
 `
 
@@ -286,7 +294,6 @@ export const Picture = styled.div`
 export const ProfileCard = styled.div`
   display: flex;
   width: 100vw;
-  height: 100%;
   justify-content: space-around;
   font-size: 5em;
   position: relative;

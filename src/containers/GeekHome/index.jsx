@@ -29,6 +29,7 @@ import NowPlaying from '../../components/Spotify/NowPlaying';
 import Profile from '../../assets/profile/dp.png'
 import LogoWhite  from '../../assets/logos/PeakWhite.png'
 import LogoBlack from '../../assets/logos/PeakBlack.png'
+import Slideshow from 'react-slidez'
 import spotify from '../../assets/icons/spotify.png'
 import flash from '../../assets/icons/flash.png'
 import social from '../../assets/icons/social.png'
@@ -40,11 +41,9 @@ import pic from '../../assets/icons/pic.png'
 import Markdown from 'markdown-to-jsx';
 
 import post from '../../blog/testingPost.md'
-import storage from 'local-storage-fallback';
 
-function HOME(props) {
+function GeekHome(props) {
     const [markdown, setMarkdown] = useState("");
-    const [back, setBack] = useState(props.theme === 'dark' ? 'black' : 'white');
 
     useEffect(() => {
         fetch(post)
@@ -53,34 +52,33 @@ function HOME(props) {
     }, []);
 
     useEffect(() => {
-        storage.setItem('navType', 'home');
-    }, []);
-
-    // useEffect(() => {
-    //     setBack(props.theme === 'dark' ? 'black' : 'white');
-    // }, [props.theme, back])
-
-    const setType = () => {
-        storage.setItem('navType', 'geek');
-    }
-
-    const setTypeSocial = () => {
-        storage.setItem('navType', 'social');
-    }
+        
+    })
 
     return (
         <React.Fragment>
-        <PageWrapper style = {{background: back, animation: '"mynewmove 4s 2"'}}>
-            <Link to = '/geek' onClick = {setType}>
-            <div style={{ background: 'purple', width: '200px', height: '50px', borderRadius: '10px' }}>
-                Geek
-            </div>
-            </Link>
-            <Link to = '/social' onClick = {setType}>
-            <div style={{ background: 'red', width: '200px', height: '50px', borderRadius: '10px' }} >
-                Social
-            </div>
-            </Link>
+        <PageWrapper>
+            <ProfileCard>
+            
+                <ProfilePicture>
+                    <img src = {Profile} alt = 'Profile' style={{ width: '250px', height: '250px' }}/>
+                </ProfilePicture>
+                <Workplace>
+                    <div>
+                        <strong><i>Software Engineer</i></strong> at 
+                    </div>
+                    <StyledA target = '_blank' rel = 'noreferrer' href = 'https://peak.ai'>
+                        <WorkplaceNameDiv>
+                            <strong>Peak</strong>
+                        </WorkplaceNameDiv>
+                    </StyledA>
+                </Workplace>
+                <WorkplaceLogo src = { props.currTheme.mode ==='dark'? LogoWhite: LogoBlack } alt = 'Logo' /> 
+                <WorkplaceTime>
+                    2020 - present
+                </WorkplaceTime>
+            </ProfileCard>
+            
             
             {/* <img src = {dp} style = {{ width: '350px', height:'310px', marginLeft: '1000px', mariginTop: '100px'}}/> */}
         </PageWrapper>
@@ -139,4 +137,4 @@ function HOME(props) {
     )
 }
 
-export default HOME
+export default GeekHome

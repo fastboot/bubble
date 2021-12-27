@@ -13,13 +13,12 @@ import {
     Typography
 } from './styles'
 
-function Languages(props) {
+function Commits(props) {
     const [data, setData] = useState()
     const [isLoading, setIsLoading] = useState(false)
-    const [stat, setStat] = useState()    
+    const [stat, setStat] = useState()     
     useEffect(() => {
-            fetchData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        fetchData();
     }, [])
 
     const fetchData = async () => {
@@ -56,39 +55,16 @@ function Languages(props) {
     }
       
     return (
-        <div>
+        <div style = {{ width: '80%', height: '100px', marginLeft: '220px' }}>
             {isLoading && <span>Loading...</span>}
-            {data && stat && 
-            <Fragment>
-                <Bar>
-                    <FirstDiv
-                        width = {stat[0].percent.toString()}
-                    />
-                    <SecondDiv
-                        width = {stat[1].percent.toString()}
-                    />
-                    <ThirdDiv
-                        width = {stat[2].percent.toString()}
-                    />
-                    <FourthDiv
-                        width = {stat[3].percent.toString()}
-                    />
-                    <FifthDiv 
-                        width = {stat[4].percent.toString()}
-                    />
-                </Bar>
-                <ListDiv>
-                    <Dot color = '#f4e45c'/><Typography>{stat[0].name}</Typography>
-                    <Dot color = '#e44c24'/><Typography>{stat[1].name}</Typography>
-                    <Dot color = '#543c7c'/><Typography>{stat[2].name}</Typography>
-                    <Dot color = '#8ce454'/><Typography>{stat[3].name}</Typography>
-                    <Dot color = '#50a7fc'/><Typography>{stat[4].name}</Typography>
-                </ListDiv>
-            </Fragment>
+            {data && 
+                <div>
+                    Here it is!
+                </div>
             }
         </div>
     )
 }
 
-export default Languages
+export default Commits
 

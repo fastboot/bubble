@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 import { 
     GradientAnimated, 
     PageHeading,
+    Heading,
     PageRow,
     Card,
     Title
@@ -21,13 +22,10 @@ function Posts(props) {
     }, []);
     return (
         <React.Fragment>
-            
-            
-            <GradientAnimated />
-            <PageHeading>
-                Posts
-            </PageHeading>
-            
+            <Heading> 
+                <h1> Give them a read </h1>
+                {/* <StripLogo src = { trophy } alt = 'trophy' /> */}
+            </Heading>
             <Block 
                 color = 'white'
                 width = '100%'

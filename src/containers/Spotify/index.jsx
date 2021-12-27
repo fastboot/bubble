@@ -20,17 +20,12 @@ import p9 from '../../assets/clicks/p9.png'
 
 const images = [p3, p5, p4, p7, p8, p9];
 
-function Social() {
+function Spotify() {
     return (
         <React.Fragment>
-            {/* <GradientAnimated />
-            <ScrollToTop /> */}
-            <PageHeading> 
-                 Social
-            </PageHeading>
-            
+            <NowPlaying strip = "noshow"/>
         </React.Fragment>
     )
 } 
 
-export default Social
+export default Spotify

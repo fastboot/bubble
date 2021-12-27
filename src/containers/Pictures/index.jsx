@@ -20,17 +20,27 @@ import p9 from '../../assets/clicks/p9.png'
 
 const images = [p3, p5, p4, p7, p8, p9];
 
-function Social() {
+function Pictures() {
     return (
         <React.Fragment>
-            {/* <GradientAnimated />
-            <ScrollToTop /> */}
-            <PageHeading> 
-                 Social
-            </PageHeading>
+            <StyledDiv2X>
+                <Slideshow 
+                    slides = { images }
+                    showIndex
+                    showArrows
+                    autoplay
+                    enableKeyboard
+                    useDotIndex
+                    slideInterval={5000}
+                    defaultIndex={1}
+                    effect={'fade'}
+                    height={'100vh'}
+                    width={'100%'} 
+                />
+            </StyledDiv2X>
             
         </React.Fragment>
     )
 } 
 
-export default Social
+export default Pictures

@@ -75,3 +75,14 @@ export const Card = styled.div`
         transition: 0.4s ease-out;
     }
 `
+
+export const Heading = styled.div`
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    width: 100vw;
+    line-height: 10px;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+`

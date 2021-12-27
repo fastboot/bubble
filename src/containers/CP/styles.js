@@ -1,23 +1,23 @@
 import styled from 'styled-components'
 
-// export const GradientAnimated = styled.div`
-//     background: linear-gradient(45deg, #e92efb, #ff2079, #440bd4, #04005e);
-//     background-size: 400% 400%;
-//     animation: gradient 10s ease infinite;
-//     width: 100%;
-//     height: 10px;
-//     @keyframes gradient {
-//         0% {
-//             background-position: 0% 50%;
-//         }
-//         50% {
-//             background-position: 100% 50%;
-//         }
-//         100% {
-//             background-position: 0% 50%;
-//         }
-//     }
-// `
+export const GradientAnimated = styled.div`
+    background: linear-gradient(45deg, #e92efb, #ff2079, #440bd4, #04005e);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    width: 100%;
+    height: 10px;
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+`
 
 export const PageHeading = styled.div`
     width: 100%;
@@ -37,7 +37,6 @@ export const StyledDiv = styled.div`
 `
 export const Wrapper = styled.div`
     width: 100%;
-    height: 100px;
     display: flex;
     flex-direction: row;
 `
@@ -79,8 +78,9 @@ export const PageRow = styled.div`
 `
 
 export const ShowcaseDivBorder = styled.div`
-    width: 100vw;
-    height: 80vh;
+    width: 30vw;
+    height: 38vh;
+    max-height: 300px;
     border-radius: 10px;
     overflow: hidden;
     border: 10px solid #212124;
@@ -207,7 +207,7 @@ export const CardHeading = styled.div`
 `
 
 export const ShowWrapper = styled.div`
-    height: 50vh;
+    height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -217,43 +217,34 @@ export const ShowWrapper = styled.div`
 
 export const ShowCard = styled.div`
     width: 80%;
-    height: 400px;
+    height: 80%;
     margin: auto;
+    // background: black;
     // box-shadow: -1rem 1.5rem 3rem ${ props => props.shadow };
     display: flex;
-    position: relative;
     border-radius: 10px;
     flex-direction: row;
 `
 
 export const ShowInfo = styled.div`
     width: ${ props => props.width };
-    height: 300px;
+    height: 70%;
     display: flex;
     color: white;
     margin-top: 50px;
     justify-content: center;
     align-items: center; 
     padding: 12px;
-    background: linear-gradient(215deg, ${ props => props.fromcolor } 0%, ${ props => props.tocolor } 100%);
-    box-shadow: ${props => props.noShadow === 'true' || props.theme.mode === 'dark' ? null : `-1rem 0 3rem ${ props.tocolor }` };
+    background: black;
+    box-shadow: -1rem 1.5rem 3rem ${ props => props.shadow };
     border-radius: 10px;
     flex-direction: column;
 `
 export const ShowPromo = styled.div`
     width: ${ props => props.width };
-    height: 90%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    line-height: 30%;
     padding: 24px;
-    font-size: 30px;
     justify-content: center;
     align-items: center; 
-    margin-left: 100px;
-`
-export const WhiteSpace = styled.div`
-    width: 100vw;
-    height: 100px;
-    background: ${props => props.theme.mode === 'dark' ? 'black' : 'white' };
 `

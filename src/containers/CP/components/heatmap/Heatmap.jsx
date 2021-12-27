@@ -10,10 +10,10 @@ function HeatmapComponent(props) {
     const defaultTheme = {
         background: 'transparent',
         text: '#000',
-        grade4: '#1c6424',
-        grade3: '#249c3c',
-        grade2: '#7ccc6c',
-        grade1: '#c4e48c',
+        grade4: '#03001c',
+        grade3: '#fe9600',
+        grade2: '#ffc501',
+        grade1: '#ffee4a',
         grade0: '#ebedf0',
     };
 
@@ -47,16 +47,16 @@ function HeatmapComponent(props) {
       }
       
     return (
-        <div style = {{ padding: '24px', textAlign: 'center' }}>
+        <div style = {{ padding: '24px' }}>
             {isLoading && <span>Loading...</span>}
             {data && 
             <Heatmap 
                 data={data} 
-                blockSize={15} 
-                fontSize={15} 
+                blockSize={25} 
+                fontSize={20} 
                 theme={ props.currTheme.mode === 'dark' ? darkTheme: defaultTheme }
             >   
-                <ReactTooltip delayShow={10} html />
+                <ReactTooltip delayShow={30} html />
             </Heatmap>}
         </div>
     )

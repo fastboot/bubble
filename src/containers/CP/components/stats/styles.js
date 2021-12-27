@@ -1,14 +1,15 @@
 import styled from 'styled-components'
 
 export const Bar = styled.div`
-    width: 70vw;
+    width: 88vw;
     height: 10px;
     display: flex;
     border-radius: 10px;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    marginLeft: 3%;
     overflow: hidden;
-    margin: 0 auto;
 `
 export const FirstDiv = styled.div`
     width: ${props => props.width}%;
@@ -37,12 +38,12 @@ export const FifthDiv = styled.div`
     background: #50a7fc;
 `
 export const ListDiv = styled.div`
-    width: 60vw;
+    width: 90vw;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin-top: 10px;
     flex-direction: row;
 `
 export const Dot = styled.div`
