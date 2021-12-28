@@ -1,12 +1,7 @@
 import React from 'react'
-import { 
-    GradientAnimated, 
-    PageHeading, 
-    Wrapper, 
+import {  
     StripLogo, 
     Heading,
-    SubHeading,
-    ShowcaseDivBorder,
     BetweenDescription,
     ProWrapper,
     MiddleProWrapper,
@@ -15,18 +10,8 @@ import {
     ProRow,
     MiddleCard,
     MiddleProRow,
-    ShowWrapper,
-    ShowCard,
-    ShowInfo,
-    ShowPromo,
 } from './styles'
-import HeatmapComponent from './components/heatmap/Heatmap'
-import Languages from './components/stats/Languages'
 import trophy from '../../assets/icons/trophy.png'
-import projects from '../../assets/icons/projects.png'
-import contribution from '../../assets/icons/contribution.png'
-import project2 from '../../assets/projects/project2.png'
-import project1 from '../../assets/projects/project1.png'
 import facebook from '../../assets/logos/facebook.png'
 import google from '../../assets/logos/google.png'
 import hash from '../../assets/logos/hash.png'
@@ -35,12 +20,9 @@ import codechef from '../../assets/logos/codechef.png'
 import spoj from '../../assets/logos/spoj.png'
 import battle from '../../assets/logos/battle.png'
 
-import GitHubButton from 'react-github-btn'
-
 function CP(props) {
     return (
         <React.Fragment>
-            {/* <GradientAnimated /> */}
             <Heading> 
                 <h1> I Love Competing! </h1>
                 <StripLogo src = { trophy } alt = 'trophy' />

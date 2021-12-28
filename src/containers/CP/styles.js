@@ -1,46 +1,5 @@
 import styled from 'styled-components'
 
-export const GradientAnimated = styled.div`
-    background: linear-gradient(45deg, #e92efb, #ff2079, #440bd4, #04005e);
-    background-size: 400% 400%;
-    animation: gradient 10s ease infinite;
-    width: 100%;
-    height: 10px;
-    @keyframes gradient {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
-    }
-`
-
-export const PageHeading = styled.div`
-    width: 100%;
-    height: 300px;
-    text-align: center;
-    padding-top: 50px;
-    font-size: 120px;
-    font-weight: bold;
-    background: ${props => props.theme.mode === 'black'? 'white': 'black'}
-    color: ${props => props.theme.mode === 'black'? 'black': 'white'};
-`
-export const StyledDiv = styled.div`
-    width: 100%;
-    height: 400px;
-    background: ${props => props.theme.mode === 'dark'? 'black': 'white'};
-    color: ${props => props.theme.mode === 'dark'? 'white': 'black'};
-`
-export const Wrapper = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-`
-
 export const Heading = styled.div`
     display: flex;
     flex-direction: row;
@@ -52,62 +11,11 @@ export const Heading = styled.div`
     align-items: center;
 `
 
-export const SubHeading = styled.div`
-    display: flex;
-    flex-direction: row;
-    height: 70px;
-    width: 100vw;
-    line-height: 10px;
-    justify-content: center;
-    align-items: center;
-`
 export const StripLogo = styled.img`
     padding-right: 10px;
     padding-left: 20px;
     width: 45px;
     height: 45px;
-`
-
-export const PageRow = styled.div`
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 90px;
-    height: ${ props => props.height };
-    display: flex;
-    flex-direction: row;
-`
-
-export const ShowcaseDivBorder = styled.div`
-    width: 30vw;
-    height: 38vh;
-    max-height: 300px;
-    border-radius: 10px;
-    overflow: hidden;
-    border: 10px solid #212124;
-`
-export const ShowcaseInfoWrapper = styled.div`
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    width: 400px;
-    height: 100px;
-    margin-left: 50px;
-    margin-top: 150px;
-`
-
-export const ShowCaseInfoHeading = styled.h1`
-    display: flex;
-    width: 100%;
-    height: 30%;
-    color: white;
-    font-size: 50px;
-`
-
-export const ShowcaseInfoDetail = styled.p`
-    display: flex;
-    width: 100%;
-    height: 100%;
-    color: white;
 `
 
 export const BetweenDescription = styled.div`
@@ -116,14 +24,6 @@ export const BetweenDescription = styled.div`
     padding: 24px;
     color: ${ props => props.theme.mode === 'dark' ? 'white': 'black' };
     margin-top: ${props => props.marginTop};
-`
-
-export const AchieveCardButton = styled.button`
-    width: 100px;
-    height: 50px;
-    border-radius: 10px;
-    margin-top: ${props => props.marginTop};
-    margin-left: 190px;
 `
 
 export const ProWrapper = styled.div`
@@ -135,6 +35,7 @@ export const ProWrapper = styled.div`
     height: 85vh;
     max-height: 660px;
 `
+
 export const MiddleProWrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -151,6 +52,7 @@ export const ProCard = styled.div`
     display: flex;
     width: 75vw;
 `
+
 export const ProRow = styled.div`
     display: flex;
     width: 100%;
@@ -199,52 +101,4 @@ export const Card = styled.div`
     background: linear-gradient(215deg, ${ props => props.fromcolor } 0%, ${ props => props.tocolor } 100%);
     border-radius: 10px;
     box-shadow: ${props => props.noShadow === 'true' || props.theme.mode === 'dark' ? null : `-1rem 0 3rem ${ props.tocolor }` };
-`
-export const CardHeading = styled.div`
-    font-size: 40px;
-    text-align: center;
-    color: white;
-`
-
-export const ShowWrapper = styled.div`
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    background: linear-gradient(215deg, ${ props => props.fromcolor } 0%, ${ props => props.tocolor } 100%);
-`
-
-export const ShowCard = styled.div`
-    width: 80%;
-    height: 80%;
-    margin: auto;
-    // background: black;
-    // box-shadow: -1rem 1.5rem 3rem ${ props => props.shadow };
-    display: flex;
-    border-radius: 10px;
-    flex-direction: row;
-`
-
-export const ShowInfo = styled.div`
-    width: ${ props => props.width };
-    height: 70%;
-    display: flex;
-    color: white;
-    margin-top: 50px;
-    justify-content: center;
-    align-items: center; 
-    padding: 12px;
-    background: black;
-    box-shadow: -1rem 1.5rem 3rem ${ props => props.shadow };
-    border-radius: 10px;
-    flex-direction: column;
-`
-export const ShowPromo = styled.div`
-    width: ${ props => props.width };
-    height: 100%;
-    display: flex;
-    padding: 24px;
-    justify-content: center;
-    align-items: center; 
 `

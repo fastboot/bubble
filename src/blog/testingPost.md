@@ -1,2 +1,3 @@
-# First Post
-## 
+# GO Basics 
+
+## Why another language?

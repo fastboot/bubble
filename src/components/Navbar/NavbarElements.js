@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { NavLink as Link } from 'react-router-dom'
 
 export const Nav = styled.nav`
-    // background: rgba(0.5, 0, 0, 0);
     background: transparent;
     backdrop-filter: blur(5px);
     position: relative;
@@ -25,15 +24,6 @@ export const StyledLink = styled(Link)`
     &.active {
       color: red;
     }
-`
-
-export const Chip = styled.div`
-    padding: 5px;
-    border-radius: 10px;
-    height: 25px;
-    line-height: -10px;
-    display: inline-block;
-    line height: -5px;
 `
 
 export const LogoLink = styled(Link)`

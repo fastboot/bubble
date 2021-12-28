@@ -8,10 +8,7 @@ export const BlockDiv = styled.div`
     background: linear-gradient(215deg, ${ props => props.fromcolor } 0%, ${ props => props.tocolor } 100%);
     flex-direction: ${ props => props.flexDirection };
 `
-export const IconDiv = styled.div`
-    width: 100px;
-    height: 20px;
-`
+
 export const CardDiv = styled.div`
     width: ${ props => props.width };
     border-radius: 10px;
@@ -36,10 +33,6 @@ export const CardDivHeading = styled.div`
     font-size: 20px;
     font-weight: bold; 
     padding: 20px
-`
-
-export const CardImage = styled.div`
-    display: flex;
 `
 
 export const CardButton = styled.div`

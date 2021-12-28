@@ -1,8 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { Route, Switch } from 'react-router-dom'
 import { 
-    GradientAnimated, 
-    PageHeading,
     Heading,
     PageRow,
     Card,
@@ -12,7 +10,7 @@ import Block from '../../components/Blocks'
 import Markdown from 'markdown-to-jsx';
 import post from '../../blog/testingPost.md'
 
-function Posts(props) {
+function Posts() {
     const [markdown, setMarkdown] = useState("");
 
     useEffect(() => {
@@ -24,7 +22,6 @@ function Posts(props) {
         <React.Fragment>
             <Heading> 
                 <h1> Give them a read </h1>
-                {/* <StripLogo src = { trophy } alt = 'trophy' /> */}
             </Heading>
             <Block 
                 color = 'white'

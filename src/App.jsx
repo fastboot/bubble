@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import storage from 'local-storage-fallback'
-import  Whoami from './containers/Whoami'
-import Social from './containers/Social'
-import Pictures from './containers/Pictures'
 import Spotify from './containers/Spotify'
 import Home from './containers/Home'
-import GeekHome from './containers/GeekHome'
 import Post from './containers/Posts'
-import Geeky from './containers/Geeky'
+import Developer from './containers/Developer'
 import CP from './containers/CP'
 import Notfound from './containers/NotFound'
 import Navbar from './components/Navbar'
@@ -43,11 +39,11 @@ function App(props) {
         <GlobalStyle />
         <Navbar updateTheme = {setTheme} currTheme = {theme} />
         <Switch>
-          <Route exact path = '/' component={() => (<GeekHome currTheme = {theme} />)} />
+          <Route exact path = '/' component={() => (<Home currTheme = {theme} />)} />
           <Route exact path = '/posts' component={() => (<Post currTheme = {theme} />)} />
           <Route exact path = '/posts/:postId' component={() => (<Post currTheme = {theme} />)} />
           <Route exact path = '/cp' component={() => (<CP currTheme = {theme} />)} />
-          <Route exact path = '/developer' component={() => (<Geeky currTheme = {theme} />)} />
+          <Route exact path = '/developer' component={() => (<Developer currTheme = {theme} />)} />
           <Route exact path = '/spotify' component={() => (<Spotify currTheme = {theme} />)} />
           <Route component = {Notfound} />
         </Switch>
