@@ -2,6 +2,7 @@
   "name": "bubble",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://www.pranjalmishra.com",
   "dependencies": {
     "@callstack/react-theme-provider": "^2.1.0",
     "@material-ui/core": "^4.11.3",
@@ -12,6 +13,7 @@
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "cheerio": "^1.0.0-rc.6",
+    "gh-pages": "^3.2.3",
     "github-contributions-canvas": "^0.6.0",
     "icons": "^1.0.0",
     "local-storage-fallback": "^4.1.2",
@@ -38,9 +40,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cp build/index.html build/404.html",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
