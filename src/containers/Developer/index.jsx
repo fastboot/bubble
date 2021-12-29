@@ -14,6 +14,7 @@ import HeatmapComponent from './components/heatmap/Heatmap'
 import Languages from './components/stats/Languages'
 import contribution from '../../assets/icons/contribution.png'
 import github from '../../assets/icons/github.png'
+import wapco from '../../assets/projects/wapco.png'
 import GitHubButton from 'react-github-btn'
 
 function Developer(props) {
@@ -53,18 +54,18 @@ function Developer(props) {
                 >
                     <ShowInfo
                         width = '30vw'
-                        fromcolor = '#4776E6'
-                        tocolor = '#8E54E9'
+                        fromcolor = '#FF512F'
+                        tocolor = '#DD2476'
                     >
                         <h1> <strong>?¿ </strong></h1>
                     </ShowInfo>
                     <ShowPromo
                         width = '40vw'
                     >
-                        <p3>react express</p3>
+                        <p3><i>react express</i></p3>
                         <h3>Personal Site</h3>
                         <p1>A full stack personal site.</p1>
-                        <img src={github} alt="github" style = {{ height: '30px', width: '30px', marginTop: '75px'}}/>
+                        <a href='https://github.com/fastboot/bubble'><img src={github} alt="github" style = {{ height: '30px', width: '30px', marginTop: '75px'}}/></a>
                     </ShowPromo>
                     
                 </ShowCard>
@@ -76,18 +77,19 @@ function Developer(props) {
                 >
                     <ShowInfo
                         width = '30vw'
-                        fromcolor = '#FF512F'
-                        tocolor = '#DD2476'
+                        fromcolor = '#4776E6'
+                        tocolor = '#8E54E9'
+                        
                     >
-                        <h1> <strong>?¿ </strong></h1>
+                        <h1> <img src = {wapco} alt = "wapco" /></h1>
                     </ShowInfo>
                     <ShowPromo
                         width = '40vw'
                     >
-                        <p3>react express</p3>
-                        <h3>Personal Site</h3>
-                        <p1>A full stack personal site.</p1>
-                        <img src={github} alt="github" style = {{ height: '30px', width: '30px', marginTop: '75px'}}/>
+                        <p3><i>python electron</i></p3>
+                        <h3>Wapco</h3>
+                        <p1>Desktop application for analysis.</p1>
+                        <a href='https://github.com/fastboot/Wapco-Linux-Beta'><img src={github} alt="github" style = {{ height: '30px', width: '30px', marginTop: '75px'}}/></a>
                     </ShowPromo>
 
                 </ShowCard>

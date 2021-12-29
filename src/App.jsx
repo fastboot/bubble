@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import storage from 'local-storage-fallback'
 import Spotify from './containers/Spotify'
 import Home from './containers/Home'
@@ -38,15 +38,15 @@ function App(props) {
       <React.Fragment>
         <GlobalStyle />
         <Navbar updateTheme = {setTheme} currTheme = {theme} />
-        <Switch>
-          <Route exact path = '/' component={() => (<Home currTheme = {theme} />)} />
-          <Route exact path = '/posts' component={() => (<Post currTheme = {theme} />)} />
-          <Route exact path = '/posts/:postId' component={() => (<Post currTheme = {theme} />)} />
-          <Route exact path = '/cp' component={() => (<CP currTheme = {theme} />)} />
-          <Route exact path = '/developer' component={() => (<Developer currTheme = {theme} />)} />
-          <Route exact path = '/spotify' component={() => (<Spotify currTheme = {theme} />)} />
+        <Routes>
+          <Route exact path = '/' element={<Home currTheme = {theme} />} />
+          <Route exact path = '/posts' element={<Post currTheme = {theme} />} />
+          <Route exact path = '/posts/:postId' element={<Post currTheme = {theme} />} />
+          <Route exact path = '/cp' element={<CP currTheme = {theme} />} />
+          <Route exact path = '/developer' element={<Developer currTheme = {theme} />} />
+          <Route exact path = '/spotify' element={<Spotify currTheme = {theme} />} />
           <Route component = {Notfound} />
-        </Switch>
+        </Routes>
         <Footer updateTheme = {setTheme} currTheme = {theme} />
       </React.Fragment>  
     </ThemeProvider>

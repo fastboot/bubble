@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import { 
     Heading,
     PageRow,
@@ -47,9 +47,9 @@ function Posts() {
             </PageRow>
             </Block>
 
-            <Switch>
+            <Routes>
                 <Route exact path = '/:postId' />
-            </Switch>
+            </Routes>
         </React.Fragment>
     )
 }
