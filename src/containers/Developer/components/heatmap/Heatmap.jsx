@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { Heatmap } from 'react-github-heatmap';
 import ReactTooltip from 'react-tooltip'
 import axios from 'axios'
+import Spinner from '../../../../components/Spinner';
 
 function HeatmapComponent(props) {
     const [data, setData] = useState()
@@ -48,7 +49,7 @@ function HeatmapComponent(props) {
       
     return (
         <div style = {{ padding: '24px', textAlign: 'center' }}>
-            {isLoading && <span>Loading...</span>}
+            {isLoading && <Spinner />}
             {data && 
             <Heatmap 
                 data={data} 

@@ -7,7 +7,7 @@ import lightBackground from '../../assets/backgrounds/lightBackground.png'
 export const PageWrapper = styled.div`
     width: 100vw;
     height: 77vh;
-    background-image: url(${ props => props.theme.mode === 'dark' ? darkBackground: lightBackground });
+    background-image: url(${ props => props.theme.mode === 'dark' ? darkBackground : lightBackground });
     background-repeat: no-repeat;
     background-size: auto;
     background-position: center;
@@ -22,47 +22,53 @@ export const StyledA = styled.a`
   color: black;
 `
 
-export const Workplace = styled.div`
-  width: 640px;
-  height: 100px;
+export const CurrWorkplace = styled.div`
+  width: 37vw;
+  height: 150px;
   display: flex;
+  flex-direction: row;
   font-size: 35px;
-  padding-left: 130px;
-  margin-top: 10px;
   text-align: center;
+  justify-content: space-between;
   vertical-align: middle;
   line-height: 120px; 
   position: relative;
 `
 
+export const Workplace = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 40px;
+  width: 20vw;
+  height: 30vh;
+  position: relative;
+`
+
 export const WorkplaceTime = styled.div`
-  font-size: 25px;
+  font-size: 16px;
   font-weight: normal;
-  margin-top: 20px;
-  padding-right: 20px;
   position: relative;
 `
 
 export const WorkplaceNameDiv = styled.div`
-  background-image: url(${props => props.theme.mode === 'dark' ? BackgroundLight: BackgroundDark});
+  background-image: url(${props => props.theme.mode === 'dark' ? BackgroundLight : BackgroundDark});
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   color: ${props => props.theme.mode === 'dark' ? 'black': 'white'};
   background-size: contain;
-  height: 90px;
-  margin-top: 20px;
-  margin-left: 20px;
-  width: 173px;
+  height: 180px;
+  width: 180px;
+  margin-top: 15px;
   font-size: 35px;
   text-align: center;
   vertical-align: middle;
-  line-height: 80px; 
-  position: relative;
+  line-height: 90px; 
 `
 
 export const WorkplaceLogo = styled.img`
-  height: 100px;
-  width: 100px;
-  margin-top: 50px;
-  padding-right: 30px;
+  height: 80px;
+  width: 80px;
   position: relative;
 `
 
@@ -87,4 +93,34 @@ export const ProfileCard = styled.div`
   position: relative;
   align-items: center;
   flex-direction: column;
+`
+
+export const WorkplaceDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+export const WorkplaceHistory = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 200px;
+`
+
+export const WorkplaceName = styled.div`
+  display: flex;
+  font-size: 24px;
+  font-weight: 900;
+`
+
+export const WorkplaceDuration = styled.div`
+  display: flex;
+  font-size: 
+`
+
+export const WorkplaceTitle = styled.div`
+  display: flex;
+  font-size: 34px;
+  font-weight: 900;
 `

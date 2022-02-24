@@ -17,12 +17,14 @@ export const Nav = styled.nav`
 export const StyledLink = styled(Link)`
     display: flex;
     color: ${props => props.theme.mode === 'dark' ? 'white': 'black'};
-    width: 80px;
     text-decoration: none;
+    padding: 4px;
     white-space: nowrap;
-    margin-left: 10px;
+    margin-left: 15px;
     &.active {
-      color: red;
+      color: ${props => props.theme.mode === 'dark' ? 'black': 'white'};
+      border-radius: 10px;
+      background-color: ${props => props.theme.mode === 'dark' ? 'white': 'black'};
     }
 `
 

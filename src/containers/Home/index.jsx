@@ -4,14 +4,20 @@ import {
     ProfileCard,
     ProfilePicture,
     Workplace,
+    CurrWorkplace,
     WorkplaceLogo,
     WorkplaceNameDiv,
+    WorkplaceDiv,
+    WorkplaceTitle,
+    WorkplaceName,
     WorkplaceTime,
     StyledA
 } from './styles'
 import Profile from '../../assets/profile/dp.png'
 import LogoWhite  from '../../assets/logos/PeakWhite.png'
 import LogoBlack from '../../assets/logos/PeakBlack.png'
+import atlas from '../../assets/logos/atlas-black.png'
+import atlassian from '../../assets/logos/atlas-white.png'
 
 function Home(props) {
 
@@ -22,20 +28,22 @@ function Home(props) {
                     <ProfilePicture>
                         <img src = {Profile} alt = 'Profile' style={{ width: '250px', height: '250px' }}/>
                     </ProfilePicture>
-                    <Workplace>
-                        <div>
-                            <strong><i>Software Engineer</i></strong> at 
-                        </div>
-                        <StyledA target = '_blank' rel = 'noreferrer' href = 'https://peak.ai'>
-                            <WorkplaceNameDiv>
-                                <strong>Peak</strong>
-                            </WorkplaceNameDiv>
-                        </StyledA>
-                    </Workplace>
-                    <WorkplaceLogo src = { props.currTheme.mode ==='dark'? LogoWhite: LogoBlack } alt = 'Logo' /> 
-                    <WorkplaceTime>
-                        2020 - present
-                    </WorkplaceTime>
+                    <CurrWorkplace>
+                            <WorkplaceTitle><i>Software Engineer</i></WorkplaceTitle> at
+                            <StyledA href={'https://www.atlassian.com/'}><WorkplaceNameDiv><strong><i>Atlassian</i></strong></WorkplaceNameDiv></StyledA>
+                    </CurrWorkplace>
+                     <Workplace>
+                         <WorkplaceDiv>
+                            <WorkplaceLogo src = { props.currTheme.mode ==='dark'? atlassian : atlas } alt = 'Logo' /> 
+                            <WorkplaceName>Atlassian</WorkplaceName>
+                            <WorkplaceTime>2022 - Present</WorkplaceTime>
+                        </WorkplaceDiv>
+                        <WorkplaceDiv>
+                            <WorkplaceLogo src = { props.currTheme.mode ==='dark'? LogoWhite: LogoBlack } alt = 'Logo' /> 
+                            <WorkplaceName>Peak</WorkplaceName>
+                            <WorkplaceTime>2020 - 2022</WorkplaceTime>
+                        </WorkplaceDiv>
+                    </Workplace> 
                 </ProfileCard>
             </PageWrapper>
         </React.Fragment>

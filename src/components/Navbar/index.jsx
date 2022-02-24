@@ -17,16 +17,13 @@ function Navbar(props) {
                 </LogoLink>
                 <React.Fragment>
                     <NavMenu>
-                    <StyledLink to = '/posts' activeStyle={{ color: "red" }} >
-                        Posts
-                    </StyledLink> 
-                    <StyledLink to = '/developer' activeStyle={{ color: "red" }} style={{ marginLeft: '-20px' }} >
+                    <StyledLink to = '/developer' >
                         Developer
                     </StyledLink> 
-                    <StyledLink to = '/cp' activeStyle={{ color: "red" }} >
+                    <StyledLink to = '/cp'>
                         Programming
                     </StyledLink> 
-                    <StyledLink to = '/spotify' activeStyle={{ color: "red" }} style={{  marginLeft: '35px' }} >
+                    <StyledLink to = '/spotify'>
                         Spotify
                     </StyledLink> 
                     <NavButtons>

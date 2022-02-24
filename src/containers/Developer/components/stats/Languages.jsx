@@ -13,6 +13,8 @@ import {
     Typography
 } from './styles'
 
+import Spinner from '../../../../components/Spinner'
+
 function Languages(props) {
     const [data, setData] = useState()
     const [isLoading, setIsLoading] = useState(false)
@@ -56,8 +58,8 @@ function Languages(props) {
     }
       
     return (
-        <div>
-            {isLoading && <span>Loading...</span>}
+        <div style = {{ padding: '24px', textAlign: 'center' }}>
+            {isLoading && <Spinner />}
             {data && stat && 
             <Fragment>
                 <Bar>
