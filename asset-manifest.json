@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.2ab9dc73.js",
+    "main.js": "/static/js/main.9406d719.js",
     "static/media/lightBackground.png": "/static/media/lightBackground.546229522fa78870ab16.png",
     "static/media/darkBackground.png": "/static/media/darkBackground.3196027422fdb9b79de9.png",
     "static/media/infy.png": "/static/media/infy.a40b7cfadf35d39a2ecb.png",
@@ -14,10 +14,12 @@
     "static/media/PeakBlack.png": "/static/media/PeakBlack.6fb7ff4b1adfa303ab31.png",
     "static/media/google.png": "/static/media/google.cadee8cdb0c0afb1a713.png",
     "static/media/instagramlight.png": "/static/media/instagramlight.bc004798c6dd112ba381.png",
+    "static/media/atlas-white.png": "/static/media/atlas-white.23cd2f16dbe945e3631e.png",
     "static/media/twitterlight.png": "/static/media/twitterlight.5cd959b6a65c438900f5.png",
     "static/media/github.png": "/static/media/github.a855c3975c028d8069f5.png",
     "static/media/githubdark.png": "/static/media/githubdark.44eee0c4a6c25b0d7347.png",
     "static/media/codechef.png": "/static/media/codechef.0e410daaccfbc01b565f.png",
+    "static/media/atlas-black.png": "/static/media/atlas-black.6a4f80d3de35c1096250.png",
     "static/media/contribution.png": "/static/media/contribution.62fb25daef3eecde0613.png",
     "static/media/linkedinlight.png": "/static/media/linkedinlight.a71dfebead358f4a0d8f.png",
     "static/media/instagramdark.png": "/static/media/instagramdark.215fa341f2724204364a.png",
@@ -29,6 +31,6 @@
     "static/media/testingPost.md": "/static/media/testingPost.5810f5a68f98d3126bf8.md"
   },
   "entrypoints": [
-    "static/js/main.2ab9dc73.js"
+    "static/js/main.9406d719.js"
   ]
 }
