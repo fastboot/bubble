@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.9406d719.js",
+    "main.js": "/static/js/main.2775a9a3.js",
     "static/media/lightBackground.png": "/static/media/lightBackground.546229522fa78870ab16.png",
     "static/media/darkBackground.png": "/static/media/darkBackground.3196027422fdb9b79de9.png",
     "static/media/infy.png": "/static/media/infy.a40b7cfadf35d39a2ecb.png",
@@ -31,6 +31,6 @@
     "static/media/testingPost.md": "/static/media/testingPost.5810f5a68f98d3126bf8.md"
   },
   "entrypoints": [
-    "static/js/main.9406d719.js"
+    "static/js/main.2775a9a3.js"
   ]
 }
