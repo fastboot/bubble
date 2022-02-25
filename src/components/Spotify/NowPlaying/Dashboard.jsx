@@ -1,4 +1,4 @@
-import React, {useState, useEffect, Fragment} from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import {
     NowPlayingWrapper,
@@ -14,6 +14,7 @@ import {
     ArrowDiv,
     ArrowSpan,
     StyledLink,
+    LoaderDiv,
     NowPlayingArtist,
     NowPlayingDevice,
     NowPlayingTrack,
@@ -25,8 +26,10 @@ import {
 import computer from '../../../assets/icons/computer.png'
 import smartphone from '../../../assets/icons/smartphone.png'
 import spotifyoriginal from '../../../assets/icons/spotifyoriginal.png'
+import Spinner from '../../../components/Spinner'
+import { useInterval } from './interval'; 
 
-function Dashboard({ strip }) {
+function Dashboard() {
     const [track, setTrack] = useState('')
     const [artist, setArtist] = useState('')
     const [albumart, setAlbumart] = useState('')
@@ -35,14 +38,16 @@ function Dashboard({ strip }) {
     const [duration, setDuration] = useState(0)
     const [progress, setProgress] = useState(0)
     const [externalUrl, setExternalUrl] = useState('');
+    const [isLoading, setIsLoading] = useState(true);
     /*
         duration = 600
         curr     = (curr / duration) * 600;
     */
-    useEffect(() => {
+    useInterval(() => {
+        // put your interval code here.
         axios
-          .get("https://pranjaltestapinodejs.herokuapp.com/currentTrack", {})
-          .then(res => {
+        .get("https://pranjaltestapinodejs.herokuapp.com/currentTrack", {})
+        .then(res => {
             if(res.data.item) {
                 setArtist(res.data.item.artists[0].name)
                 setDevice(res.data.device.name)
@@ -53,17 +58,23 @@ function Dashboard({ strip }) {
                 setDuration(res.data.item.duration_ms)
                 setProgress(res.data.progress_ms)
             }
-          })
-          .catch((err) => {
+        })
+        .catch((err) => {
             console.log(err)
-          },[])
-      });
-
-    const showStrip = strip
+        },[])
+        .finally(() => {
+            setIsLoading(false);
+        })
+    }, 1000);
     
     return (
         <React.Fragment>
-            { showStrip === 'noshow' && artist ? ( 
+            { isLoading && (
+                <LoaderDiv>
+                    <Spinner />
+                </LoaderDiv>
+            )}
+            { !isLoading && artist && ( 
                     <NowPlayingWrapper albumart = {albumart}>
                         <StripLogo src = { spotifyoriginal } alt = 'spotify' />
                         <a href = { externalUrl } target="_blank" rel="noreferrer"><AlbumArt src = { albumart } alt = 'albumart' /></a>
@@ -78,51 +89,16 @@ function Dashboard({ strip }) {
                                 <Filler percent = {(progress / duration) * 100} width = '100'/>
                                 <Dot />
                             </Bar>
-                            <iframe 
-                                src="https://open.spotify.com/follow/1/?uri=spotify:user:Pranjal_Mishra&size=detail&theme=light" 
-                                width="300" 
-                                height="56" 
-                                title="follow"
-                                scrolling="no" 
-                                frameBorder="0" 
-                                style={{ border: 'none', overflow: 'hidden', marginTop: '50px'}} 
-                                allowtransparency="true">
-                            </iframe>
                         </DetailsWrapper>
                         
                     </NowPlayingWrapper>
-                ) :
-                (
-                    <Fragment>
-                        { artist && ( 
-                        <StripDetailsWrapper>
-                                <StripAlbumArt src = { albumart } alt = 'albumart' />
-                                    <StripTypography>
-                                        <StripTrack> { track } </StripTrack>
-                                        <StripArtist> { artist } </StripArtist>
-                                    </StripTypography>
-                                <StripDeviceIcon src = { deviceType === 'Computer'? computer: smartphone } alt = 'computer' />
-                                <StyledLink to = '/social' >
-                                    <ArrowDiv>
-                                        <ArrowSpan />
-                                        <ArrowSpan />
-                                        <ArrowSpan />
-                                    </ArrowDiv>
-                                </StyledLink>
-                            
-                        </StripDetailsWrapper>
-                        )}
-                    </Fragment>
                 )
             }
-            { showStrip === 'noshow' && !artist && 
-                <NowPlayingWrapper albumart = {albumart}>
-                    <StripLogo src = { spotifyoriginal } alt = 'spotify' />
-                    <StripDetailsWrapper>
-                        <h1 style = {{ marginLeft: '120px', lineHeight: '55px' }}> Away from headphones, maybe check back again later :) </h1>
-                    </StripDetailsWrapper>
-                </NowPlayingWrapper>
-            }
+            { !isLoading && !artist && (
+                <LoaderDiv>
+                    <h1><i>Away at the moment would be back soon :)</i></h1> 
+                </LoaderDiv>
+            )}
         </React.Fragment>
     )
 }

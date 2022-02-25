@@ -11,10 +11,10 @@ export const SpinnerDiv = styled.div`
     height: 64px;
     margin: 8px;
     border-radius: 50%;
-    border: 6px solid #fff;
-    border-color: #fff transparent #fff transparent;
-    animation: lds-dual-ring 1.2s linear infinite;
-    @keyframes animate {
+    border: 6px solid ${ props => props.theme.mode === 'dark' ? 'white': 'black' };
+    border-color: ${ props => props.theme.mode === 'dark' ? 'white': 'black' } ${ props => props.theme.mode === 'dark' ? 'white': 'black' } transparent transparent;
+    animation: dual-ring 0.7s linear infinite;
+    @keyframes dual-ring {
         0% {
         transform: rotate(0deg);
         }

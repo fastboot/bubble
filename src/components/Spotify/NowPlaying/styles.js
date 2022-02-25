@@ -6,20 +6,29 @@ export const NowPlayingWrapper = styled.div`
     position: relative;
     z-index: 1;
     display: flex;
-    height: 600px;
-    
+    height: 75vh;
     overflow: hidden;
 
     &:before {
         content: "";
         position: absolute;
-        width: 100%; 
-        height: 600px; 
+        width: 100vw; 
+        height: 75vh; 
         filter: blur(15px);
         z-index: -1;
         background: url(${ props => props.albumart }) no-repeat 50% 50% fixed;
         background-size: cover;
     }
+`
+
+export const LoaderDiv = styled.div`
+    position: relative;
+    z-index: 1;
+    display: flex;
+    height: 75vh;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 `
 
 export const NowPlayingStripWrapper = styled.div`
@@ -28,31 +37,7 @@ export const NowPlayingStripWrapper = styled.div`
     display: flex;
     flex-direction: row;
 `
-export const StripAlbumArt = styled.img`
-    width: 50px;
-    height: 50px;
-    display: flex;
-    margin-top: -2px;
-`
-export const StripDetailsWrapper = styled.div`
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-`
 
-export const StripTypography = styled.div`
-    margin-left: 10px;
-`
-
-export const StripTrack = styled.div`
-    font-size: 20px;
-    font-weight: bold;
-    font-style: italic;
-`
-export const StripArtist = styled.div`
-    font-size: 12px;
-    font-weight: normal;
-`
 export const StripDeviceIcon = styled.img`
     width: 30px;
     height: 30px;
