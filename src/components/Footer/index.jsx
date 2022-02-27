@@ -9,11 +9,7 @@ function Footer (props){
         <React.Fragment>
             <FooterWrapper>
                 <FooterDiv>
-                    {/* <FooterInfo>
-                        Get In Touch!
-                    </FooterInfo> */}
                     <FooterIcons>
-                        <a target = '_blank' rel ='noreferrer' href = {CONSTANTS.FACEBOOK}><Icon imgsrc = { props.currTheme.mode === 'dark' ? FooterLogos.Facebooklight : FooterLogos.Facebook } imgalt = 'Facebook' /></a>
                         <a target = '_blank' rel ='noreferrer' href = {CONSTANTS.INSTAGRAM}><Icon imgsrc = { props.currTheme.mode === 'dark' ? FooterLogos.Instagramlight : FooterLogos.Instagram } imgalt = 'Instagram' /></a>
                         <a target = '_blank' rel ='noreferrer' href = {CONSTANTS.TWITTER}><Icon imgsrc = { props.currTheme.mode === 'dark' ? FooterLogos.Twitterlight : FooterLogos.Twitter } imgalt = 'Twitter' /></a>
                         <a target = '_blank' rel ='noreferrer' href = {CONSTANTS.LINKEDIN}><Icon imgsrc = { props.currTheme.mode === 'dark' ? FooterLogos.Linkedinlight : FooterLogos.Linkedin } imgalt = 'Linkedin' /></a>

@@ -15,6 +15,10 @@ export const PageWrapper = styled.div`
     display: flex;
     position: relative;
     flex-direction: column;
+    @media (max-width: 768px) {
+      height: 100vh;
+    }
+
 `
 
 export const StyledA = styled.a`
@@ -23,30 +27,37 @@ export const StyledA = styled.a`
 `
 
 export const CurrWorkplace = styled.div`
-  width: 37vw;
-  height: 9.375rem;
+  width: 80vw;
   display: flex;
   flex-direction: row;
-  font-size: 35px;
+  font-size: 2rem;
+  justify-content: center;
   text-align: center;
-  justify-content: space-between;
-  vertical-align: middle;
-  line-height: 120px; 
+  align-items: center;
   position: relative;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 
 export const Workplace = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   line-height: 40px;
-  width: 20vw;
+  width: 30vw;
+
   height: 30vh;
   position: relative;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 
 export const WorkplaceTime = styled.div`
   font-size: 16px;
+  white-space: nowrap;
+  display: block;
   font-weight: normal;
   position: relative;
 `
@@ -54,28 +65,35 @@ export const WorkplaceTime = styled.div`
 export const WorkplaceNameDiv = styled.div`
   background-image: url(${props => props.theme.mode === 'dark' ? BackgroundLight : BackgroundDark});
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 100% 50%;
+  background-position: right 50px;
   color: ${props => props.theme.mode === 'dark' ? 'black': 'white'};
-  background-size: contain;
   height: 180px;
   width: 180px;
-  margin-top: 15px;
   font-size: 35px;
+  margin-left: 20px;
   text-align: center;
-  vertical-align: middle;
-  line-height: 90px; 
+  line-height: 180px; 
+  @media (max-width: 768px) {
+    background-position: right 10px;
+    line-height: 100px;
+    margin-left: 0px;
+  }
 `
 
 export const WorkplaceLogo = styled.img`
-  height: 80px;
-  width: 80px;
+  height: auto;
+  width: auto;
+  max-height: 10vh;
+  max-width: 20vw;
   position: relative;
 `
 
 export const ProfilePicture = styled.div`
-  height: 30vh;
-  width: 17vw;
-  resize: both;
+  height: auto;
+  width: auto;
+  max-height: 30vh;
+  max-width: 50vw;
   overflow: auto;
   border-radius: 50%;
   border: 3px solid ${ props => props.theme.mode === 'dark' ? 'white' : 'black' };
@@ -85,13 +103,27 @@ export const ProfilePicture = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  @media (max-width: 768px) {
+    max-height: 30vh;
+    max-width: 50vw;
+  }
+`
+
+export const ProfileImg = styled.img`
+  height: auto;
+  width: auto;
+  max-height: 30vh;
+  max-width: 50vw;
+  @media (max-width: 768px) {
+    max-height: 30vh;
+    max-width: 50vw;
+  }
 `
 
 export const ProfileCard = styled.div`
   display: flex;
   width: 100vw;
   justify-content: space-around;
-  font-size: 5em;
   position: relative;
   align-items: center;
   flex-direction: column;
@@ -124,5 +156,7 @@ export const WorkplaceDuration = styled.div`
 export const WorkplaceTitle = styled.div`
   display: flex;
   font-size: 34px;
+  white-space: pre-wrap;
   font-weight: 900;
+  text-align: center;
 `

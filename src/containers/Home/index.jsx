@@ -11,6 +11,7 @@ import {
     WorkplaceTitle,
     WorkplaceName,
     WorkplaceTime,
+    ProfileImg,
     StyledA
 } from './styles'
 import Profile from '../../assets/profile/dp.png'
@@ -26,10 +27,10 @@ function Home(props) {
             <PageWrapper>
                 <ProfileCard>
                     <ProfilePicture>
-                        <img src = {Profile} alt = 'Profile' style={{ width: '17vw', height: '30vh' }}/>
+                        <ProfileImg src = {Profile} alt = 'Profile' />
                     </ProfilePicture>
                     <CurrWorkplace>
-                            <WorkplaceTitle><i>Software Engineer</i></WorkplaceTitle> at
+                            <WorkplaceTitle><i>Software Engineer {' '}</i></WorkplaceTitle> at 
                             <StyledA href={'https://www.atlassian.com/'}><WorkplaceNameDiv><strong><i>Atlassian</i></strong></WorkplaceNameDiv></StyledA>
                     </CurrWorkplace>
                      <Workplace>
