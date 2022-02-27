@@ -26,7 +26,7 @@ function Home(props) {
             <PageWrapper>
                 <ProfileCard>
                     <ProfilePicture>
-                        <img src = {Profile} alt = 'Profile' style={{ width: '250px', height: '250px' }}/>
+                        <img src = {Profile} alt = 'Profile' style={{ width: '17vw', height: '30vh' }}/>
                     </ProfilePicture>
                     <CurrWorkplace>
                             <WorkplaceTitle><i>Software Engineer</i></WorkplaceTitle> at

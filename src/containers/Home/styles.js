@@ -24,7 +24,7 @@ export const StyledA = styled.a`
 
 export const CurrWorkplace = styled.div`
   width: 37vw;
-  height: 150px;
+  height: 9.375rem;
   display: flex;
   flex-direction: row;
   font-size: 35px;
@@ -73,8 +73,10 @@ export const WorkplaceLogo = styled.img`
 `
 
 export const ProfilePicture = styled.div`
-  height: 250px;
-  width: 250px;
+  height: 30vh;
+  width: 17vw;
+  resize: both;
+  overflow: auto;
   border-radius: 50%;
   border: 3px solid ${ props => props.theme.mode === 'dark' ? 'white' : 'black' };
   overflow: hidden;

@@ -1,19 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
 import {
     NowPlayingWrapper,
     AlbumArt,
     Device,
     DetailsWrapper,
-    StripDetailsWrapper,
-    StripAlbumArt,
-    StripTrack,
-    StripArtist,
-    StripTypography,
     StripDeviceIcon,
-    ArrowDiv,
-    ArrowSpan,
-    StyledLink,
     LoaderDiv,
     NowPlayingArtist,
     NowPlayingDevice,

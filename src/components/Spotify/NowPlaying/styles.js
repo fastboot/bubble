@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { NavLink as Link } from 'react-router-dom'
 
 export const NowPlayingWrapper = styled.div`
     
@@ -60,41 +59,7 @@ export const DetailsWrapper = styled.div`
     display: flex;
     flex-direction: column;
 `
-export const ArrowDiv = styled.div`
-    position: absolute;
-    display: flex;
-    transform: translate(50%,50%);
-`
-export const ArrowSpan = styled.span`
-    width: 20px;
-    height: 20px;
-    border-right: 2px solid white;
-    border-top: 2px solid white;
-    transform: rotate(45deg);
-    animation: animate 2s infinite;
-    &:nth-child(2) {
-        animation-delay: 0.2s;
-    }
-    &:nth-child(3) {
-        animation-delay: 0.4s;
-    }
-    @keyframes animate {
-        0%{
-            opacity: 0;
-            transform: rotate(45deg) translateX(-20px,-20px);
-        }
-        50%{
-            opacity: 1;
-        }
-        100%{
-            opacity: 0;
-            transform: rotate(45deg) translateX(20px,20px);
-        }
-    }
-`
-export const StyledLink = styled(Link)`
-    text-decoration: none;
-`
+
 export const NowPlayingTrack = styled.p`
     font-size: 50px;
     font-style: italic;

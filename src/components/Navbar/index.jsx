@@ -1,39 +1,34 @@
-import React from 'react'
-import { NavButtons, NavMenu, Nav, StyledLink, LogoLink, Button } from './NavbarElements'
-import Moon from '../../assets/icons/sun.png'
-import Sun from '../../assets/icons/moon.png'
+import React from 'react';
+import styled from 'styled-components';
+import Burger from './Burger';
+import { NavLink as Link } from 'react-router-dom'
 
-function Navbar(props) {
+const Nav = styled.nav`
+  width: 100vw;
+  height: 62px;
+  border-bottom: 50px;
+  display: flex;
+  top: 0;
+  justify-content: space-between;
+`
 
-    const changeTheme = () => {
-        props.updateTheme((props.currTheme.mode === 'dark' ? { mode: 'light' }: { mode: 'dark' }))
-    }
+const LogoLink = styled(Link)`
+  text-decoration: none;
+  position: relative;
+  display: block; 
+  line-height: 15px;
+  padding-left: 4vw;
+  color: ${props => props.theme.mode === 'dark' ? 'white': 'black'};
+`
 
-    return (
-        <React.Fragment>
-            <Nav>
-                <LogoLink to = '/'>
-                    <h1> ?¿ </h1>
-                </LogoLink>
-                <React.Fragment>
-                    <NavMenu>
-                    <StyledLink to = '/developer' >
-                        Developer
-                    </StyledLink> 
-                    <StyledLink to = '/cp'>
-                        Programming
-                    </StyledLink> 
-                    <StyledLink to = '/spotify'>
-                        Spotify
-                    </StyledLink> 
-                    <NavButtons>
-                        <Button type="image" src = { props.currTheme.mode === 'dark' ? Moon: Sun } onClick = { changeTheme } />
-                    </NavButtons>
-                    </NavMenu>
-                </React.Fragment>
-            </Nav>
-        </React.Fragment>
-    )
+const Navbar = (props) => {
+  
+  return (
+    <Nav>
+      <LogoLink to = '/' > <h1> ?¿ </h1> </LogoLink>
+      <Burger {...props} />
+    </Nav>
+  )
 }
 
 export default Navbar
