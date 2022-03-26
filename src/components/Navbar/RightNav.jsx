@@ -18,7 +18,7 @@ const Ul = styled.ul`
     background-color: #0D2538;
     position: fixed;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
-    top: 0;
+    top: 10px;
     margin-top: -10px;
     right: 0;
     height: 100vh;
@@ -35,15 +35,15 @@ const Ul = styled.ul`
 
 const StyledLink = styled(Link)`
     display: flex;
-    color: ${props => props.theme.mode === 'dark' ? 'white': 'black'};
+    color: white;
     text-decoration: none;
     padding: 4px;
     white-space: nowrap;
     margin-left: 15px;
     &.active {
-      color: ${props => props.theme.mode === 'dark' ? 'black': 'white'};
+      color: black;
       border-radius: 10px;
-      background-color: ${props => props.theme.mode === 'dark' ? 'white': 'black'};
+      background-color: white;
     }
 
     @media (max-width: 768px) {
