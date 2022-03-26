@@ -4,9 +4,9 @@ import {
     Heading,
     BetweenDescription,
     ProWrapper,
-    MiddleProWrapper,
-    ProCard,
     Card,
+    Hone,
+    Pone,
     ProRow,
     Wrapper,
     MiddleCard,
@@ -30,35 +30,32 @@ function CP(props) {
                 <StripLogo src = { trophy } alt = 'trophy' />
             </Heading>
             <ProWrapper>
-                <ProCard>
                     <ProRow>
                         <Card
                             fromcolor = '#11998e'
                             tocolor = '#38ef7d'
                         >
                             <img src = {facebook} alt = "facebook" style = {{ height: '40px', width: '40px' }}/>
-                            <h1> Facebook Hacker Cup </h1>
-                            <p> Ranked 934 in round 2 </p> 
+                            <Hone> Facebook Hacker Cup </Hone>
+                            <Pone> Ranked 934 in round 2 </Pone> 
                         </Card>
                         <Card
                             fromcolor = '#4776E6'
                             tocolor = '#8E54E9'
                         >
                             <img src = {google} alt = "google" style = {{ height: '40px', width: '40px' }}/>
-                            <h1> Google Code Jam </h1>
-                            <p> Ranked 1961 in round 1B </p> 
+                            <Hone> Google Code Jam </Hone>
+                            <Pone> Ranked 1961 in round 1B </Pone> 
                         </Card>
                     </ProRow>
-                </ProCard>
-                <ProCard>
                     <ProRow>
                         <Card
                             fromcolor = '#e65c00'
                             tocolor = '#F9D423'
                         >
                             <img src = {hash} alt = "hash" style = {{ height: '40px', width: '40px' }}/>
-                            <h1> 3 Address Code </h1>
-                            <p> Ranked 74 at the finals </p> 
+                            <Hone> 3 Address Code </Hone>
+                            <Pone> Ranked 74 at the finals </Pone> 
                         </Card>
                         <Card
                             fromcolor = {props.currTheme.mode === 'dark' ? 'black' : 'white'}
@@ -69,24 +66,18 @@ function CP(props) {
                             </BetweenDescription>
                         </Card>
                     </ProRow>
-                </ProCard>
             </ProWrapper>
-            <MiddleProWrapper>
-                <ProCard>
-                    <MiddleProRow>
+            <MiddleProRow>
                     <MiddleCard
                         fromcolor = '#FF512F'
                         tocolor = '#DD2476'
                     >
                         <img src = {codechef} alt = "codechef" style = {{ height: '40px', width: '40px' }}/> 
-                        <h1> SnackDown </h1>
-                        <p>  Ranked 854 among 15500+ teams globally </p> 
+                        <Hone> SnackDown </Hone>
+                        <Pone>  Ranked 854 among 15500+ teams globally </Pone> 
                     </MiddleCard>
-                    </MiddleProRow>
-                </ProCard>
-            </MiddleProWrapper>
+            </MiddleProRow>
             <ProWrapper>
-                <ProCard>
                     <ProRow>
                         <Card
                             fromcolor = {props.currTheme.mode === 'dark' ? 'black' : 'white'}
@@ -101,31 +92,28 @@ function CP(props) {
                             tocolor = '#021B79'
                         >
                             <img src = {spoj} alt = "spoj" style = {{ height: '40px', width: '40px' }}/>
-                            <h1> SPOJ </h1>
-                            <p> Ranked 8556 in the world currently </p> 
+                            <Hone> SPOJ </Hone>
+                            <Pone> Ranked 8556 in the world currently </Pone> 
                         </Card>
                     </ProRow>
-                </ProCard>
-                <ProCard>
                     <ProRow>
                         <Card
                             fromcolor = '#B6B6B6'
                             tocolor = '#9B9B9B'
                         >
                             <img src = {infy} alt = "infy" style = {{ height: '40px', width: '80px' }}/>
-                            <h1> HackWithInfy </h1>
-                            <p> Ranked in top 200 </p> 
+                            <Hone> HackWithInfy </Hone>
+                            <Pone> Ranked in top 200 </Pone> 
                         </Card>
                         <Card
                             fromcolor = '#990099'
                             tocolor = '#cc3399'
                         >
                             <img src = {battle} alt = "battle" style = {{ height: '40px', width: '40px' }}/>
-                            <h1> Battle of Brains </h1>
-                            <p> Ranked 7 at onsite finals </p> 
+                            <Hone> Battle of Brains </Hone>
+                            <Pone> Ranked 7 at onsite finals </Pone> 
                         </Card>
                     </ProRow>
-                </ProCard>
             </ProWrapper>
             </Wrapper>
         </React.Fragment>
