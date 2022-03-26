@@ -79,9 +79,7 @@ function CP(props) {
                         tocolor = '#DD2476'
                     >
                         <img src = {codechef} alt = "codechef" style = {{ height: '40px', width: '40px' }}/> 
-                        <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>
-                        <h1> SnackDown </h1> 
-                        <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>
+                        <h1> SnackDown </h1>
                         <p>  Ranked 854 among 15500+ teams globally </p> 
                     </MiddleCard>
                     </MiddleProRow>

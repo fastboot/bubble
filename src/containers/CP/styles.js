@@ -90,25 +90,28 @@ export const MiddleProRow = styled.div`
     display: flex;
     width: 100%;
     height: 25vh;
-    max-height: 200px;
     flex-direction: row;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        position: relative;
+        padding: 12px;
+    }
 `
 
 export const MiddleCard = styled.div`
     display: flex;
     flex-direction: row;
     color: white;
-    width: 100%;
-    margin-right: 30px;
-    margin-left: 30px;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    padding: 10px;
-    transition: 0.4s ease-out;
-    background: linear-gradient(215deg, ${ props => props.fromcolor } 0%, ${ props => props.tocolor } 100%);
     border-radius: 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(215deg, ${ props => props.fromcolor } 0%, ${ props => props.tocolor } 100%);
     box-shadow: ${props => props.noShadow === 'true' || props.theme.mode === 'dark' ? null : `-1rem 0 3rem ${ props.tocolor }` };
+    @media (max-width: 768px) {
+        flex-direction: column;
+        padding: 24px;
+    }
 `
 
 export const Card = styled.div`
