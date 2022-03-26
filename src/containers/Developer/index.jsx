@@ -8,6 +8,7 @@ import {
     ShowWrapper,
     ShowInfo,
     ShowPromo,
+    H,
     Hone,
     Pone,
     Pthree,
@@ -25,7 +26,7 @@ function Developer(props) {
     return (
         <React.Fragment>
             <Heading> 
-                <h1> Code Contribution </h1>
+                <H> Code Contribution </H> 
                 <StripLogo src = { contribution } alt = 'contribution' />
             </Heading>
             <HeatmapComponent currTheme = {props.currTheme} />

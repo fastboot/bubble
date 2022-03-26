@@ -28,10 +28,13 @@ export const SubHeading = styled.div`
     align-items: center;
 `
 export const StripLogo = styled.img`
-    padding-right: 10px;
-    padding-left: 20px;
-    width: 45px;
-    height: 45px;
+    width: 100px;
+    height: 100px;
+    margin-left: 3vw;
+    @media (max-width: 768px) {
+        width: 40px;
+        height: 40px;
+    }
 `
 
 export const ShowWrapper = styled.div`
@@ -93,6 +96,14 @@ export const ProjectImg = styled.img`
     @media (max-width: 768px) {
         width: 40px;
         height: 40px;
+    }
+`
+
+export const H = styled.h1`
+    font-size: 6vmin;
+    line-height: 4vh;
+    @media (max-width: 768px) {
+        font-size: 4vmax;
     }
 `
 

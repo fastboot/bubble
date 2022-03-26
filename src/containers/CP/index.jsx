@@ -5,6 +5,7 @@ import {
     BetweenDescription,
     ProWrapper,
     Card,
+    H,
     Hone,
     Pone,
     ProRow,
@@ -26,7 +27,7 @@ function CP(props) {
         <React.Fragment>
             <Wrapper>
             <Heading> 
-                <h1> I Love Competing! </h1>
+                <H> Competing! </H>
                 <StripLogo src = { trophy } alt = 'trophy' />
             </Heading>
             <ProWrapper>
