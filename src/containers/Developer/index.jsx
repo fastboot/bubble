@@ -6,9 +6,13 @@ import {
     SubHeading,
     WhiteSpace,
     ShowWrapper,
-    ShowCard,
     ShowInfo,
     ShowPromo,
+    Hone,
+    Pone,
+    Pthree,
+    GithubImg,
+    ProjectImg,
 } from './styles'
 import HeatmapComponent from './components/heatmap/Heatmap'
 import Languages from './components/stats/Languages'
@@ -49,50 +53,42 @@ function Developer(props) {
                 <StripLogo src = { contribution } alt = 'contribution' />
             </Heading>
             <ShowWrapper>
-                <ShowCard
-                    shadow = '#9E1502'
-                >
+
                     <ShowInfo
                         width = '30vw'
                         fromcolor = '#FF512F'
                         tocolor = '#DD2476'
                     >
-                        <h1> <strong>?¿ </strong></h1>
+                        <Hone> <strong>?¿ </strong></Hone>
                     </ShowInfo>
                     <ShowPromo
                         width = '40vw'
                     >
-                        <p3><i>react express</i></p3>
-                        <h3>Personal Site</h3>
-                        <p1>A full stack personal site.</p1>
-                        <a href='https://github.com/fastboot/bubble'><img src={github} alt="github" style = {{ height: '30px', width: '30px', marginTop: '75px'}}/></a>
+                        <Pthree><i>react express</i></Pthree>
+                        <Hone>Personal Site</Hone>
+                        <Pone>A full stack personal site.</Pone>
+                        <a href='https://github.com/fastboot/bubble'><GithubImg src={github} alt="github" /></a>
                     </ShowPromo>
-                    
-                </ShowCard>
+    
                 
             </ShowWrapper>
             <ShowWrapper>
-                <ShowCard
-                    shadow = '#9E1502'
-                >
                     <ShowInfo
                         width = '30vw'
                         fromcolor = '#4776E6'
                         tocolor = '#8E54E9'
                         
                     >
-                        <h1> <img src = {wapco} alt = "wapco" /></h1>
+                        <ProjectImg src = {wapco} alt = "wapco" />
                     </ShowInfo>
                     <ShowPromo
                         width = '40vw'
                     >
-                        <p3><i>python electron</i></p3>
-                        <h3>Wapco</h3>
-                        <p1>Desktop application for analysis.</p1>
-                        <a href='https://github.com/fastboot/Wapco-Linux-Beta'><img src={github} alt="github" style = {{ height: '30px', width: '30px', marginTop: '75px'}}/></a>
+                        <Pthree><i>python electron</i></Pthree>
+                        <Hone>Wapco</Hone>
+                        <Pone>Desktop application for analysis.</Pone>
+                        <a href='https://github.com/fastboot/Wapco-Linux-Beta'><GithubImg src={github} alt="github" /></a>
                     </ShowPromo>
-
-                </ShowCard>
                 
             </ShowWrapper>
                 <WhiteSpace />

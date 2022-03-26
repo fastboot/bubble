@@ -10,6 +10,7 @@ import {
     FifthDiv,
     ListDiv,
     Dot,
+    BlockRow,
     Typography
 } from './styles'
 
@@ -80,11 +81,11 @@ function Languages(props) {
                     />
                 </Bar>
                 <ListDiv>
-                    <Dot color = '#f4e45c'/><Typography>{stat[0].name}</Typography>
-                    <Dot color = '#e44c24'/><Typography>{stat[1].name}</Typography>
-                    <Dot color = '#543c7c'/><Typography>{stat[2].name}</Typography>
-                    <Dot color = '#8ce454'/><Typography>{stat[3].name}</Typography>
-                    <Dot color = '#50a7fc'/><Typography>{stat[4].name}</Typography>
+                    <BlockRow><Dot color = '#f4e45c'/><Typography>{stat[0].name}</Typography></BlockRow>
+                    <BlockRow><Dot color = '#e44c24'/><Typography>{stat[1].name}</Typography></BlockRow>
+                    <BlockRow><Dot color = '#543c7c'/><Typography>{stat[2].name}</Typography></BlockRow>
+                    <BlockRow><Dot color = '#8ce454'/><Typography>{stat[3].name}</Typography></BlockRow>
+                    <BlockRow><Dot color = '#50a7fc'/><Typography>{stat[4].name}</Typography></BlockRow>
                 </ListDiv>
             </Fragment>
             }

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Bar = styled.div`
-    width: 70vw;
+    width: 85vw;
     height: 10px;
     display: flex;
     border-radius: 10px;
@@ -9,6 +9,7 @@ export const Bar = styled.div`
     justify-content: center;
     overflow: hidden;
     margin: 0 auto;
+    // background: red;
 `
 export const FirstDiv = styled.div`
     width: ${props => props.width}%;
@@ -36,13 +37,22 @@ export const FifthDiv = styled.div`
     height: 10px;
     background: #50a7fc;
 `
-export const ListDiv = styled.div`
+export const ListDiv = styled.ul`
     width: 60vw;
-    height: 50px;
     display: flex;
+    // background: red;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    flex-direction: row;
+    // overflow: hidden;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+`
+
+export const BlockRow = styled.div`
+    display: flex;
     flex-direction: row;
 `
 export const Dot = styled.div`
@@ -56,8 +66,9 @@ export const Dot = styled.div`
     background: ${props => props.color};
 `
 export const Typography = styled.div`
-    width: 200px;
-    margin: 5px 5px;
+    width: 10vw;
+    margin: 5px 5px; 
     height: 20px;
     display: flex;
+    font-size: 2vmin;
 `
