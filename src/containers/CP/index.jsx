@@ -8,6 +8,7 @@ import {
     ProCard,
     Card,
     ProRow,
+    Wrapper,
     MiddleCard,
     MiddleProRow,
 } from './styles'
@@ -23,6 +24,7 @@ import battle from '../../assets/logos/battle.png'
 function CP(props) {
     return (
         <React.Fragment>
+            <Wrapper>
             <Heading> 
                 <h1> I Love Competing! </h1>
                 <StripLogo src = { trophy } alt = 'trophy' />
@@ -127,6 +129,7 @@ function CP(props) {
                     </ProRow>
                 </ProCard>
             </ProWrapper>
+            </Wrapper>
         </React.Fragment>
     )
 }
