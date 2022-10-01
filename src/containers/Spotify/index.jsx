@@ -8,11 +8,13 @@ import {
     PlaylistName,
     PlaylistDiv,
     AlbumArt,
-    PlaylistsWrapper
+    PlaylistsWrapper,
+    ArrowContainer,
+    Arrow
 } from './styles'
 import contribution from '../../assets/icons/contribution.png'
 
-function Spotify() {
+function Spotify(props) {
 
     const [data, setData] = useState()
     const [isLoading, setIsLoading] = useState(false)
@@ -37,10 +39,12 @@ function Spotify() {
 
     return (
         <React.Fragment>
-            <NowPlaying strip = "noshow"/>
+            <NowPlaying strip = "noshow" theme = {props.currTheme.mode} />
             <Heading> 
                 <H> Didn't like that? Checkout some of my other playlists </H> 
+                <Arrow />
             </Heading>
+            
             { data && (
                 <PlaylistsWrapper>
                     {data.map((playlist, index) => {

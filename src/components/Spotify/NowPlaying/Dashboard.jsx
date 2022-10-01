@@ -16,12 +16,14 @@ import {
     Bar,
 } from './styles.js'
 import computer from '../../../assets/icons/computer.png'
+import computerWhite from '../../../assets/icons/computerWhite.png'
 import smartphone from '../../../assets/icons/smartphone.png'
+import smartphoneWhite from '../../../assets/icons/smartphoneWhite.png'
 import spotifyoriginal from '../../../assets/icons/spotifyoriginal.png'
 import Spinner from '../../../components/Spinner'
 import { useInterval } from './interval'; 
 
-function Dashboard() {
+function Dashboard(props) {
     const [track, setTrack] = useState('')
     const [artist, setArtist] = useState('')
     const [albumart, setAlbumart] = useState('')
@@ -74,7 +76,7 @@ function Dashboard() {
                             <NowPlayingTrack> { track } </NowPlayingTrack>
                             <NowPlayingArtist> { artist } </NowPlayingArtist>
                             <Device>
-                                <StripDeviceIcon src = { deviceType === 'Computer'? computer: smartphone } alt = 'computer' />
+                                <StripDeviceIcon src = { deviceType === 'Computer'? (props.theme === 'dark' ? computerWhite : computer) : (props.theme === 'dark' ? smartphoneWhite : smartphone )} alt = 'computer' />
                                 <NowPlayingDevice> { device } </NowPlayingDevice>
                             </Device>
                             <Bar>

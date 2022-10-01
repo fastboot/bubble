@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import BackgroundLight from '../../assets/shapes/PeakBackground.png'
 import BackgroundDark from '../../assets/shapes/PeakBackgroundDark.png'
+import BackgroundColor from '../../assets/shapes/backgroundOnHover.png'
 import darkBackground from '../../assets/backgrounds/darkBackground.png'
 import lightBackground from '../../assets/backgrounds/lightBackground.png'
 
@@ -74,11 +75,15 @@ export const WorkplaceNameDiv = styled.div`
   margin-left: 20px;
   text-align: center;
   line-height: 180px; 
+  &:hover {
+    background-image: url(${BackgroundColor});
+  }
   @media (max-width: 768px) {
     background-position: right 10px;
     line-height: 100px;
     margin-left: 0px;
   }
+
 `
 
 export const WorkplaceLogo = styled.img`
