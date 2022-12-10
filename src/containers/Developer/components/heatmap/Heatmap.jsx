@@ -35,7 +35,7 @@ function HeatmapComponent(props) {
 
     const fetchData = async () => {
         setIsLoading(true);
-        await axios.get("https://pranjaltestapinodejs.herokuapp.com/contributions", {
+        await axios.get("https://bubble-backend.vercel.app//contributions", {
             headers: {"Access-Control-Allow-Origin": "*"}
         })
         .then((res) => {

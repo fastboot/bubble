@@ -26,7 +26,7 @@ function Spotify(props) {
 
     const fetchData = async () => {
         setIsLoading(true);
-        await axios.get("https://pranjaltestapinodejs.herokuapp.com/getPlaylists")
+        await axios.get("https://bubble-backend.vercel.app//getPlaylists")
         .then((res) => {
             console.log(res.data);
             setData(res.data);

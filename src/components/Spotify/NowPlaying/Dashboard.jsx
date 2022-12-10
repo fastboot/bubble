@@ -40,7 +40,7 @@ function Dashboard(props) {
     useInterval(() => {
         // put your interval code here.
         axios
-        .get("https://pranjaltestapinodejs.herokuapp.com/currentTrack", {})
+        .get("https://bubble-backend.vercel.app/currentTrack", {})
         .then(res => {
             if(res.data.item) {
                 setArtist(res.data.item.artists[0].name)
