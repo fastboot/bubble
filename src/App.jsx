@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
 
 function getInitialTheme() {
   const savedTheme = storage.getItem('theme')
-  return savedTheme ? JSON.parse(savedTheme) : { mode: 'light' }
+  return savedTheme ? JSON.parse(savedTheme) : { mode: 'dark' }
 }
 
 function App(props) {
