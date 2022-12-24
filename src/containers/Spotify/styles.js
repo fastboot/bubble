@@ -9,12 +9,15 @@ export const Heading = styled.div`
     margin-top: 20px;
     justify-content: center;
     align-items: center;
+    @media (max-width: 768px) {
+        text-align: center;
+    }
 `
 export const H = styled.h1`
     font-size: 3vmin;
     line-height: 4vh;
     @media (max-width: 768px) {
-        font-size: 4vmax;
+        font-size: 2vmax;
     }
 `
 
@@ -29,13 +32,11 @@ export const StripLogo = styled.img`
 `
 
 export const PlaylistsWrapper = styled.div`
-    width: auto;
-    height: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    margin-left: 15vw;
+    justify-content: center;
     margin-top: 5vh;
 `
 
@@ -54,21 +55,31 @@ export const AlbumArt = styled.img`
         width: 120px;
         height: 120px;
         margin-top: 0vh;
-        margin-left: 37vw;
     } 
 `
 
 export const PlaylistName = styled.div`
   display: flex;
   padding: 10px;
-  font-size: 14px;
   font-weight: 500px;
+  font-size: 2.5vmin;
+    @media (max-width: 768px) {
+        font-size: 1.5vmax
+        line-height: 1vmax;
+    }
+`
+
+export const StyledA = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
 export const PlaylistDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 `
 
 export const Arrow = styled.div`

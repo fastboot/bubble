@@ -8,7 +8,6 @@ export const NowPlayingWrapper = styled.div`
     flex-direction: row;
     height: 75vh;
     overflow: hidden;
-
     &:before {
         content: "";
         position: absolute;
