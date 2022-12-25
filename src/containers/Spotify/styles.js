@@ -62,7 +62,7 @@ export const PlaylistName = styled.div`
   display: flex;
   padding: 10px;
   font-weight: 500px;
-  font-size: 2.5vmin;
+  font-size: 1.5vmin;
     @media (max-width: 768px) {
         font-size: 1.5vmax
         line-height: 1vmax;
