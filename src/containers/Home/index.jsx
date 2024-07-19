@@ -12,19 +12,29 @@ import {
     WorkplaceName,
     WorkplaceTime,
     ProfileImg,
-    StyledA
+    StyledA,
+    Blob,
+    Blob2,
+    Blob3,
+    Back,
+    Front
 } from './styles'
 import Profile from '../../assets/profile/dp.png'
 import LogoWhite  from '../../assets/logos/PeakWhite.png'
 import LogoBlack from '../../assets/logos/PeakBlack.png'
 import atlas from '../../assets/logos/atlas-black.png'
 import atlassian from '../../assets/logos/atlas-white.png'
+import NewNavigation from '../../components/new-navbar/new-navbar'
+import Footer from '../../components/Footer'
 
 function Home(props) {
 
     return (
         <React.Fragment>
             <PageWrapper>
+                <NewNavigation />
+                <Back />
+                <Front />
                 <ProfileCard>
                     <ProfilePicture>
                         <ProfileImg src = {Profile} alt = 'Profile' />
@@ -46,6 +56,10 @@ function Home(props) {
                         </WorkplaceDiv>
                     </Workplace> 
                 </ProfileCard>
+                <Blob />
+                <Blob2 />
+                <Blob3 />
+                <Footer />
             </PageWrapper>
         </React.Fragment>
     )

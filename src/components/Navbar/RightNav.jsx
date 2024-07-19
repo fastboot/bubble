@@ -80,8 +80,6 @@ const RightNav = (props) => {
 
   return (
     <Ul open={props.open}>
-      <StyledLink to = '/developer' > Developer </StyledLink>
-      <StyledLink to = '/cp' > Programming </StyledLink>
       <StyledLink to = '/spotify' > Spotify </StyledLink>
       <NavButtons>
         <Button type="image" src = { props.currTheme.mode === 'dark' ? Moon: Sun } onClick = { changeTheme } />

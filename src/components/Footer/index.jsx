@@ -10,10 +10,10 @@ function Footer (props){
             <FooterWrapper>
                 <FooterDiv>
                     <FooterIcons>
-                        <a target = '_blank' rel ='noreferrer' href = {CONSTANTS.INSTAGRAM}><Icon imgsrc = { props.currTheme.mode === 'dark' ? FooterLogos.Instagramlight : FooterLogos.Instagram } imgalt = 'Instagram' /></a>
-                        <a target = '_blank' rel ='noreferrer' href = {CONSTANTS.TWITTER}><Icon imgsrc = { props.currTheme.mode === 'dark' ? FooterLogos.Twitterlight : FooterLogos.Twitter } imgalt = 'Twitter' /></a>
-                        <a target = '_blank' rel ='noreferrer' href = {CONSTANTS.LINKEDIN}><Icon imgsrc = { props.currTheme.mode === 'dark' ? FooterLogos.Linkedinlight : FooterLogos.Linkedin } imgalt = 'Linkedin' /></a>
-                        <a target = '_blank' rel ='noreferrer' href = {CONSTANTS.GITHUB}><Icon imgsrc = { props.currTheme.mode === 'dark' ? FooterLogos.Githublight : FooterLogos.Github } imgalt = 'Github' /></a>
+                        <a target = '_blank' rel ='noreferrer' href = {CONSTANTS.INSTAGRAM}><Icon imgsrc = {  FooterLogos.Instagramlight  } imgalt = 'Instagram' /></a>
+                        <a target = '_blank' rel ='noreferrer' href = {CONSTANTS.TWITTER}><Icon imgsrc = {  FooterLogos.Twitterlight  } imgalt = 'Twitter' /></a>
+                        <a target = '_blank' rel ='noreferrer' href = {CONSTANTS.LINKEDIN}><Icon imgsrc = {  FooterLogos.Linkedinlight  } imgalt = 'Linkedin' /></a>
+                        <a target = '_blank' rel ='noreferrer' href = {CONSTANTS.GITHUB}><Icon imgsrc = {  FooterLogos.Githublight  } imgalt = 'Github' /></a>
                     </FooterIcons>
                 </FooterDiv>
             </FooterWrapper>
