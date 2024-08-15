@@ -29,7 +29,7 @@ export const Navbar = styled.div`
   margin-left: 45%;
   border-radius: 50px;
   background-color: #17141d;
-    box-shadow: -1rem 0 3rem #000;
+  justify-content: space-around;
 `
 
 export const NavbarSlider = styled.div`
@@ -41,16 +41,20 @@ export const NavbarSlider = styled.div`
   background-color: ${props => (props.toggled ? '#1DB954' : 'white')};
   transform: ${props => (props.toggled ? 'translateX(100px)' : 'translateX(0)')};
   transition: transform 0.4s ease-in;
+  z-index: 1;
 
 `
 
 export const NavbarItems = styled.p`
+position: relative;
   color: ${props => (props.color)};
-  position: absolute;
   height: 40px;
-  width: 100px;
-  margin-left: ${props => (props.margin)};
+  width: 50px;
   margin-top: 9px;
   font-size: 17px;
-  z-index: 10;
+  z-index: 3;
+`
+
+export const NavBar2 = styled.div`
+
 `

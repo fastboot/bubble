@@ -26,6 +26,7 @@ import {
     TopGenres,
     Follow,
     TopTitle,
+    lineBreak,
     TopLabel,
     ArtistArt,
     TrackArt,
@@ -37,9 +38,22 @@ import {
     RecentListWrapper,
     RecentWrapperCard,
     RecentImageWrapper,
-    RecentImage, 
+    RecentImage,
     NowPlayingTrack,
-    NowPlayingArtist
+    NowPlayingArtist,
+    TopWrapper,
+    TopWrapperHeading,
+    TopWrapperList,
+    TopWrapperListItem,
+    TopWrapperListItemName,
+    TopWrapperListItemIndex,
+    TopWrapperListItemImage,
+    IndexColor,
+    FirstTopContainer,
+    FollowMeText,
+    PageHeading,
+    PlaylistOutside,
+    RecentOutside
 } from './styles'
 import getColor from 'colorthief'
 import FadeIn from './FadeIn'
@@ -49,40 +63,42 @@ import profile from '../../assets/profile/dp.png'
 import DarkModeSwitch from '../../components/theme-toggle/theme-toggle'
 import DarkMode from '../../components/theme-toggle/theme-toggle'
 import NewNavigation from '../../components/new-navbar/new-navbar'
+import { Footer2, GradientDiv, AcrossDiv, IconsWrapper } from '../Landing/styles'
+import Footer from '../../components/Footer';
 
 function calculateBrightness(hexColor) {
     const rgb = hexColor.match(/\w\w/g).map(x => parseInt(x, 16));
     return 0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2];
-  }
-  
-  function getColorsForGradientAndDetail(colors) {
+}
+
+function getColorsForGradientAndDetail(colors) {
     const brightnessValues = colors.map(color => ({
-      color,
-      brightness: calculateBrightness(color),
+        color,
+        brightness: calculateBrightness(color),
     }));
-  
+
     brightnessValues.sort((a, b) => a.brightness - b.brightness);
-  
+
     const darkestColor = brightnessValues[0].color;
     const lightestColor = brightnessValues[brightnessValues.length - 1].color;
     const dominantColor = brightnessValues[Math.floor(brightnessValues.length / 2)].color;
-  
+
     return {
-      darkestColor,
-      dominantColor,
-      detailColor: lightestColor,
+        darkestColor,
+        dominantColor,
+        detailColor: lightestColor,
     };
-  }
+}
 
-  const rgbToHex = (rgbArray) => {
-  const [r, g, b] = rgbArray; // Destructure the array
+const rgbToHex = (rgbArray) => {
+    const [r, g, b] = rgbArray; // Destructure the array
 
-  const toHex = (c) => {
-    const hex = c.toString(16); // Convert to hex
-    return hex.length === 1 ? "0" + hex : hex; // Add leading zero if necessary
-  };
+    const toHex = (c) => {
+        const hex = c.toString(16); // Convert to hex
+        return hex.length === 1 ? "0" + hex : hex; // Add leading zero if necessary
+    };
 
-  return "#" + toHex(r) + toHex(g) + toHex(b); // Concatenate and return
+    return "#" + toHex(r) + toHex(g) + toHex(b); // Concatenate and return
 };
 
 function Spotify(props) {
@@ -98,7 +114,7 @@ function Spotify(props) {
         '#3357FF', // a vibrant blue
         '#FF33A6', // a vibrant pink
         '#FF33F6'  // a vibrant magenta
-      ]);
+    ]);
 
     useEffect(() => {
         fetchData();
@@ -122,26 +138,25 @@ function Spotify(props) {
         setIsLoading(true);
         await axios.get("https://bubble-backend.vercel.app/profile")
             .then((res) => {
-                console.log(res);
                 setRecentData(res.data.items);
             })
             .catch((err) => {
                 console.log(err);
             })
             .finally(() => setIsLoading(false))
-        }
+    }
 
     const fetchTopTrack = async () => {
-            setIsLoading(true);
-            await axios.get("https://bubble-backend.vercel.app/recentTopTrack")
-                .then((res) => {
-                    setTopTrack(res.data.items);
-                })
-                .catch((err) => {
-                    console.log(err);
-                })
-                .finally(() => setIsLoading(false))
-            }
+        setIsLoading(true);
+        await axios.get("https://bubble-backend.vercel.app/recentTopTrack")
+            .then((res) => {
+                setTopTrack(res.data.items);
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+            .finally(() => setIsLoading(false))
+    }
 
     const fetchTopArtist = async () => {
         setIsLoading(true);
@@ -153,86 +168,71 @@ function Spotify(props) {
                 console.log(err);
             })
             .finally(() => setIsLoading(false))
-        }
+    }
 
-        const initialWidth = window.innerWidth * 0.6;
-        const initialHeight = 600;
-        const minWidth = window.innerWidth * 0.8;
-        const minHeight = 800;
-      
-        const [size, setSize] = useState({ width: initialWidth, height: initialHeight });
-      
-        useEffect(() => {
-          const handleScroll = () => {
+    const initialWidth = window.innerWidth * 0.6;
+    const initialHeight = 600;
+    const minWidth = window.innerWidth * 0.8;
+    const minHeight = 800;
+
+    const [size, setSize] = useState({ width: initialWidth, height: initialHeight });
+
+    useEffect(() => {
+        const handleScroll = () => {
             const scrollY = window.scrollY;
             const startShrink = 300;
             const endShrink = 50;
-      
+
             if (scrollY > startShrink) {
-              const progress = Math.min((scrollY - startShrink) / (endShrink - startShrink), 1);
-              const newWidth = initialWidth - (initialWidth - minWidth) * progress;
-              const newHeight = initialHeight - (initialHeight - minHeight) * progress;
-              setSize({ width: newWidth, height: newHeight });
+                const progress = Math.min((scrollY - startShrink) / (endShrink - startShrink), 1);
+                const newWidth = initialWidth - (initialWidth - minWidth) * progress;
+                const newHeight = initialHeight - (initialHeight - minHeight) * progress;
+                setSize({ width: newWidth, height: newHeight });
             } else {
-              setSize({ width: initialWidth, height: initialHeight });
+                setSize({ width: initialWidth, height: initialHeight });
             }
-          };
-      
-          window.addEventListener('scroll', handleScroll);
-      
-          // Clean up event listener on component unmount
-          return () => {
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Clean up event listener on component unmount
+        return () => {
             window.removeEventListener('scroll', handleScroll);
-          };
-        }, [initialWidth, initialHeight, minWidth, minHeight]);
+        };
+    }, [initialWidth, initialHeight, minWidth, minHeight]);
 
 
-        const [currentLineIndex, setCurrentLineIndex] = useState(Math.floor(Math.random() * lyrics.length));
+    const [currentLineIndex, setCurrentLineIndex] = useState(Math.floor(Math.random() * lyrics.length));
 
-        useEffect(() => {
-          const interval = setInterval(() => {
+    useEffect(() => {
+        const interval = setInterval(() => {
             setCurrentLineIndex(Math.floor(Math.random() * lyrics.length));
-          }, 4000); // Change line every 3 seconds
-      
-          return () => clearInterval(interval);
-        }, []);
+        }, 4000); // Change line every 3 seconds
+
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <React.Fragment>
             {/*  */}
-            <NewNavigation />
+            <GradientDiv />
+            <NewNavigation currTheme={props.currTheme} changeMode={props.changeMode}/>
+            <PageHeading>
+                Now listening.
+            </PageHeading>
             <NowPlayingWrapper>
                 <NowPlaying strip="noshow" theme={props.currTheme.mode} />
             </NowPlayingWrapper>
 
-            <RecentWrapper>
-                <RecentWrapperCard>
-                <RecentTopWrapper>
-                    <RecentImageWrapper>
-                    {topTrack && (<TrackArt src={topTrack[0].album.images[0].url} />)}
-                        {topArtist && (<TopLabel color="#EBC944">{topArtist[0].name}</TopLabel>)}
-                        {topArtist && (<TopLabel color="#EBC944">{topArtist[0].name}</TopLabel>)}
-                    </RecentImageWrapper>
-
-                </RecentTopWrapper>
-                <RecentListWrapper>
-
-                <RecentImageWrapper>
-                {topArtist && (<ArtistArt src={topArtist[0].images[0].url} />)}
-                        {topArtist && (<TopLabel color="#EBC944">{topArtist[0].name}</TopLabel>)}
-                        {topArtist && (<TopLabel color="#EBC944">{topArtist[0].name}</TopLabel>)}
-                    </RecentImageWrapper>
-
-                </RecentListWrapper>
-                </RecentWrapperCard>
-            </RecentWrapper>
-
+            <PlaylistOutside>
+            <PageHeading>
+                            More playlists, you will find your vibe.
+                        </PageHeading>
             {data && (
                 <PlaylistsWrapper>
+                    
                     <FadeIn>
-                        <Heading>
-                            <H>  </H>
-                        </Heading>
+                        
 
                         <ListWrapper>
                             {data.map((playlist, index) => {
@@ -254,41 +254,74 @@ function Spotify(props) {
                             })}
                         </ListWrapper>
                     </FadeIn>
-                    
+
                 </PlaylistsWrapper>
             )}
-            <FadeIn>
-                    <CollabWrapper>
-                            <CollabCard width={size.width} height={size.height}>
-                            <TopArtist>
-                                <TopTitle>Top artist</TopTitle>
-                                {topArtist && (<TopLabel color="#EBC944">{topArtist[0].name}</TopLabel>)}
-                                {topArtist && (<ArtistArt src={topArtist[0].images[0].url} />)}
-                            </TopArtist>
-                            <TopTrack>
-                                <TopTitle>Top track</TopTitle>
-                                {topTrack && (<TopLabel color="#FF4500">{topTrack[0].name}</TopLabel>)}
-                                {topTrack && (<TrackArt src={topTrack[0].album.images[0].url} />)}
-                            </TopTrack>
-                            <TopGenres>
-                                <TopTitle>Top genres</TopTitle>
-                                <TopLabel color="#43ABC9">{"modern bollywood"}</TopLabel>
-                                <TopLabel color="#43ABC9">{"pop"}</TopLabel>
-                                <TopLabel color="#43ABC9">{"rap"}</TopLabel>
-                            </TopGenres>
-                            <Follow>
-                               <Carousel>
-    
-                               {lyrics[currentLineIndex]}
+            </PlaylistOutside>
 
-                               </Carousel>
-                               <TopFollowDiv><ProfileFollowImg src={profile} />Tune in!</TopFollowDiv>
-                            </Follow>
-                            </CollabCard>
-                    </CollabWrapper>
-                    </FadeIn>
+            <RecentOutside>
+                <PageHeading>
+                    Recent favourites.
+                </PageHeading>
+            <RecentWrapper>
+                
+                <RecentWrapperCard>
+                    <TopWrapper>
+                        <TopWrapperHeading>Top tracks</TopWrapperHeading>
+                        <TopWrapperList>
+                            {topTrack && topTrack.map((currentTrack, index) => {
+                                const artists = currentTrack.artists.map((curr) => {return curr.name})
+                                const artistText = artists.toString()
+                                return (
+                                    <>
+                                        <TopWrapperListItem>
+                                            <TopWrapperListItemName><IndexColor>{index + 1}</IndexColor>&nbsp;&nbsp; {currentTrack.name} </TopWrapperListItemName>
+                                            <TopWrapperListItemImage src={currentTrack.album.images[0].url} />
+                                        </TopWrapperListItem>
+                                    </>
+
+                                )
+                            })}
+                        </TopWrapperList>
+                    </TopWrapper>
+                    <TopWrapper>
+                        <TopWrapperHeading artist>Top artists</TopWrapperHeading>
+                        <TopWrapperList>
+                            {topArtist && topArtist.map((currentArtist, index) => {
+
+                                return (
+                                    <TopWrapperListItem artist>
+                                        <TopWrapperListItemName><IndexColor artist>{index + 1}</IndexColor>&nbsp;&nbsp; {currentArtist.name}</TopWrapperListItemName>
+                                        {topTrack && (<TopWrapperListItemImage src={currentArtist.images[0].url} />)}
+                                    </TopWrapperListItem>
+                                )
+                            })}
+                        </TopWrapperList>
+                    </TopWrapper>
+
+                </RecentWrapperCard>
+
+                
+                
+                <Follow>
+                        <Carousel>
+
+                            {lyrics[currentLineIndex]}
+
+                        </Carousel>
+                        <TopFollowDiv>
+                            <FollowMeText>Follow me </FollowMeText>
+                            <ProfileFollowImg src={profile} />
+                        </TopFollowDiv>
+                    </Follow>
+            </RecentWrapper>
             
-        </React.Fragment>
+            </RecentOutside>
+            <Footer2 >
+            <AcrossDiv>Across the internet.</AcrossDiv>
+            <IconsWrapper><Footer {...props}/></IconsWrapper>
+            </Footer2>
+        </React.Fragment >
     )
 }
 

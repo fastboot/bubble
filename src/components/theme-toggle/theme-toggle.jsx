@@ -1,31 +1,12 @@
 import React, { useState } from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import storage from 'local-storage-fallback'
 
-const GlobalStyle = createGlobalStyle`
-  :root {
-    --header: white;
-    --background: #f4f3f2;
-    --page-color-transition: background 0.1s ease, color 0.1s ease; /* Reduced duration */
-  }
-
-  [data-theme='dark'] {
-    --header: radial-gradient(circle, #FFD700, #FFA500);
-    --background: #11112a;
-  }
-
-  body {
-    background: var(--background);
-    transition: transform 0.25s ease-in-out, var(--page-color-transition); /* Reduced duration */
-  }
-`;
 
 const DarkModeButton = styled.span`
-  padding: 0.3em 0.5em;
   cursor: pointer;
   width: 30px; /* Reduced width */
   height: 30px; /* Reduced height */
-  margin-left: 100px;
   top: 0;
   right: 0;
   bottom: 0;
@@ -101,28 +82,15 @@ const DarkModeIcon = styled.div`
 `;
 
 
-function getInitialTheme() {
-  const savedTheme = storage.getItem('theme')
-  return savedTheme ? JSON.parse(savedTheme) : { mode: 'dark' }
-}
 
-
-
-const DarkMode = () => {
-  const [theme, setTheme] = useState(getInitialTheme());
-
-  const changeMode = () => {
-
-    const newTheme = theme.mode === 'light' ? { mode: 'dark' } : { mode: 'light' };
-    setTheme(newTheme);
-    storage.setItem('theme', JSON.stringify(newTheme))
-  };
+const DarkMode = (props) => {
+  
 
   return (
     <>
-      <GlobalStyle />
-      <DarkModeButton role="button" tabIndex="0" onClick={changeMode} onKeyDown={changeMode}>
-        <DarkModeIcon className="darkmode_icon" data-theme={theme.mode}>
+      
+      <DarkModeButton role="button" tabIndex="0" onClick={props.changeMode} onKeyDown={props.changeMode}>
+        <DarkModeIcon className="darkmode_icon" data-theme={props.currTheme.mode}>
           <span className="ray"></span>
           <span className="ray"></span>
           <span className="ray"></span>

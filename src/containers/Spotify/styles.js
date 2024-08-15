@@ -7,8 +7,6 @@ export const Heading = styled.div`
     width: 100vw;
     line-height: 10px;
     margin-top: 20px;
-    justify-content: center;
-    align-items: center;
     @media (max-width: 768px) {
         text-align: center;
     }
@@ -31,6 +29,15 @@ export const StripLogo = styled.img`
     }
 `
 
+export const PlaylistOutside = styled.div`
+    height: auto;
+    width: 100%;
+    background: ${props => props.theme.mode === 'dark' ? '#17141d' : 'rgb(250, 250, 250)'};
+    display: flex;
+    flex-direction: column;
+
+`
+
 export const PlaylistsWrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -38,7 +45,7 @@ export const PlaylistsWrapper = styled.div`
     align-items: center;
     justify-content: center;
     margin-top: 5vh;
-    background: rgb(250, 250, 250);
+    background: ${props => props.theme.mode === 'dark' ? '#17141d' : 'rgb(250, 250, 250)'};
 `
 
 export const AlbumArt = styled.img`
@@ -134,11 +141,11 @@ export const NowPlayingWrapper = styled.div`
     align-items: center;
     justify-content: center;
     display: flex;
-    margin-top: 100px;
     animation-play-state: paused;
     animation-delay: calc(var(--scroll) * -1s);
     animation-iteration-count: 1;
     animation-fill-mode: both;
+    margin-top: -50px;
 `
 
 export const ListWrapper = styled.div`
@@ -157,7 +164,7 @@ export const ListItem = styled.div`
     width: 40%;
     flex-direction: row;
     height: 120px;
-    background: rgb(250, 250, 250);
+    background: ${props => props.theme.mode === 'dark' ? '#17141d' : 'rgb(250, 250, 250)'};
     align-items: center;
     padding-left: 20px;
     border-radius: 10px;
@@ -279,12 +286,12 @@ export const TopGenres = styled.div`
 `
 
 export const Follow = styled.div`
-    height: 40%;
-    width: 92%;
-    background: linear-gradient(to right, #1DB954, #1B876D, #146041);
+    height: 75px;
+    width: 78%;
+    background: linear-gradient(to right, deepskyblue, deepskyblue, gold);
     display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
     border-radius: 28px;
     overflow: hidden;
     padding: 20px;
@@ -320,9 +327,7 @@ export const Carousel = styled.div`
     font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
   color: white;
   text-align: left;
-  margin-top: 30px;
-  margin-left: 20px;
-  width: 100%;
+  width: 70%;
   opacity: 0;
   animation: fadeInOut 4s ease-in-out infinite;
   align-self: flex-start;
@@ -362,45 +367,45 @@ export const TopFollowDiv = styled.div`
     font-weight: 400;
     letter-spacing: -0.005em;
     font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
-    align-self: flex-start;
+    align-self: flex-end;
     display: flex;
     flex-direction: row;
-    width: 80%;
+    justify-content: space-around;
+    align-items: end;
+    width: 20%;
     height: 100px;
     color: white;
 
 `
 export const ProfileFollowImg = styled.img`
-    height: 150px;
-    width: 150px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
-    margin-left: 20px;
-    margin-top: -50px;
-    margin-right: 20px;
 `
 
 export const RecentWrapper = styled.div`
     width: 100%;
     height: 100vh;
-    background: blue;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: -150px;
 `
 
 export const RecentWrapperCard = styled.div`
-    width: 70%;
+    width: 80%;
     height: 50vh;
-    background: green;
+    background: black;
     display: flex;
     flex-direction: row;
-    border-radius: 28px;
+    border-radius: 24px;
+    justify-content: space-between;
 `
 
 export const RecentTopWrapper = styled.div`
-    width: 50%;
+    width: 45%;
     height: auto;
-    background: red;
     display: flex;
     flex-direction: column;
 `
@@ -408,7 +413,6 @@ export const RecentTopWrapper = styled.div`
 export const RecentListWrapper = styled.div`
     widht: 50%;
     height: auto;
-    background: orange;
     display: flex;
     flex-direction: column;
 `
@@ -416,7 +420,6 @@ export const RecentListWrapper = styled.div`
 export const RecentImageWrapper = styled.div`
     width: 50%;
     height: auto;
-    background: yellow;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -453,4 +456,120 @@ export const NowPlayingArtist = styled.p`
     @media (max-width: 768px) {
         font-size: 20px;
     } 
+`
+
+export const TopWrapper = styled.div`
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+`
+
+export const TopWrapperHeading = styled.div`
+    widht: auto;
+    height: 10%;
+    display: flex;
+    font-size: 48px;
+    color: ${props => props.artist? "gold": "deepskyblue"};
+    background: black;
+    border-radius: 24px;
+`
+
+export const TopWrapperList = styled.div`
+    width: auto:
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 24px;
+`
+
+export const TopWrapperListItem = styled.div`
+    width: auto;
+    height: 8%;
+    display: flex;
+    flex-direction: row;
+    background: black;
+    color: white;
+    justify-content: space-between;
+    padding: 24px;
+    border-bottom: 0.1px solid dimgray;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+        background:#111;
+		color:#fff;
+        transform: scale(1.1);
+        border-radius: 10px;
+        border-bottom: none;
+    }
+`
+
+export const TopWrapperListItemIndex = styled.p`
+    font-size: 24px;
+`
+
+export const TopWrapperListItemName = styled.p`
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+`
+
+export const TopWrapperListItemImage = styled.img`
+    height: 60px;
+    width: 60px;
+    border-radius: 5px;
+`
+
+export const IndexColor = styled.div`
+    color: ${props => props.artist? "gold": "deepskyblue"};
+`
+
+export const FirstTopContainer = styled.div`
+    width: auto;
+    height: 8%;
+    background: white;
+    color: black;
+    justify-content: space-between;
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+`
+
+export const FollowMeText = styled.p`
+    font-size: 20px;
+    line-height: 1.4705882353;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin-left: 10px;
+`
+
+export const artistsName = styled.p`
+    font-size: 15px;
+    line-height: 1.4705882353;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+`
+
+export const PageHeading = styled.div`
+    font-size: 56px;
+    line-height: 1.0714285714;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin-left: 200px;
+    margin-top: 100px;
+`
+
+export const RecentOutside = styled.div`
+    height: auto;
+    width: 100%;
+    margin-bottom: -10px;
+    background: ${props => props.theme.mode === 'dark' ? 'black' : 'rgb(250, 250, 250)'};
+    display: flex;
+    flex-direction: column;
+
 `

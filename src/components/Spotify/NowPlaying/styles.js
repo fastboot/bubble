@@ -151,7 +151,7 @@ export const NowPlaying = styled.div`
   transition: width 0.5s, height 0.5s;
   width: ${(props) => props.width}px;
   height: ${(props) => props.height}px;
-  box-shadow: -1rem 0 3rem ${ props => props.dominantColor };
+//   box-shadow: -1rem 0 3rem ${ props => props.dominantColor };
 
 }
 `
