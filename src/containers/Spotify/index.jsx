@@ -1,55 +1,26 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import NowPlaying from '../../components/Spotify/NowPlaying'
 import {
-    Heading,
-    H,
     PlaylistName,
-    PlaylistDiv,
-    AlbumArt,
     PlaylistsWrapper,
-    StyledA,
-    Arrow,
     NowPlayingWrapper,
     ListWrapper,
     ListItem,
     ListItemImage,
-    HorizontalLine,
     RecentWrapper,
-    RecentTrack,
-    RecentGap,
-    FollowButton,
-    CollabWrapper,
-    CollabCard,
-    TopTrack,
-    TopArtist,
-    TopGenres,
     Follow,
-    TopTitle,
-    lineBreak,
-    TopLabel,
-    ArtistArt,
-    TrackArt,
     Carousel,
-    TopFollowTitle,
     TopFollowDiv,
     ProfileFollowImg,
-    RecentTopWrapper,
-    RecentListWrapper,
     RecentWrapperCard,
-    RecentImageWrapper,
-    RecentImage,
-    NowPlayingTrack,
-    NowPlayingArtist,
     TopWrapper,
     TopWrapperHeading,
     TopWrapperList,
     TopWrapperListItem,
     TopWrapperListItemName,
-    TopWrapperListItemIndex,
     TopWrapperListItemImage,
     IndexColor,
-    FirstTopContainer,
     FollowMeText,
     PageHeading,
     PlaylistOutside,
@@ -57,49 +28,11 @@ import {
 } from './styles'
 import getColor from 'colorthief'
 import FadeIn from './FadeIn'
-import Vibrant from 'node-vibrant';
 import { lyrics } from './famous-lines'
 import profile from '../../assets/profile/dp.png'
-import DarkModeSwitch from '../../components/theme-toggle/theme-toggle'
-import DarkMode from '../../components/theme-toggle/theme-toggle'
 import NewNavigation from '../../components/new-navbar/new-navbar'
 import { Footer2, GradientDiv, AcrossDiv, IconsWrapper } from '../Landing/styles'
 import Footer from '../../components/Footer';
-
-function calculateBrightness(hexColor) {
-    const rgb = hexColor.match(/\w\w/g).map(x => parseInt(x, 16));
-    return 0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2];
-}
-
-function getColorsForGradientAndDetail(colors) {
-    const brightnessValues = colors.map(color => ({
-        color,
-        brightness: calculateBrightness(color),
-    }));
-
-    brightnessValues.sort((a, b) => a.brightness - b.brightness);
-
-    const darkestColor = brightnessValues[0].color;
-    const lightestColor = brightnessValues[brightnessValues.length - 1].color;
-    const dominantColor = brightnessValues[Math.floor(brightnessValues.length / 2)].color;
-
-    return {
-        darkestColor,
-        dominantColor,
-        detailColor: lightestColor,
-    };
-}
-
-const rgbToHex = (rgbArray) => {
-    const [r, g, b] = rgbArray; // Destructure the array
-
-    const toHex = (c) => {
-        const hex = c.toString(16); // Convert to hex
-        return hex.length === 1 ? "0" + hex : hex; // Add leading zero if necessary
-    };
-
-    return "#" + toHex(r) + toHex(g) + toHex(b); // Concatenate and return
-};
 
 function Spotify(props) {
 

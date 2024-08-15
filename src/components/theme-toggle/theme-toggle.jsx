@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
-import storage from 'local-storage-fallback'
+import React from 'react';
+import styled from 'styled-components';
 
 
 const DarkModeButton = styled.span`
@@ -81,14 +80,10 @@ const DarkModeIcon = styled.div`
   &[data-theme='dark'] .ray:nth-child(8) { transform: rotate(360deg) translateX(-11px); } /* Adjusted translateX */
 `;
 
-
-
 const DarkMode = (props) => {
   
-
   return (
     <>
-      
       <DarkModeButton role="button" tabIndex="0" onClick={props.changeMode} onKeyDown={props.changeMode}>
         <DarkModeIcon className="darkmode_icon" data-theme={props.currTheme.mode}>
           <span className="ray"></span>

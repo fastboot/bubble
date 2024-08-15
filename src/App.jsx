@@ -4,9 +4,7 @@ import storage from 'local-storage-fallback'
 import Spotify from './containers/Spotify'
 import Landing from './containers/Landing'
 import Notfound from './containers/NotFound'
-import Footer from './components/Footer'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
-import NewNavigation from './components/new-navbar/new-navbar'
 
 const GlobalStyle = createGlobalStyle`
   :root {
