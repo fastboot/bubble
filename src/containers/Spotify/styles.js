@@ -27,7 +27,7 @@ export const PlaylistsWrapper = styled.div`
 `;
 
 export const NowPlayingWrapper = styled.div`
-  height: 80vh;
+  height: auto;
   width: 100vw;
   align-items: center;
   justify-content: center;
@@ -36,16 +36,17 @@ export const NowPlayingWrapper = styled.div`
   animation-delay: calc(var(--scroll) * -1s);
   animation-iteration-count: 1;
   animation-fill-mode: both;
-  margin-top: -50px;
+  margin-top: 64px;
+  margin-bottom: 128px;
 
   @media (max-width: 768px) {
-    height: 60vh;
-    margin-top: -30px;
+    margin-top: 32px;
+    margin-bottom: 64px;
   }
 
   @media (max-width: 480px) {
-    height: 50vh;
-    margin-top: -20px;
+    margin-top: 32px;
+    margin-bottom: 64px;
   }
 `;
 

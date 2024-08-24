@@ -149,7 +149,7 @@ function Spotify(props) {
         <React.Fragment>
             {/*  */}
             <GradientDiv />
-            <NewNavigation currTheme={props.currTheme} changeMode={props.changeMode}/>
+            <NewNavigation currTheme={props.currTheme} changeMode={props.changeMode} />
             <PageHeading>
                 Now listening.
             </PageHeading>
@@ -158,85 +158,85 @@ function Spotify(props) {
             </NowPlayingWrapper>
 
             <PlaylistOutside>
-            <PageHeading>
-                            More playlists, you will find your vibe.
-                        </PageHeading>
-            {data && (
-                <PlaylistsWrapper>
-                    
-                    <FadeIn>
-                        
+                <PageHeading>
+                    More playlists, you will find your vibe.
+                </PageHeading>
+                {data && (
+                    <PlaylistsWrapper>
 
-                        <ListWrapper>
-                            {data.map((playlist, index) => {
+                        <FadeIn>
 
-                                if (data[index].owner.id === "spotify" || data[index].name === "ROXANNE") {
 
-                                    return <></>;
-                                }
-                                return (
-                                    <>
+                            <ListWrapper>
+                                {data.map((playlist, index) => {
 
-                                        <ListItem bkcolor={getColor(data[index].images[0].url)}>
-                                            <ListItemImage src={data[index].images[0].url} alt="albumart" />
+                                    if (data[index].owner.id === "spotify" || data[index].name === "ROXANNE") {
 
-                                            <PlaylistName>{data[index].name}</PlaylistName>
-                                        </ListItem>
-                                    </>
-                                )
-                            })}
-                        </ListWrapper>
-                    </FadeIn>
+                                        return <></>;
+                                    }
+                                    return (
+                                        <>
 
-                </PlaylistsWrapper>
-            )}
+                                            <ListItem bkcolor={getColor(data[index].images[0].url)}>
+                                                <ListItemImage src={data[index].images[0].url} alt="albumart" />
+
+                                                <PlaylistName>{data[index].name}</PlaylistName>
+                                            </ListItem>
+                                        </>
+                                    )
+                                })}
+                            </ListWrapper>
+                        </FadeIn>
+
+                    </PlaylistsWrapper>
+                )}
             </PlaylistOutside>
 
             <RecentOutside>
                 <PageHeading>
                     Recent favourites.
                 </PageHeading>
-            <RecentWrapper>
-                
-                <RecentWrapperCard>
-                    <TopWrapper>
-                        <TopWrapperHeading>Top tracks</TopWrapperHeading>
-                        <TopWrapperList>
-                            {topTrack && topTrack.map((currentTrack, index) => {
-                                const artists = currentTrack.artists.map((curr) => {return curr.name})
-                                const artistText = artists.toString()
-                                return (
-                                    <>
-                                        <TopWrapperListItem>
-                                            <TopWrapperListItemName><IndexColor>{index + 1}</IndexColor>&nbsp;&nbsp; {currentTrack.name} </TopWrapperListItemName>
-                                            <TopWrapperListItemImage src={currentTrack.album.images[0].url} />
+                <RecentWrapper>
+
+                    <RecentWrapperCard>
+                        <TopWrapper>
+                            <TopWrapperHeading>Top tracks</TopWrapperHeading>
+                            <TopWrapperList>
+                                {topTrack && topTrack.map((currentTrack, index) => {
+                                    const artists = currentTrack.artists.map((curr) => { return curr.name })
+                                    const artistText = artists.toString()
+                                    return (
+                                        <>
+                                            <TopWrapperListItem>
+                                                <TopWrapperListItemName><IndexColor>{index + 1}</IndexColor>&nbsp;&nbsp; {currentTrack.name} </TopWrapperListItemName>
+                                                <TopWrapperListItemImage src={currentTrack.album.images[0].url} />
+                                            </TopWrapperListItem>
+                                        </>
+
+                                    )
+                                })}
+                            </TopWrapperList>
+                        </TopWrapper>
+                        <TopWrapper>
+                            <TopWrapperHeading artist>Top artists</TopWrapperHeading>
+                            <TopWrapperList>
+                                {topArtist && topArtist.map((currentArtist, index) => {
+
+                                    return (
+                                        <TopWrapperListItem artist>
+                                            <TopWrapperListItemName><IndexColor artist>{index + 1}</IndexColor>&nbsp;&nbsp; {currentArtist.name}</TopWrapperListItemName>
+                                            {topTrack && (<TopWrapperListItemImage src={currentArtist.images[0].url} />)}
                                         </TopWrapperListItem>
-                                    </>
+                                    )
+                                })}
+                            </TopWrapperList>
+                        </TopWrapper>
 
-                                )
-                            })}
-                        </TopWrapperList>
-                    </TopWrapper>
-                    <TopWrapper>
-                        <TopWrapperHeading artist>Top artists</TopWrapperHeading>
-                        <TopWrapperList>
-                            {topArtist && topArtist.map((currentArtist, index) => {
+                    </RecentWrapperCard>
 
-                                return (
-                                    <TopWrapperListItem artist>
-                                        <TopWrapperListItemName><IndexColor artist>{index + 1}</IndexColor>&nbsp;&nbsp; {currentArtist.name}</TopWrapperListItemName>
-                                        {topTrack && (<TopWrapperListItemImage src={currentArtist.images[0].url} />)}
-                                    </TopWrapperListItem>
-                                )
-                            })}
-                        </TopWrapperList>
-                    </TopWrapper>
 
-                </RecentWrapperCard>
 
-                
-                
-                <Follow>
+                    <Follow>
                         <Carousel>
 
                             {lyrics[currentLineIndex]}
@@ -247,12 +247,12 @@ function Spotify(props) {
                             <ProfileFollowImg src={profile} />
                         </TopFollowDiv>
                     </Follow>
-            </RecentWrapper>
-            
+                </RecentWrapper>
+
             </RecentOutside>
             <Footer2 >
-            <AcrossDiv>Across the internet.</AcrossDiv>
-            <IconsWrapper><Footer {...props}/></IconsWrapper>
+                <AcrossDiv>Across the internet.</AcrossDiv>
+                <IconsWrapper><Footer {...props} /></IconsWrapper>
             </Footer2>
         </React.Fragment >
     )

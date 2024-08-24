@@ -53,6 +53,7 @@ export const StripLogo = styled.img`
     margin-left: 30px;
 `
 export const Bar = styled.div`
+    position: relative;
     width: 40vw;
     margin-top: 2vh;
     height: 5px;
@@ -105,6 +106,7 @@ export const NowPlaying = styled.div`
         width: 90%;
         height: 90%;
         border-radius: 24px;
+        padding-bottom: 32px;
     } 
 `
 

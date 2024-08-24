@@ -152,7 +152,7 @@ function Dashboard(props) {
                         <NowPlaying dominantColor={dominantColor} darkerColor={darkestColor} lighterColor={detailColor} width={size.width} height={size.height}>
                         <TopBar>
                         <SpotifyLogo src={spotify} />
-                        <PlayingDevice>Playing on <StripDeviceIcon src = { deviceType === 'Computer'? (props.theme === 'dark' ? computerWhite : computer) : (props.theme === 'dark' ? smartphoneWhite : smartphone )} alt = 'computer' /></PlayingDevice>
+                        <PlayingDevice>Playing on <StripDeviceIcon src = { deviceType === 'Computer'? (props.theme === 'dark' ? computer : computer) : (props.theme === 'dark' ? smartphone : smartphone )} alt = 'computer' /></PlayingDevice>
                         </TopBar>
                           <NowPlayingCard>
                               
