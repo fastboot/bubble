@@ -68,7 +68,7 @@ export const PlaylistName = styled.div`
 export const ListWrapper = styled.div`
   width: 70%;
   height: auto;
-  padding: 24px;
+  padding-top: 24px;
   padding-bottom: 125px;
   margin-left: 80px;
   display: flex;
@@ -160,15 +160,19 @@ export const Follow = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 90%;
-    height: 60px;
+    width: 85%;
+    height: auto;
     padding: 15px;
+    flex-direction: column;
+    border-radius: 16px;
   }
 
   @media (max-width: 480px) {
-    width: 100%;
-    height: 50px;
+    width: 85%;
+    height: auto;
     padding: 10px;
+    flex-direction: column;
+    border-radius: 16px;
   }
 `;
 
@@ -226,12 +230,12 @@ export const TopFollowDiv = styled.div`
 
   @media (max-width: 768px) {
     font-size: 30px;
-    width: 30%;
+    width: 100%;
   }
 
   @media (max-width: 480px) {
     font-size: 20px;
-    width: 40%;
+    width: 100%;
   }
 `;
 
@@ -243,11 +247,15 @@ export const ProfileFollowImg = styled.img`
   @media (max-width: 768px) {
     height: 60px;
     width: 60px;
+    margin-left: -200px;
+    margin-top: -20px;
   }
 
   @media (max-width: 480px) {
     height: 50px;
     width: 50px;
+    margin-left: -200px;
+    margin-top: -20px;
   }
 `;
 
@@ -261,20 +269,19 @@ export const RecentWrapper = styled.div`
   margin-top: -150px;
 
   @media (max-width: 768px) {
-    height: 80vh;
-    margin-top: -100px;
+    height: auto;
+    margin-top: -150px;
   }
 
   @media (max-width: 480px) {
-    height: 70vh;
-    margin-top: -50px;
+    height: auto;
   }
 `;
 
 export const RecentWrapperCard = styled.div`
   width: 80%;
   height: 50vh;
-  background: black;
+  background: ${props => props.theme.mode === 'dark' ? 'black' : 'rgb(240, 240, 240)'};;
   display: flex;
   flex-direction: row;
   border-radius: 24px;
@@ -319,7 +326,7 @@ export const TopWrapperHeading = styled.div`
   display: flex;
   font-size: 48px;
   color: ${(props) => (props.artist ? 'gold' : 'deepskyblue')};
-  background: black;
+  background: ${props => props.theme.mode === 'dark' ? 'black' : 'rgb(240, 240, 240)'};
   border-radius: 24px;
 
   @media (max-width: 768px) {
@@ -352,8 +359,8 @@ export const TopWrapperListItem = styled.div`
   height: 8%;
   display: flex;
   flex-direction: row;
-  background: black;
-  color: white;
+  background: ${props => props.theme.mode === 'dark' ? 'black' : 'rgb(240, 240, 240)'};
+  color: ${props => props.theme.mode === 'dark' ? 'white' : 'black'};;
   justify-content: space-between;
   padding: 24px;
   border-bottom: 0.1px solid dimgray;
@@ -423,6 +430,10 @@ export const FollowMeText = styled.p`
     letter-spacing: -0.022em;
     font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
     margin-left: 10px;
+
+     @media (max-width: 768px) {
+        margin-left: -50px;
+    }
 `
 
 export const artistsName = styled.p`

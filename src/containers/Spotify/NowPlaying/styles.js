@@ -104,6 +104,7 @@ export const NowPlaying = styled.div`
     @media (max-width: 768px) {
         width: 90%;
         height: 90%;
+        border-radius: 24px;
     } 
 `
 
@@ -126,6 +127,7 @@ export const AlbumArt = styled.img`
         width: 120px;
         height: 120px;
         margin-top: 0vh;
+        border-radius: 16px;
     } 
 `
 
