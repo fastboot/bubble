@@ -2,16 +2,14 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import {
-  AlbumArt,
+    AlbumArt,
     Bar,
-    Device,
     Dot,
     Filler,
     LoaderDiv,
     NowPlaying,
     NowPlayingArtist,
     NowPlayingCard,
-    NowPlayingDevice,
     NowPlayingTrack,
     PlayingDevice,
     SpotifyLogo,

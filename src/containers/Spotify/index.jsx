@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import NowPlaying from '../../components/Spotify/NowPlaying'
+import NowPlaying from './NowPlaying'
 import {
     PlaylistName,
     PlaylistsWrapper,

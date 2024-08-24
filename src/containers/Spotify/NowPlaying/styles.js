@@ -1,18 +1,5 @@
 import styled from 'styled-components'
 
-export const NowPlayingWrapper = styled.div`
-    
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    height: 70vh;
-    overflow: hidden;
-    background: linear-gradient(45deg, ${ props => props.dominantColor }, ${ props => props.darkerColor });
-
-    @media (max-width: 768px) {
-        flex-direction: column;
-    } 
-`
 
 export const LoaderDiv = styled.div`
     position: relative;
@@ -24,33 +11,12 @@ export const LoaderDiv = styled.div`
     justify-content: center;
 `
 
-export const NowPlayingStripWrapper = styled.div`
-    width: 100px;
-    height: 70px;
-    display: flex;
-    z-index: 10;
-    flex-direction: row;
-`
-
 export const StripDeviceIcon = styled.img`
     width: 30px;
     filter: invert(1);
     margin-top: -3px;
     height: 30px;
     margin-left: 10px;
-`
-
-export const DetailsWrapper = styled.div`
-    width: 50vw;
-    height: 300px;
-    margin-top: 100px;
-    margin-left: 50px;
-    display: flex;
-    z-index: 10;
-    flex-direction: column;
-    @media (max-width: 768px) {
-        margin-top: 10px;
-    } 
 `
 
 export const NowPlayingTrack = styled.p`
@@ -62,7 +28,7 @@ export const NowPlayingTrack = styled.p`
     font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
     z-index: 10;
     @media (max-width: 768px) {
-        font-size: 35px;
+        font-size: 24px;
     } 
 `
 export const NowPlayingArtist = styled.p`
@@ -75,28 +41,11 @@ export const NowPlayingArtist = styled.p`
     margin-top: -5px;
     z-index: 10;
     @media (max-width: 768px) {
-        font-size: 20px;
+        font-size: 16px;
     } 
 `
-export const NowPlayingAlbum = styled.p`
-    font-size: 30px;
-`
-export const NowPlayingDevice = styled.p`
-    font-size: 17px;
-    line-height: 1.4705882353;
-    font-weight: 400;
-    letter-spacing: -0.022em;
-    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
-    color:white;
-    padding-left: 10px;
-    @media (max-width: 768px) {
-        font-size: 10px;
-    } 
-`
-export const Device = styled.div`
-    display: flex;
-    flex-direction: row;
-`
+
+
 export const StripLogo = styled.img`
     margin-top: 30px;
     width: 45px;
@@ -147,13 +96,15 @@ export const NowPlaying = styled.div`
     justify-content: center;
 
     transform: ${props => props.transform}
-  transform: translateX(-50%);
-  transition: width 0.5s, height 0.5s;
-  width: ${(props) => props.width}px;
-  height: ${(props) => props.height}px;
-//   box-shadow: -1rem 0 3rem ${ props => props.dominantColor };
+    transform: translateX(-50%);
+    transition: width 0.5s, height 0.5s;
+    width: ${(props) => props.width}px;
+    height: ${(props) => props.height}px;
 
-}
+    @media (max-width: 768px) {
+        width: 90%;
+        height: 90%;
+    } 
 `
 
 export const NowPlayingCard = styled.div`
@@ -175,7 +126,6 @@ export const AlbumArt = styled.img`
         width: 120px;
         height: 120px;
         margin-top: 0vh;
-        margin-left: 37vw;
     } 
 `
 
@@ -185,6 +135,12 @@ export const SpotifyLogo = styled.img`
     margin-left: 30px;
     width: 60px;
     height: 60px;
+    @media (max-width: 768px) {
+        width: 30px;
+        height: 30px;
+        margin-top: 2vh;
+        margin-left: 15px;
+    } 
 `
 
 export const PlayingDevice = styled.div`
@@ -201,6 +157,12 @@ export const PlayingDevice = styled.div`
     align-self: end;
     width: 150px;
     height: 70px;
+
+    @media (max-width: 768px) {
+        margin-top: 5vh;
+        margin-right: -15px;
+        align-self: center;
+    } 
 `
 
 export const TopBar = styled.div`

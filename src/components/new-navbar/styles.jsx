@@ -54,7 +54,3 @@ position: relative;
   font-size: 17px;
   z-index: 3;
 `
-
-export const NavBar2 = styled.div`
-
-`

@@ -23,14 +23,16 @@ const Container = styled.div`
 
 const Txt = styled.div`
   display: flex;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.09em;
   font-size: 5em;
-  line-height: 2;
-  font-weight: 300;
+  font-weight: 400;
   text-rendering: optimizeLegibility;
   color: #fefefe;
+  @media (max-width: 768px) {
+    font-size: 2em;
+    margin-left: 10%;
+  }
 `;
 
 const GradientText = ({ text="" }) => {

@@ -14,6 +14,11 @@ const PillContainer = styled.div`
   border-radius: 25px;
   overflow: hidden;
   align-self: center;
+
+  @media (max-width: 768px) {
+    margin-top: 30px;
+    margin-left: 20%;
+  }
 `;
 
 const PillItem = styled.div`
@@ -26,12 +31,6 @@ const PillItem = styled.div`
   transition: color 0.3s;
   z-index: 2; // Ensures text is on top
   margin-left: 15px;
-  
-  ${({ active, color }) =>
-    active &&
-    css`
-      color: ${color.text};
-    `}
 `;
 
 const Slider = styled.div`
@@ -42,8 +41,27 @@ const Slider = styled.div`
   width: 33.33%;
   background-color: ${({ color }) => color.background};
   border-radius: 25px;
-  transition: transform 0.3s, background-color 0.3s;
-  transform: ${({ position }) => `translateX(${position}%)`};
+  transition: background-color 0.7s;
+    animation: ${({ where }) => where === 'spotify' ? `oscillate` : `oscillateBack`} 1s forwards;
+
+  @keyframes oscillate {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes oscillateBack {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+}
 `;
 
 const DarkModeSwitch = styled.input`
@@ -51,9 +69,8 @@ const DarkModeSwitch = styled.input`
 `;
 
 const colors = {
-  whoami: { background: 'white', text: 'black' },
-  spotify: { background: '#1DB954', text: 'white' },
-  darkMode: { background: '#333', text: 'white' },
+  whoami: { background: 'royalblue' },
+  spotify: { background: '#1DB954' },
 };
 
 const MenuPill = (props) => {
@@ -81,29 +98,30 @@ const MenuPill = (props) => {
     }
   };
 
-  const getPosition = () => {
+  const getString = () => {
     if (activeItem === 'whoami') {
-      return 0;  // Start position
+      return 'whoami';  // Start position
     } else if (activeItem === 'spotify') {
-      return 100;  // Translate to the right (100%)
+      return 'spotify';  // Translate to the right (100%)
     }
-    return 0;  // Default to 0%
+    return 'spotify';  // Default to 0%
   };
   
 
   return (
     <PillContainer>
-      <Slider color={colors[activeItem]} position={getPosition()} />
+      <Slider color={colors[activeItem]} where={getString()}/>
       <PillItem
-        active={activeItem === 'whoami'}
-        color={colors.whoami}
+        active={activeItem === 'spotify'}
+        color={colors.spotify}
         onClick={() => handleClick('whoami')}
       >
         whoami
       </PillItem>
       <PillItem
-        active={activeItem === 'spotify'}
-        color={colors.spotify}
+        
+        active={activeItem === 'whoami'}
+        color={colors.whoami}
         onClick={() => handleClick('spotify')}
       >
         spotify
