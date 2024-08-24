@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.f4f2d4e1.js",
+    "main.js": "/static/js/main.247dc529.js",
     "static/media/dp3d.png": "/static/media/dp3d.f434a82350f751282f39.png",
     "static/media/dp.png": "/static/media/dp.d57614f496986f0afc77.png",
     "static/media/githublight.png": "/static/media/githublight.20077ca6a2b90e9f317c.png",
@@ -21,6 +21,6 @@
     "static/media/blob2.svg": "/static/media/blob2.64316c3c7e66a2960e3b80151c001ab5.svg"
   },
   "entrypoints": [
-    "static/js/main.f4f2d4e1.js"
+    "static/js/main.247dc529.js"
   ]
 }
