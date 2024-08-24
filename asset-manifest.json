@@ -1,37 +1,26 @@
 {
   "files": {
-    "main.js": "/static/js/main.9224d561.js",
-    "static/media/lightBackground.png": "/static/media/lightBackground.546229522fa78870ab16.png",
-    "static/media/darkBackground.png": "/static/media/darkBackground.3196027422fdb9b79de9.png",
+    "main.js": "/static/js/main.f4f2d4e1.js",
+    "static/media/dp3d.png": "/static/media/dp3d.f434a82350f751282f39.png",
     "static/media/dp.png": "/static/media/dp.d57614f496986f0afc77.png",
-    "static/media/infy.png": "/static/media/infy.a40b7cfadf35d39a2ecb.png",
-    "static/media/spoj.png": "/static/media/spoj.cdb0f1014bedb0bdabc7.png",
-    "static/media/trophy.png": "/static/media/trophy.a0cd1341e0442f2c2a88.png",
     "static/media/githublight.png": "/static/media/githublight.20077ca6a2b90e9f317c.png",
-    "static/media/moon.png": "/static/media/moon.4a385c7d6604e6687dd2.png",
     "static/media/PeakWhite.png": "/static/media/PeakWhite.513a0f502a5f3fc2b258.png",
-    "static/media/sun.png": "/static/media/sun.32e367081c3a9e9745af.png",
     "static/media/PeakBlack.png": "/static/media/PeakBlack.6fb7ff4b1adfa303ab31.png",
-    "static/media/google.png": "/static/media/google.cadee8cdb0c0afb1a713.png",
     "static/media/instagramlight.png": "/static/media/instagramlight.bc004798c6dd112ba381.png",
     "static/media/atlas-white.png": "/static/media/atlas-white.23cd2f16dbe945e3631e.png",
     "static/media/twitterlight.png": "/static/media/twitterlight.5cd959b6a65c438900f5.png",
-    "static/media/github.png": "/static/media/github.a855c3975c028d8069f5.png",
+    "static/media/spotify.png": "/static/media/spotify.91a40dc3de3ba44b08dd.png",
     "static/media/githubdark.png": "/static/media/githubdark.44eee0c4a6c25b0d7347.png",
-    "static/media/codechef.png": "/static/media/codechef.0e410daaccfbc01b565f.png",
     "static/media/atlas-black.png": "/static/media/atlas-black.6a4f80d3de35c1096250.png",
     "static/media/smartphoneWhite.png": "/static/media/smartphoneWhite.6e8660a870840ae580e4.png",
-    "static/media/contribution.png": "/static/media/contribution.62fb25daef3eecde0613.png",
     "static/media/linkedinlight.png": "/static/media/linkedinlight.a71dfebead358f4a0d8f.png",
     "static/media/instagramdark.png": "/static/media/instagramdark.215fa341f2724204364a.png",
     "static/media/twitterdark.png": "/static/media/twitterdark.7bf809cdc926ee52e77e.png",
     "static/media/facebookwhite.png": "/static/media/facebookwhite.72acfd497c96deb5c082.png",
-    "static/media/battle.png": "/static/media/battle.254f58eb0c45036034b9.png",
-    "static/media/wapco.png": "/static/media/wapco.c8ff8c3fb52add733324.png",
     "index.html": "/index.html",
-    "static/media/testingPost.md": "/static/media/testingPost.5810f5a68f98d3126bf8.md"
+    "static/media/blob2.svg": "/static/media/blob2.64316c3c7e66a2960e3b80151c001ab5.svg"
   },
   "entrypoints": [
-    "static/js/main.9224d561.js"
+    "static/js/main.f4f2d4e1.js"
   ]
 }
