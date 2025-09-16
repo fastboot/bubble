@@ -37,14 +37,13 @@ import Footer from '../../components/Footer';
 function Spotify(props) {
 
     const [data, setData] = useState()
-    const [recentData, setRecentData] = useState();
+    // removed unused recentData state
     const [topTrack, setTopTrack] = useState();
     const [topArtist, setTopArtist] = useState();
-    const [isLoading, setIsLoading] = useState(false);
+    const [, setIsLoading] = useState(false);
 
     useEffect(() => {
         fetchData();
-        fetchDataAgain();
         fetchTopTrack();
         fetchTopArtist();
     }, [])
@@ -60,17 +59,7 @@ function Spotify(props) {
             })
             .finally(() => setIsLoading(false))
     }
-    const fetchDataAgain = async () => {
-        setIsLoading(true);
-        await axios.get("https://bubble-backend.vercel.app/profile")
-            .then((res) => {
-                setRecentData(res.data.items);
-            })
-            .catch((err) => {
-                console.log(err);
-            })
-            .finally(() => setIsLoading(false))
-    }
+    // removed unused profile fetch
 
     const fetchTopTrack = async () => {
         setIsLoading(true);

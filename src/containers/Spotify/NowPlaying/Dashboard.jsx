@@ -55,11 +55,11 @@ function Dashboard(props) {
     const [track, setTrack] = useState('')
     const [artist, setArtist] = useState('')
     const [albumart, setAlbumart] = useState("https://picsum.photos/id/237/200/300")
-    const [device, setDevice] = useState('')
+    // removed unused device state
     const [deviceType, setDeviceType] = useState('')
     const [duration, setDuration] = useState(0)
     const [progress, setProgress] = useState(0)
-    const [externalUrl, setExternalUrl] = useState('');
+    // removed unused externalUrl state
     const [isLoading, setIsLoading] = useState(true);
     const [colors, setColors] = useState([
         '#FF5733', // a vibrant red-orange
@@ -79,11 +79,11 @@ function Dashboard(props) {
         .then(res => {
             if(res.data.item) {
                 setArtist(res.data.item.artists[0].name)
-                setDevice(res.data.device.name)
+                // setDevice(res.data.device.name)
                 setTrack(res.data.item.name)
                 setAlbumart(res.data.item.album.images[0].url)
                 setDeviceType(res.data.device.type)
-                setExternalUrl(res.data.item.external_urls.spotify)
+                // setExternalUrl(res.data.item.external_urls.spotify)
                 setDuration(res.data.item.duration_ms)
                 setProgress(res.data.progress_ms)
 
