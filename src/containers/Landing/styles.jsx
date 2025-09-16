@@ -64,6 +64,10 @@ export const ImageSide = styled.div`
   height: auto;
   display: flex;
   flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  min-height: 420px;
 
   @media (max-width: 1024px) {
     width: 100%;
@@ -73,46 +77,42 @@ export const ImageSide = styled.div`
 `;
 
 export const ImageVector = styled.img`
-  width: 450px;
-  height: 430px;
+  width: clamp(220px, 38vw, 460px);
+  height: auto;
   z-index: 2;
   border-radius: 40%;
-  padding-top: 80px;
+  position: relative;
 
   @media (max-width: 768px) {
-    width: 300px;
-    height: 280px;
-    padding-top: 40px;
+    width: clamp(200px, 60vw, 340px);
+    height: auto;
   }
 `;
 
 export const BlobVector = styled.img`
-  align-self: center;
-  width: 750px;
-  height: 700px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(320px, 60vw, 780px);
+  height: auto;
   border-radius: 50%;
   z-index: 1;
-  margin-top: -514px;
-  margin-right: -51px;
-
-  animation: oscillater 5s infinite;
+  animation: oscillater 5s infinite ease-in-out;
 
   @media (max-width: 768px) {
-    width: 500px;
-    height: 450px;
-    margin-top: -350px;
-    margin-right: -16px;
+    width: clamp(260px, 80vw, 560px);
   }
 
   @keyframes oscillater {
     0% {
-      transform: translateY(0%);
+      transform: translate(-50%, -50%) translateY(0%);
     }
     50% {
-      transform: translateY(5%);
+      transform: translate(-50%, -50%) translateY(5%);
     }
     100% {
-      transform: translateY(0%);
+      transform: translate(-50%, -50%) translateY(0%);
     }
   }
 `;

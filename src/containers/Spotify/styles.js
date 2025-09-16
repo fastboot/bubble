@@ -329,6 +329,7 @@ export const TopWrapperHeading = styled.div`
   color: ${(props) => (props.artist ? 'gold' : 'deepskyblue')};
   background: ${props => props.theme.mode === 'dark' ? 'black' : 'rgb(240, 240, 240)'};
   border-radius: 24px;
+  margin-bottom: 12px;
 
   @media (max-width: 768px) {
     font-size: 36px;
@@ -345,6 +346,7 @@ export const TopWrapperList = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 24px;
+  gap: 0px;
 
   @media (max-width: 768px) {
     height: 70%;
@@ -357,32 +359,34 @@ export const TopWrapperList = styled.div`
 
 export const TopWrapperListItem = styled.div`
   width: auto;
-  height: 8%;
+  height: 72px;
   display: flex;
   flex-direction: row;
   background: ${props => props.theme.mode === 'dark' ? 'black' : 'rgb(240, 240, 240)'};
   color: ${props => props.theme.mode === 'dark' ? 'white' : 'black'};;
   justify-content: space-between;
-  padding: 24px;
-  border-bottom: 0.1px solid dimgray;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  border-bottom: 1px solid dimgray;
   transition: transform 0.2s ease-in-out;
 
   &:hover {
     background: #111;
     color: #fff;
-    transform: scale(1.1);
     border-radius: 10px;
-    border-bottom: none;
+    /* Keep border to prevent layout shift */
+    border-bottom: 1px solid dimgray;
   }
 
   @media (max-width: 768px) {
-    padding: 20px;
-    height: 10%;
+    padding: 10px 14px;
+    height: 64px;
   }
 
   @media (max-width: 480px) {
-    padding: 15px;
-    height: 12%;
+    padding: 8px 12px;
+    height: 56px;
   }
 `;
 
