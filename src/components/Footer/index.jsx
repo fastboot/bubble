@@ -1,5 +1,5 @@
 import React from 'react'
-import { FooterWrapper, FooterDiv, FooterIcons } from './FooterElements'
+import { FooterWrapper, FooterIcons } from './FooterElements'
 import FooterLogos from './constants/FooterLogos'
 import Icon from '../Icons'
 import * as CONSTANTS from '../../constants'

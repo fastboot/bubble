@@ -41,13 +41,6 @@ function Spotify(props) {
     const [topTrack, setTopTrack] = useState();
     const [topArtist, setTopArtist] = useState();
     const [isLoading, setIsLoading] = useState(false);
-    const [colors, setColors] = useState([
-        '#FF5733', // a vibrant red-orange
-        '#33FF57', // a vibrant green
-        '#3357FF', // a vibrant blue
-        '#FF33A6', // a vibrant pink
-        '#FF33F6'  // a vibrant magenta
-    ]);
 
     useEffect(() => {
         fetchData();
@@ -103,36 +96,7 @@ function Spotify(props) {
             .finally(() => setIsLoading(false))
     }
 
-    const initialWidth = window.innerWidth * 0.6;
-    const initialHeight = 600;
-    const minWidth = window.innerWidth * 0.8;
-    const minHeight = 800;
-
-    const [size, setSize] = useState({ width: initialWidth, height: initialHeight });
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrollY = window.scrollY;
-            const startShrink = 300;
-            const endShrink = 50;
-
-            if (scrollY > startShrink) {
-                const progress = Math.min((scrollY - startShrink) / (endShrink - startShrink), 1);
-                const newWidth = initialWidth - (initialWidth - minWidth) * progress;
-                const newHeight = initialHeight - (initialHeight - minHeight) * progress;
-                setSize({ width: newWidth, height: newHeight });
-            } else {
-                setSize({ width: initialWidth, height: initialHeight });
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        // Clean up event listener on component unmount
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, [initialWidth, initialHeight, minWidth, minHeight]);
+    // removed unused scroll-based size state
 
 
     const [currentLineIndex, setCurrentLineIndex] = useState(Math.floor(Math.random() * lyrics.length));
@@ -203,8 +167,7 @@ function Spotify(props) {
                             <TopWrapperHeading>Top tracks</TopWrapperHeading>
                             <TopWrapperList>
                                 {topTrack && topTrack.map((currentTrack, index) => {
-                                    const artists = currentTrack.artists.map((curr) => { return curr.name })
-                                    const artistText = artists.toString()
+                                    // const artists = currentTrack.artists.map((curr) => { return curr.name })
                                     return (
                                         <>
                                             <TopWrapperListItem>

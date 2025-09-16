@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import DarkMode from '../theme-toggle/theme-toggle';
-import { NavLink as Link, NavLink, useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 const PillContainer = styled.div`
   display: flex;
@@ -64,9 +64,7 @@ const Slider = styled.div`
 }
 `;
 
-const DarkModeSwitch = styled.input`
-  cursor: pointer;
-`;
+// removed unused DarkModeSwitch
 
 const colors = {
   whoami: { background: 'royalblue' },

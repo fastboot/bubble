@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import BackgroundLight from '../../assets/shapes/PeakBackground.png'
 import BackgroundDark from '../../assets/shapes/PeakBackgroundDark.png'
 import BackgroundColor from '../../assets/shapes/backgroundOnHover.png'

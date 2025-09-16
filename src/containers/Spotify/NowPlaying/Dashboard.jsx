@@ -20,9 +20,9 @@ import Spinner from '../../../components/Spinner'
 import { useInterval } from './interval'; 
 import Vibrant from 'node-vibrant';
 import computer from '../../../assets/icons/computer.png'
-import computerWhite from '../../../assets/icons/computerWhite.png'
+// import computerWhite from '../../../assets/icons/computerWhite.png'
 import smartphone from '../../../assets/icons/smartphone.png'
-import smartphoneWhite from '../../../assets/icons/smartphoneWhite.png'
+// import smartphoneWhite from '../../../assets/icons/smartphoneWhite.png'
 import spotify from '../../../assets/icons/spotify.png'
 
 
@@ -152,7 +152,7 @@ function Dashboard(props) {
                         <NowPlaying dominantColor={dominantColor} darkerColor={darkestColor} lighterColor={detailColor} width={size.width} height={size.height}>
                         <TopBar>
                         <SpotifyLogo src={spotify} />
-                        <PlayingDevice>Playing on <StripDeviceIcon src = { deviceType === 'Computer'? (props.theme === 'dark' ? computer : computer) : (props.theme === 'dark' ? smartphone : smartphone )} alt = 'computer' /></PlayingDevice>
+                        <PlayingDevice>Playing on <StripDeviceIcon src = { deviceType === 'Computer'? computer : smartphone } alt = 'device' /></PlayingDevice>
                         </TopBar>
                           <NowPlayingCard>
                               
