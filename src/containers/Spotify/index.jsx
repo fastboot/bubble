@@ -9,10 +9,6 @@ import {
     ListItem,
     ListItemImage,
     RecentWrapper,
-    Follow,
-    Carousel,
-    TopFollowDiv,
-    ProfileFollowImg,
     RecentWrapperCard,
     TopWrapper,
     TopWrapperHeading,
@@ -21,15 +17,12 @@ import {
     TopWrapperListItemName,
     TopWrapperListItemImage,
     IndexColor,
-    FollowMeText,
     PageHeading,
     PlaylistOutside,
     RecentOutside
 } from './styles'
 import getColor from 'colorthief'
 import FadeIn from './FadeIn'
-import { lyrics } from './famous-lines'
-import profile from '../../assets/profile/dp.png'
 import NewNavigation from '../../components/new-navbar/new-navbar'
 import { Footer2, GradientDiv, AcrossDiv, IconsWrapper } from '../Landing/styles'
 import Footer from '../../components/Footer';
@@ -84,19 +77,6 @@ function Spotify(props) {
             })
             .finally(() => setIsLoading(false))
     }
-
-    // removed unused scroll-based size state
-
-
-    const [currentLineIndex, setCurrentLineIndex] = useState(Math.floor(Math.random() * lyrics.length));
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentLineIndex(Math.floor(Math.random() * lyrics.length));
-        }, 4000); // Change line every 3 seconds
-
-        return () => clearInterval(interval);
-    }, []);
 
     return (
         <React.Fragment>
