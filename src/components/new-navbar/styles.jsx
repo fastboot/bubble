@@ -47,7 +47,6 @@ export const NavbarSlider = styled.div`
 
 export const NavbarItems = styled.p`
 position: relative;
-  color: ${props => (props.color)};
   height: 40px;
   width: 50px;
   margin-top: 9px;

@@ -90,6 +90,7 @@ export const ListWrapper = styled.div`
 `;
 
 export const ListItem = styled.div`
+  cursor: pointer;
   display: flex;
   width: 40%;
   flex-direction: row;
@@ -281,7 +282,7 @@ export const RecentWrapper = styled.div`
 
 export const RecentWrapperCard = styled.div`
   width: 80%;
-  height: 50vh;
+  height: auto;
   background: ${props => props.theme.mode === 'dark' ? 'black' : 'rgb(240, 240, 240)'};;
   display: flex;
   flex-direction: row;
@@ -329,7 +330,7 @@ export const TopWrapperHeading = styled.div`
   color: ${(props) => (props.artist ? 'gold' : 'deepskyblue')};
   background: ${props => props.theme.mode === 'dark' ? 'black' : 'rgb(240, 240, 240)'};
   border-radius: 24px;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 
   @media (max-width: 768px) {
     font-size: 36px;
@@ -358,6 +359,7 @@ export const TopWrapperList = styled.div`
 `;
 
 export const TopWrapperListItem = styled.div`
+  cursor: pointer;
   width: auto;
   height: 72px;
   display: flex;

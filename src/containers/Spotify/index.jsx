@@ -110,41 +110,6 @@ function Spotify(props) {
                 <NowPlaying strip="noshow" theme={props.currTheme.mode} />
             </NowPlayingWrapper>
 
-            <PlaylistOutside>
-                <PageHeading>
-                    More playlists, you will find your vibe.
-                </PageHeading>
-                {data && (
-                    <PlaylistsWrapper>
-
-                        <FadeIn>
-
-
-                            <ListWrapper>
-                                {data.map((playlist, index) => {
-
-                                    if (data[index].owner.id === "spotify" || data[index].name === "ROXANNE") {
-
-                                        return <></>;
-                                    }
-                                    return (
-                                        <>
-
-                                            <ListItem bkcolor={getColor(data[index].images[0].url)}>
-                                                <ListItemImage src={data[index].images[0].url} alt="albumart" />
-
-                                                <PlaylistName>{data[index].name}</PlaylistName>
-                                            </ListItem>
-                                        </>
-                                    )
-                                })}
-                            </ListWrapper>
-                        </FadeIn>
-
-                    </PlaylistsWrapper>
-                )}
-            </PlaylistOutside>
-
             <RecentOutside>
                 <PageHeading>
                     Recent favourites.
@@ -159,7 +124,7 @@ function Spotify(props) {
                                     // const artists = currentTrack.artists.map((curr) => { return curr.name })
                                     return (
                                         <>
-                                            <TopWrapperListItem>
+                                            <TopWrapperListItem onClick={() => window.open(currentTrack.external_urls.spotify, '_blank')}>
                                                 <TopWrapperListItemName><IndexColor>{index + 1}</IndexColor>&nbsp;&nbsp; {currentTrack.name} </TopWrapperListItemName>
                                                 <TopWrapperListItemImage src={currentTrack.album.images[0].url} />
                                             </TopWrapperListItem>
@@ -175,7 +140,7 @@ function Spotify(props) {
                                 {topArtist && topArtist.map((currentArtist, index) => {
 
                                     return (
-                                        <TopWrapperListItem artist>
+                                        <TopWrapperListItem onClick={() => window.open(currentArtist.external_urls.spotify, '_blank')} artist>
                                             <TopWrapperListItemName><IndexColor artist>{index + 1}</IndexColor>&nbsp;&nbsp; {currentArtist.name}</TopWrapperListItemName>
                                             {topTrack && (<TopWrapperListItemImage src={currentArtist.images[0].url} />)}
                                         </TopWrapperListItem>
@@ -186,22 +151,44 @@ function Spotify(props) {
 
                     </RecentWrapperCard>
 
-
-
-                    <Follow>
-                        <Carousel>
-
-                            {lyrics[currentLineIndex]}
-
-                        </Carousel>
-                        <TopFollowDiv>
-                            <FollowMeText>Follow me </FollowMeText>
-                            <ProfileFollowImg src={profile} />
-                        </TopFollowDiv>
-                    </Follow>
                 </RecentWrapper>
 
             </RecentOutside>
+
+            <PlaylistOutside>
+                <PageHeading>
+                    More playlists, you will find your vibe.
+                </PageHeading>
+                {data && (
+                    <PlaylistsWrapper>
+
+                        <FadeIn>
+
+
+                            <ListWrapper>
+                                {data.map((playlist, index) => {
+
+                                    if (data[index].owner.id === "spotify") {
+                                        return <></>;
+                                    }
+                                    return (
+                                        <>
+                                            <ListItem onClick={() => window.open(data[index].external_urls.spotify, '_blank')} bkcolor={getColor(data[index].images[0].url)}>
+                                                <ListItemImage src={data[index].images[0].url} alt="albumart" />
+
+                                                <PlaylistName>{data[index].name}</PlaylistName>
+                                            </ListItem>
+                                        </>
+                                    )
+                                })}
+                            </ListWrapper>
+                        </FadeIn>
+
+                    </PlaylistsWrapper>
+                )}
+            </PlaylistOutside>
+
+            
             <Footer2 >
                 <AcrossDiv>Across the internet.</AcrossDiv>
                 <IconsWrapper><Footer {...props} /></IconsWrapper>

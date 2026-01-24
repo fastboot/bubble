@@ -7,15 +7,14 @@ import BackgroundColor from '../../assets/shapes/backgroundOnHover.png'
 /* Adding Responsive Styles */
 export const CardWrapper = styled.div`
     width: 100vw;
-    min-height: 80vh;
-    margin-top: 100px;
-    margin-bottom: -200px;
+    min-height: 60vh;
+    margin-bottom: -150px;
     display: flex;
     flex-direction: column;
     color: ${props => props.theme.mode !== 'dark' ? 'black': 'white'};
 
     @media (max-width: 1920px) and (min-width: 1441px) {
-        min-height: 75vh;
+        min-height: 65vh;
         margin-top: 90px;
         margin-bottom: -180px;
     }
@@ -236,13 +235,25 @@ export const BlobVector = styled.img`
   transform: translate(-50%, -50%);
   
   /* Blob is always bigger than image */
-  width: calc(var(--img-size) * 2);
-  height: auto;
+  width: 500px;
+  height: 600px;
 
   border-radius: 50%;
   z-index: 1;
   animation: oscillater 5s infinite ease-in-out;
   object-fit: contain;
+
+  @media (max-width: 1024px) {
+    --img-size: clamp(200px, 50vw, 340px);
+  }
+
+  @media (max-width: 768px) {
+    --img-size: clamp(180px, 55vw, 300px);
+  }
+
+  @media (max-width: 480px) {
+    --img-size: clamp(160px, 60vw, 260px);
+  }
 
   @keyframes oscillater {
     0% {
@@ -337,7 +348,7 @@ export const GradientDiv = styled.div`
 
 export const Footer2 = styled.div`
   width: 100%;
-  min-height: 200px;
+  min-height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -397,21 +408,24 @@ export const IconsWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 0;
+  margin-left: -120px;
   height: auto;
   width: 100%;
   padding: 0 20px;
 
   @media (max-width: 1024px) {
     padding: 0 16px;
+    margin-left: -120px;
   }
 
   @media (max-width: 768px) {
     padding: 0 12px;
+    margin-left: 0px;
   }
 
   @media (max-width: 480px) {
     padding: 0 8px;
+    margin-left: 0px;
   }
 `;
 

@@ -33,7 +33,7 @@ const DarkModeIcon = styled.div`
     left: 6px; /* Adjusted left */
     bottom: 3px; /* Adjusted bottom */
     border-radius: 6px; /* Adjusted border-radius to maintain circular shape */
-    background: #17141D;
+    background:rgb(0, 0, 0);
     transform-origin: center center;
     transition: transform 0.25s ease, left 0.1s ease, bottom 0.1s ease, var(--page-color-transition);
   }

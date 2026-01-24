@@ -33,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    min-height: 100vh;
+    min-height: 110vh;
   }
 
   html {

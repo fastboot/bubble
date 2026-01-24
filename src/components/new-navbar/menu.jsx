@@ -8,9 +8,9 @@ const PillContainer = styled.div`
   position: relative;
   width: 250px;
   height: 50px;
-  background-color: ${props => props.theme.mode === 'dark' ? '#17141d' : '#F5F5F5'};
+  background-color: ${props => props.theme.mode !== 'dark' ? '#17141d' : '#17141d'};
   margin-top: 50px;
-  margin-left: 45%;
+  margin-left: 40vw;
   border-radius: 25px;
   overflow: hidden;
   align-self: center;
@@ -27,11 +27,11 @@ const PillItem = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: ${props => props.theme.mode === 'dark' ? 'white' : '#1A1A1A'};
+  color: ${props => props.theme.mode === 'dark' ? 'white' : 'white'};
   cursor: pointer;
   transition: color 0.3s ease;
   z-index: 2; // Ensures text is on top
-  margin-left: 15px;
+  margin-left: 10px;
 `;
 
 const Slider = styled.div`
