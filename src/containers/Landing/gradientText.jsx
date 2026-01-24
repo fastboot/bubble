@@ -1,50 +1,65 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
-
-const animTextFlow = keyframes`
-  0% { color: #ff0000; }   /* Red */
-  17% { color: #ff8c00; }  /* Dark Orange (Gold variant) */
-  34% { color: #ff00ff; }  /* Magenta */
-  51% { color: #800080; }  /* Purple */
-  68% { color: #0000ff; }  /* Blue */
-  85% { color: #8a2be2; }  /* Blue Violet */
-  100% { color: #ff0000; } /* Back to Red */
-`;
-const AnimatedText = styled.span`
-  display: inline-block;
-  animation: ${animTextFlow} 20s infinite;
-  animation-delay: ${({ index }) => (index * 0.2) - 20}s;
-`;
+import styled from 'styled-components';
 
 const Container = styled.div`
   width: 100%;
-  text-align: center;
+  text-align: left;
 `;
 
-const Txt = styled.div`
-  display: flex;
-  text-transform: uppercase;
-  letter-spacing: 0.09em;
-  font-size: 5em;
-  font-weight: 400;
-  text-rendering: optimizeLegibility;
-  color: #fefefe;
-  @media (max-width: 768px) {
-    font-size: 2em;
-    margin-left: 10%;
+const GradientTextWrapper = styled.div`
+  background: ${props => props.theme.mode === 'dark' 
+    ? 'linear-gradient(135deg, #FF69B4 0%, #6A5ACD 50%, #00FFFF 100%)'
+    : 'linear-gradient(135deg, #FF69B4 0%, #6A5ACD 50%, #00FFFF 100%)'};
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease-in-out infinite;
+  
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 `;
 
-const GradientText = ({ text="" }) => {
+const Txt = styled.div`
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  
+  @media (max-width: 1440px) and (min-width: 1025px) {
+    font-size: clamp(2.5rem, 7vw, 5rem);
+  }
+  
+  @media (max-width: 768px) {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+    line-height: 1.2;
+  }
+
+  @media (max-width: 480px) {
+    font-size: clamp(2rem, 12vw, 3rem);
+    line-height: 1.3;
+  }
+`;
+
+const GradientText = ({ text="", currTheme }) => {
   return (
     <Container>
-      <Txt>
-        {text.split('').map((char, index) => (
-          <AnimatedText key={index} index={index}>
-            {char}
-          </AnimatedText>
-        ))}
-      </Txt>
+      <GradientTextWrapper theme={currTheme}>
+        <Txt>
+          {text}
+        </Txt>
+      </GradientTextWrapper>
     </Container>
   );
 };

@@ -8,12 +8,13 @@ const PillContainer = styled.div`
   position: relative;
   width: 250px;
   height: 50px;
-  background-color: #17141d;
+  background-color: ${props => props.theme.mode === 'dark' ? '#17141d' : '#F5F5F5'};
   margin-top: 50px;
   margin-left: 45%;
   border-radius: 25px;
   overflow: hidden;
   align-self: center;
+  transition: background-color 0.3s ease;
 
   @media (max-width: 768px) {
     margin-top: 30px;
@@ -26,9 +27,9 @@ const PillItem = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: ${props => props.theme.mode === 'dark' ? 'white' : '#1A1A1A'};
   cursor: pointer;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
   z-index: 2; // Ensures text is on top
   margin-left: 15px;
 `;
@@ -61,7 +62,6 @@ const Slider = styled.div`
       transform: translateX(0%);
     }
   }
-}
 `;
 
 // removed unused DarkModeSwitch
@@ -107,12 +107,13 @@ const MenuPill = (props) => {
   
 
   return (
-    <PillContainer>
+    <PillContainer theme={props.theme}>
       <Slider color={colors[activeItem]} where={getString()}/>
       <PillItem
         active={activeItem === 'spotify'}
         color={colors.spotify}
         onClick={() => handleClick('whoami')}
+        theme={props.theme}
       >
         whoami
       </PillItem>
@@ -121,6 +122,7 @@ const MenuPill = (props) => {
         active={activeItem === 'whoami'}
         color={colors.whoami}
         onClick={() => handleClick('spotify')}
+        theme={props.theme}
       >
         spotify
       </PillItem>

@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
   :root {
     --header: white;
     --background: white;
-    --page-color-transition: background 0.3s ease, color 0.1s ease; /* Reduced duration */
+    --page-color-transition: background 0.3s ease, color 0.1s ease;
   }
 
   [data-theme='dark'] {
@@ -18,13 +18,26 @@ const GlobalStyle = createGlobalStyle`
     --background: black;
   }
 
+  * {
+    box-sizing: border-box;
+  }
 
   body {
-    transition: transform 0.35s ease-in-out, var(--page-color-transition); /* Reduced duration */
-    background-color: ${ props => props.theme.mode === 'dark' ? 'black': 'white' };
-    color: ${ props => props.theme.mode === 'dark' ? 'white': 'black' };
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.35s ease-in-out, var(--page-color-transition);
+    background: ${ props => props.theme.mode === 'dark' 
+      ? 'linear-gradient(135deg, #1A1A1A 0%, #2D1B69 50%, #1A1A1A 100%)'
+      : 'linear-gradient(135deg, #FFFFFF 0%, #F0F8FF 50%, #FFFFFF 100%)'};
+    color: ${ props => props.theme.mode === 'dark' ? 'white': '#1A1A1A' };
     letter-spacing: -0.015em;
-    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 `;
 
