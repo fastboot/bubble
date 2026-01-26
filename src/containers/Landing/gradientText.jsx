@@ -36,19 +36,23 @@ const Txt = styled.div`
   font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.1;
   letter-spacing: -0.02em;
-  
-  @media (max-width: 1440px) and (min-width: 1025px) {
+  text-align: left;
+
+  @media (max-width: 1440px) {
     font-size: clamp(2.5rem, 7vw, 5rem);
+    text-align: center;
   }
   
   @media (max-width: 768px) {
     font-size: clamp(2.5rem, 10vw, 4rem);
     line-height: 1.2;
+    text-align: center;
   }
 
   @media (max-width: 480px) {
     font-size: clamp(2rem, 12vw, 3rem);
     line-height: 1.3;
+    text-align: center;
   }
 `;
 

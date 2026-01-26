@@ -45,7 +45,6 @@ export const CardWrapper = styled.div`
 
 export const Card = styled.div`
   width: 90%;
-  max-width: 1600px;
   min-height: 80%;
   align-self: center;
   border-radius: 24px;
@@ -94,7 +93,7 @@ export const Card = styled.div`
 
 export const LeftContentWrapper = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: 32px;
@@ -102,6 +101,8 @@ export const LeftContentWrapper = styled.div`
 
   @media (max-width: 1920px) and (min-width: 1441px) {
     flex: 0 1 64%;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 28px;
   }
 
@@ -354,6 +355,10 @@ export const Footer2 = styled.div`
   align-items: center;
   justify-content: center;
   padding: 20px 0;
+
+  @media (max-width: 1920px) and (min-width: 1441px) {
+     margin-top: 15vh;
+  }
 
   @media (max-width: 1024px) {
     min-height: 180px;
